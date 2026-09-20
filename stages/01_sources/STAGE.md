@@ -18,6 +18,7 @@ Find every tree that holds documents, and record what was seen.
 | file | role |
 |---|---|
 | `stages/01_sources/survey_roots.py` | walk a tree and count documents by extension, size band and folder - metadata only, so a cloud placeholder is measured without being downloaded |
+| `chains/chain_survey.ps1` | the survey, supervised and resumable: proves at least one source is mounted before walking terabytes, re-derives the newest row against the disk at every checkpoint, and refuses to call a run that wrote nothing a success |
 
 ## Tests
 - none yet - the first tool written here must arrive with one

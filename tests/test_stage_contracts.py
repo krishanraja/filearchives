@@ -28,7 +28,12 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REQUIRED = ["Inputs", "Outputs", "Invariants", "Code", "Tests", "Lessons"]
-CODE_DIRS = ["stages", "guards", "filearchives", "tools"]
+# Every tree that holds .py or .ps1 belongs here. contentarchives' version was
+# missing `stages` when the conveyor's first stages moved into it, and 34 files
+# silently became unowned without the test objecting - an ownership check can
+# only see the trees it is told about, so a missing entry is a hole that reports
+# success. `chains` is here from the start for that reason.
+CODE_DIRS = ["stages", "guards", "filearchives", "tools", "chains"]
 CODE_EXT = {".py", ".ps1"}
 
 problems: list[str] = []

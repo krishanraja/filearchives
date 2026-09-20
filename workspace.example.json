@@ -1,0 +1,33 @@
+{
+  "_comment": [
+    "Copy this to %USERPROFILE%\\.filearchives\\workspace.json and edit it,",
+    "or point FILEARCHIVES_WORKSPACE at a copy for a one-off run against",
+    "another drive. It is NEVER committed: it describes one person's machine.",
+    "",
+    "There is deliberately no default. A machine without this file stops with",
+    "instructions rather than inventing D:\\ and writing records somewhere",
+    "nobody will think to look.",
+    "",
+    "archive  - where the curated document archive lives on THIS machine",
+    "audit    - where the engine writes its own records and journals",
+    "staging  - optional; defaults to <audit>\\_staging",
+    "sources  - read-only trees to survey and ingest FROM. May include drives",
+    "           that are not always mounted: an absent source is reported and",
+    "           skipped, never silently treated as empty.",
+    "targets  - where mirrors of the archive go. Same rule."
+  ],
+
+  "archive": "D:\\DocumentArchive",
+  "audit": "D:\\_FileAudit",
+  "staging": "D:\\_FileAudit\\_staging",
+
+  "sources": [
+    "E:\\",
+    "G:\\My Drive",
+    "C:\\Users\\<you>\\OneDrive"
+  ],
+
+  "targets": [
+    "H:\\My Drive\\DocumentArchive"
+  ]
+}

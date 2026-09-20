@@ -52,8 +52,17 @@ sys.path.insert(0, _d)
 
 import stagepath  # noqa: E402,F401
 from files import MissingInput  # noqa: E402
+from paths import workspace, roots as configured_roots, NotConfigured  # noqa: E402
 
-OUT = os.environ.get("FILEARCHIVES_SOURCES", r"D:\_FileAudit\SOURCES.csv")
+# WHERE RECORDS GO IS A PROPERTY OF THE MACHINE, NOT OF THIS FILE.
+#
+# This used to read `os.environ.get("FILEARCHIVES_SOURCES", r"D:\_FileAudit\...")`
+# - a default that works on exactly one machine and is silently wrong on every
+# other one, which is the failure this engine exists to prevent. A path that
+# does not exist does not raise; it reads as empty, and empty reads as
+# "nothing to do".
+#
+# The resolver stops with instructions when a machine is unconfigured.
 
 # Documents. Deliberately NOT media - photographs and video belong to
 # contentarchives, and the two engines must not fight over the same trees.
@@ -141,10 +150,23 @@ def main() -> int:
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", action="append", default=[])
-    ap.add_argument("--all-drives", action="store_true")
+    ap.add_argument("--all-drives", action="store_true",
+                    help="every mounted drive letter, configured or not")
+    ap.add_argument("--all-configured", action="store_true",
+                    help="the sources named in this machine's workspace")
     ap.add_argument("--report", action="store_true",
                     help="print what was already surveyed and stop")
     a = ap.parse_args()
+
+    # The workspace decides where records live. A machine that has not been
+    # configured stops here with instructions, rather than defaulting to a
+    # drive letter that is right on one machine and silently wrong elsewhere.
+    try:
+        w = workspace()
+    except NotConfigured as e:
+        print(e)
+        return 2
+    OUT = w.sources_csv
 
     if a.report:
         if not os.path.exists(OUT):
@@ -156,9 +178,16 @@ def main() -> int:
                 int(r["DocumentBytes"]) / (1 << 30), r["When"]))
         return 0
 
-    roots = a.root or (drives() if a.all_drives else [])
+    if a.all_configured:
+        roots = configured_roots(w)
+        if not roots:
+            print("no configured source is mounted - nothing to survey.")
+            print("  This is NOT the same as 'the sources are empty'.")
+            return 1
+    else:
+        roots = a.root or (drives() if a.all_drives else [])
     if not roots:
-        print("name a --root, or --all-drives")
+        print("name a --root, --all-configured, or --all-drives")
         return 1
 
     rows = []

@@ -43,6 +43,55 @@ there:
 
 ---
 
+## It runs on any machine, and the machine says where things are
+
+**Nothing in this repo hardcodes a drive letter.** contentarchives opened its
+path file with `ROOT = r"D:\ContentLibrary"`, which was right for one machine
+and is impossible for a second - and quietly wrong on the first one the day a
+drive is re-lettered, because a path that no longer exists does not raise. It
+reads as empty, and empty reads as "nothing to do".
+
+So each machine carries its own config, and there is **no default**:
+
+    %USERPROFILE%\.filearchives\workspace.json      (default location)
+    FILEARCHIVES_WORKSPACE=<path>                   (override, for a one-off
+                                                     run against another drive)
+
+Copy `workspace.example.json`, edit it, done. An unconfigured machine STOPS with
+instructions rather than inventing `D:\`. A configured source that is not
+mounted is **reported and skipped**, never silently treated as empty - a drive
+that is absent and a drive that is empty must not look the same.
+
+## Chains: modular, supervised, and they outlive the session
+
+Each stage is a step; a chain is a sequence of them. Run one with:
+
+    pwsh -NoProfile -File guards\arm.ps1 -Chain chains\chain_survey.ps1
+    pwsh -NoProfile -File guards\arm.ps1 -Status
+    pwsh -NoProfile -File guards\arm.ps1 -Stop -TaskName filearchives-survey
+
+`arm.ps1` registers a scheduled task, so the work survives the terminal closing
+and the session ending - `Start-Process -WindowStyle Hidden` does NOT detach,
+and in contentarchives three jobs died in the same second an agent session
+ended, four hours in. The task restarts on a kill, and every chain is written to
+resume, so a death costs only the work in flight.
+
+**`-TaskName` is per-chain**, so chains touching different trees run side by
+side. contentarchives had one fixed task name, which is why a fortnightly ingest
+could not be armed while a mirror was running.
+
+**Every step must declare five blocks** - Preflight, Start, Progress, Verify,
+Postcondition - and a missing one is an exception, not a step that quietly runs
+unguarded. `Verify` must RE-DERIVE a sample from source and compare, never
+inspect the output's shape: over there a progress counter climbed beautifully
+for five hours while every record written was attached to the wrong file.
+
+**Chains log with `Add-Content` + `Write-Host`, never `Tee-Object`**, and
+`Invoke-Step` takes a gate's LAST emission. Both defences guard the same trap:
+Tee writes to the pipeline as well as the file, so a gate that logs returns a
+non-empty array, and `[bool]` of that is `$true`. A Postcondition returning
+`$false` read as success for a week.
+
 ## The order to build it in, and why
 
 Do NOT start by writing an importer. The first job is to find out what is

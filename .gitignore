@@ -17,3 +17,11 @@ SOURCES.csv
 INVENTORY.csv
 STRUCTURE-PROPOSAL.csv
 deletions.csv
+
+# Per-machine workspace config. Describes one person's drives and is
+# never committed - workspace.example.json carries the shape instead.
+workspace.json
+.filearchives/
+survey.out
+survey.err
+*.log
