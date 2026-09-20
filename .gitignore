@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated state and working records. These describe the machine's own drives
+# and belong on disk, never in the repo - the same rule contentarchives learned
+# the hard way with profile.yaml and the .bak coverage files.
+*.bak
+*.bak-*
+*.writing
+*.dropping
+
+# Anything holding real paths, counts or personal terms from this machine.
+profile.yaml
+profile.yml
+SOURCES.csv
+INVENTORY.csv
+STRUCTURE-PROPOSAL.csv
+deletions.csv
