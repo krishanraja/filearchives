@@ -7,6 +7,7 @@ param(
     [Parameter(Mandatory)][string] $ApprovalReason,
     [string] $Category = 'extension-routed',
     [switch] $MetadataOnly,
+    [switch] $IncludeExtensionless,
     [string] $ConfigPath
 )
 
@@ -32,7 +33,8 @@ $prefix = $sourceBase.TrimEnd('\', '/') + [IO.Path]::DirectorySeparatorChar
 $moves = [Collections.Generic.List[object]]::new()
 $reserved = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 foreach ($file in @(Get-ChildItem -LiteralPath $sourceBase -Recurse -Force -File | Sort-Object FullName)) {
-    if ($extensions -notcontains $file.Extension.ToLowerInvariant()) { continue }
+    $fileExtension = $file.Extension.ToLowerInvariant()
+    if ($extensions -notcontains $fileExtension -and -not ($IncludeExtensionless -and -not $fileExtension)) { continue }
     $relative = $file.FullName.Substring($prefix.Length).Replace('/', '\')
     $destination = ConvertTo-FaCanonicalPath (Join-Path $destinationBase $relative)
     if ((Test-Path -LiteralPath $destination) -or -not $reserved.Add($destination)) {
