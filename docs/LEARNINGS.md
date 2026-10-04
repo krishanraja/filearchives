@@ -229,3 +229,19 @@ checkpoint. Freeze path, length and timestamp first; balance rows by bytes; then
 hash each source stream as it is copied. A whole-file hash readback from the
 destination volume must match before the temporary file is renamed, and the
 source remains intact until every shard has a complete receipt.
+
+## 29. A drive inventory does not prove profile ingress coverage
+
+Windows user content arrives through known folders on every attached profile,
+including peer-machine `Downloads` trees. A run cannot be complete merely
+because the drive root or a hand-picked set of folders was inventoried. Every
+existing known folder must be covered by an explicit configured source root,
+and an uncovered folder fails the completion gate.
+
+## 30. Empty copy shards are valid evidence
+
+Byte-balanced sharding can legitimately yield an empty shard when requested
+parallelism exceeds the number of eligible files. The executor must emit an
+authenticated zero-file, zero-byte receipt and the shard-set verifier must
+include it in the exact reconciliation instead of crashing or silently
+discarding it.
