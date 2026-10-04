@@ -114,13 +114,16 @@ foreach ($file in @($manifest.Files)) {
     Add-FaCompleted ([pscustomobject]@{Source=$source;Destination=$destination;Length=[long]$file.Length;Sha256=$sourceHash;Status='verified-stream-and-readback'})
 }
 
+$completedBytes = if ($completed.Count) {
+    [long](($completed | Measure-Object Length -Sum).Sum)
+} else { [long]0 }
 $receipt = [ordered]@{
     SchemaVersion = 1
     Kind = 'streaming-folder-copy-receipt-v1'
     Status = 'complete'
     ManifestSha256 = Get-FaSha256 -Path $ManifestPath
     FileCount = [long]$completed.Count
-    Bytes = [long](@($completed | Measure-Object Length -Sum).Sum)
+    Bytes = $completedBytes
     Files = @($completed)
     SourceRetained = $true
     VerificationClaim = 'source stream SHA-256 equals destination-volume temporary-file readback SHA-256; verified temporary file renamed in place to final destination'

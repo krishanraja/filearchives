@@ -30,9 +30,9 @@ try {
     if ($frozen.FileCount -ne 2 -or @($frozen.Skipped).Count -ne 2) { throw 'streaming manifest accounting failed' }
     $shardRoot = Join-Path $audit 'shards'
     & (Join-Path $repo 'stages\02_ingest\split_streaming_folder_copy_manifest.ps1') `
-        -InputManifestPath $parent -OutputRoot $shardRoot -ShardCount 2 -ConfigPath $config | Out-Null
+        -InputManifestPath $parent -OutputRoot $shardRoot -ShardCount 3 -ConfigPath $config | Out-Null
     $shards = @(Get-ChildItem -LiteralPath $shardRoot -Filter '*.manifest.json'|Sort-Object Name)
-    if ($shards.Count -ne 2) { throw 'expected exactly two streaming shards' }
+    if ($shards.Count -ne 3) { throw 'expected exactly three streaming shards, including one empty shard' }
     foreach ($shard in $shards) {
         $receiptPath = $shard.FullName -replace '\.manifest\.json$','.receipt.json'
         & (Join-Path $repo 'stages\02_ingest\invoke_streaming_folder_copy_manifest.ps1') `
@@ -42,7 +42,7 @@ try {
     & (Join-Path $repo 'stages\02_ingest\test_copy_shard_set.ps1') `
         -ParentManifestPath $parent -ShardRoot $shardRoot -ReportPath $setReport -ConfigPath $config
     $set = Get-Content -LiteralPath $setReport -Raw|ConvertFrom-Json
-    if ($set.Status -ne 'complete' -or $set.FileCount -ne 2 -or $set.ShardCount -ne 2) {
+    if ($set.Status -ne 'complete' -or $set.FileCount -ne 2 -or $set.ShardCount -ne 3) {
         throw 'streaming copy shard-set verification failed'
     }
     foreach ($relative in @('one.txt','nested\two.txt')) {

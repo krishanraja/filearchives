@@ -47,7 +47,7 @@ foreach ($shardFile in $shards) {
     }
     if (-not $indexes.Add([int]$shard.ShardIndex)) { throw "duplicate shard index: $($shard.ShardIndex)" }
     if ([int]$shard.ShardCount -ne $shards.Count) { throw "incomplete shard set: $($shardFile.FullName)" }
-    $rows = if ($parent.Kind -eq 'live-file-copy-v1') { @($shard.Copies) } else { @($shard.Files) }
+    $rows = @(if ($parent.Kind -eq 'live-file-copy-v1') { @($shard.Copies) } else { @($shard.Files) })
     foreach ($row in $rows) {
         $key = '{0}|{1}|{2}|{3}' -f $row.Source,$row.Destination,[long]$row.Length,$row.LastWriteTimeUtc
         if (-not $expected.ContainsKey($key) -or -not $seen.Add($key)) {
@@ -59,7 +59,7 @@ foreach ($shardFile in $shards) {
     $expectedReceiptKind = if ($parent.Kind -eq 'live-file-copy-v1') {
         'live-file-copy-receipt-v1'
     } else { 'streaming-folder-copy-receipt-v1' }
-    $receiptRows = if ($parent.Kind -eq 'live-file-copy-v1') { @($receipt.Copies) } else { @($receipt.Files) }
+    $receiptRows = @(if ($parent.Kind -eq 'live-file-copy-v1') { @($receipt.Copies) } else { @($receipt.Files) })
     $receiptCount = if ($parent.Kind -eq 'live-file-copy-v1') { [long]$receipt.CopyCount } else { [long]$receipt.FileCount }
     if ($receipt.SchemaVersion -ne 1 -or $receipt.Kind -ne $expectedReceiptKind -or $receipt.Status -ne 'complete' -or
         [string]$receipt.ManifestSha256 -ne (Get-FaSha256 -Path $shardFile.FullName) -or
