@@ -38,8 +38,16 @@ foreach ($target in @($manifest.Targets | Sort-Object Depth -Descending)) {
         $changed.Add([pscustomobject]@{ Path = $path; Reason = 'not-empty-at-action-time' })
         continue
     }
-    Remove-Item -LiteralPath $path -Force -ErrorAction Stop
-    if (Test-Path -LiteralPath $path) { throw "empty directory still exists after removal: $path" }
+    try {
+        Remove-Item -LiteralPath $path -Force -ErrorAction Stop
+    } catch {
+        $changed.Add([pscustomobject]@{ Path = $path; Reason = 'remove-failed'; Error = $_.Exception.Message })
+        continue
+    }
+    if (Test-Path -LiteralPath $path) {
+        $changed.Add([pscustomobject]@{ Path = $path; Reason = 'still-present-after-remove' })
+        continue
+    }
     $removed.Add($path)
 }
 $receipt = [ordered]@{

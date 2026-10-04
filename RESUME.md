@@ -38,47 +38,36 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 
 ### Current truth
 
-- repository revision inspected: `dd5c9ecc4976ad378f4e4e2b3ffc27772ad3ccd5`
-- canonical local clone for this mission:
-  `C:\Users\krish\dev\krishanraja\filearchives`
-- `C:`, `E:`, `G:` and `H:` were inventoried. `L:` is the intermittently
-  connected share `\\LORIMER\C(LORIMER)` and is reachable in the current pass;
-  its eight roots are being added resumably to the sealed run
-- `C:\Users\krish\dev\krishanraja\mm-ctrl` has substantial uncommitted work.
-  Its original remains untouched and a content-reconciled snapshot with the
-  exact HEAD, index and 677 dirty/untracked status entries exists at
-  `C:\Users\krish\.scratch\filearchives\critical-snapshots\mm-ctrl-20261004`
-- the clean second `filearchives` clone has been retired into local quarantine;
-  this canonical clone is pushed to `origin/main`
-- PowerShell 7 is the zero-install runtime; Python 3.12 is currently available
-  for the inherited topology test but is not required by new estate stages
-- sealed run `estate-20261003-v1` contains 1,308,625 files, 149,768
-  directories and 199,161,374,424 bytes across all 20 configured source roots
-- every present source passed structural verification; `c-documents` is
-  qualified by 14 terminal access errors, all in generated Codex dependency
-  trees
-- estate analysis and the target schema are documented in
-  `docs/estate-strategy-2026-10-04.md`
-- Krish accepted every recommended policy default. The executable policy is
-  `policy/estate-policy-v1.json`; Labs is not active, historical Mindmaker is
-  Mind/make, and Mindmake-OS/mm-ctrl/control-center is mindmakeOS
-- the canonical H/G shallow folder skeleton exists and has a readback receipt
-- Maa and Loz are under H `FAMILY-ADMIN`, `Lozatron Briefings` is inside Loz,
-  and G Personal holds stable pointers so Google ownership and IDs are retained
-- the first 18 high-confidence H folders have moved through sealed manifests;
-  105 identity, finance, property, medical and education files were copied to
-  G with SHA-256 verification and their H sources moved to pre-backup quarantine
-- L contains eight dirty repositories. All eight verified recovery snapshots
-  are already under
-  `C:\Users\krish\dev\krishanraja\_recovery\20261004`; L inventory is being
-  sealed before its visible dev tree is retired
-- three-tier duplicate proof completed for readable candidates: 18,256 exact
-  groups, 81,482 files in those groups, 63,226 redundant copies and a 9.25 GB
-  theoretical maximum reclaim; 4,357 groups touch managed repos
-- content proof remains unavailable for 15,486 signature rows (all G/H
-  candidates, 1,025 OneDrive placeholders, seven source changes and seven
-  document read/missing errors) plus two actively edited filearchives files at
-  the whole-hash tier; all remain explicitly unproven
+- canonical local clone: `C:\Users\krish\dev\krishanraja\filearchives`;
+  the completed engine is pushed to `origin/main`
+- sealed run `estate-20261003-v1` covers all 20 configured roots on C, E, G, H
+  and mounted L: 1,308,625 files, 149,768 directories and 199,161,374,424 bytes
+- H business current/archive, CONTENT-EXTRA and FAMILY-ADMIN exist in the
+  accepted shallow taxonomy; G contains the accepted ten personal categories
+- final canonical-state audit passes with zero issues; C/L Windows known-folder
+  coverage passes with zero uncovered paths
+- both `C:\Users\krish\Downloads` and `L:\Users\krish\Downloads` are empty;
+  late L arrivals were re-ingested before this final assertion
+- E contains only `_FILEARCHIVES_QUARANTINE`, `$RECYCLE.BIN` and
+  `System Volume Information`; all retired source trees remain recoverable
+- L's eight dirty repositories have verified C recovery snapshots and H
+  off-machine recovery; L's visible dev tree is retired except for a locked
+  empty Git refs shell
+- `C:\Users\krish\dev\krishanraja\mm-ctrl` remains untouched at HEAD
+  `1afe495208876b09f2f9e34dfa79ac20aaf3fbdc`; fresh C and H snapshots each
+  reconcile the full index, file set, content and all 770 status entries
+- two historical C Codex task trees were archived to H with authenticated
+  four-shard receipts, and their complete originals moved to C quarantine;
+  one fileless `2026-09-04\read` shell remains locked by another process
+- H exact-ingress dedupe quarantined 997 proven redundant files (3.19 GB); G
+  personal-history/media dedupe quarantined 1,264 files (21.57 GB)
+- 282 explicitly named screenshot/thumbnail/meme/cache/temp media files were
+  quarantined; two temporary document families kept their newest member and
+  quarantined superseded members
+- 856 cloud-category empty descendants and 3,685 local empty descendants were
+  removed; provider-changed and locked shells were retained and recorded
+- no permanent deletion occurred; provider-unreadable and otherwise unproven
+  objects remain retained
 
 ### Locked constraints
 
@@ -112,19 +101,17 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 
 ### Current gate
 
-Present-source inventory, accepted classification policy and duplicate proof
-for readable files are complete. L is reachable and its resumable inventory is
-in progress. Cloud-native and provider-unreadable rows remain unproven, while
-provider-readable cross-volume copies are verified individually. H
-`ContentLibrary` remains completely excluded.
+The consolidation and its final canonical/profile/repository verification are
+complete. H `ContentLibrary` remained completely excluded. The only remaining
+destructive gate is external-backup verification plus the accepted 30-day
+quarantine hold.
 
 ### Next action
 
-Finish L inventory and all eight dirty-repository C snapshots; complete the
-current verified music/media and loose-H batches; migrate valuable OneDrive and
-E/G/C cohorts through copy/readback manifests; re-inventory the live end state;
-then emit the external-backup handoff. Keep all retired sources in
-`99_DELETE-QUARANTINE` until backup plus 30 days.
+Copy H and G canonical authorities plus H
+`ARCHIVE\04_DEVICE-AND-SERVICE-EXPORTS\Critical-Local-Recovery` to the external
+drive, then run an independent readback verification. Start the 30-day hold
+only from that verified backup date; permanent purge remains disabled before it.
 
 ---
 

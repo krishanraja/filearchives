@@ -43,7 +43,7 @@ function Invoke-GitLines {
     return @($lines | ForEach-Object { [string]$_ })
 }
 
-$head = (Invoke-GitLines $source @('rev-parse', 'HEAD'))[0]
+$head = @(Invoke-GitLines $source @('rev-parse', 'HEAD'))[0]
 $branch = (Invoke-GitLines $source @('branch', '--show-current') | Select-Object -First 1)
 $origin = (Invoke-GitLines $source @('remote', 'get-url', 'origin') | Select-Object -First 1)
 $sourceStatus = @(Invoke-GitLines $source @('status', '--porcelain=v1', '--untracked-files=all'))
@@ -108,10 +108,38 @@ foreach ($relative in $trackedAndUntracked) {
         Remove-Item -LiteralPath $destinationFile -Force
     }
 }
-$destinationHead = (Invoke-GitLines $destination @('rev-parse', 'HEAD'))[0]
+$finalTrackedAndUntracked = @(Invoke-GitLines $source @('ls-files', '--cached', '--others', '--exclude-standard') |
+    Sort-Object -Unique)
+if ([string]::Join("`n", $finalTrackedAndUntracked) -ne [string]::Join("`n", $trackedAndUntracked)) {
+    throw 'source Git file set changed during snapshot reconciliation'
+}
+foreach ($relative in $finalTrackedAndUntracked) {
+    if ([string]::IsNullOrWhiteSpace($relative)) { continue }
+    $sourceFile = ConvertTo-FaCanonicalPath (Join-Path $source $relative)
+    $destinationFile = ConvertTo-FaCanonicalPath (Join-Path $destination $relative)
+    if (Test-Path -LiteralPath $sourceFile -PathType Leaf) {
+        if (-not (Test-Path -LiteralPath $destinationFile -PathType Leaf) -or
+            (Get-FaSha256 -Path $sourceFile) -ne (Get-FaSha256 -Path $destinationFile)) {
+            throw "snapshot final content reconciliation failed: $relative"
+        }
+    } elseif (Test-Path -LiteralPath $destinationFile -PathType Leaf) {
+        throw "snapshot retained a source-deleted file: $relative"
+    }
+}
+$sourceStatusFinal = @(Invoke-GitLines $source @('status', '--porcelain=v1', '--untracked-files=all'))
+if ([string]::Join("`n", $sourceStatusFinal) -ne [string]::Join("`n", $sourceStatus)) {
+    throw 'source Git status changed during snapshot reconciliation'
+}
+$destinationHead = @(Invoke-GitLines $destination @('rev-parse', 'HEAD'))[0]
 $destinationStatus = @(Invoke-GitLines $destination @('status', '--porcelain=v1', '--untracked-files=all'))
 if ($destinationHead -ne $head) { throw 'snapshot HEAD does not match source HEAD' }
 $statusEquivalent = [string]::Join("`n", $destinationStatus) -eq [string]::Join("`n", $sourceStatus)
+if (-not $statusEquivalent) { throw 'snapshot Git status does not match source status' }
+$sourceIndexEntries = @(Invoke-GitLines $source @('ls-files', '--stage'))
+$destinationIndexEntries = @(Invoke-GitLines $destination @('ls-files', '--stage'))
+$indexSemanticEquivalent = [string]::Join("`n", $destinationIndexEntries) -eq
+    [string]::Join("`n", $sourceIndexEntries)
+if (-not $indexSemanticEquivalent) { throw 'snapshot staged index entries do not match source' }
 $receipt = [ordered]@{
     SchemaVersion = 1
     Kind = 'dirty-repository-snapshot-receipt-v1'
@@ -125,6 +153,8 @@ $receipt = [ordered]@{
     SnapshotStatusEntries = [long]$destinationStatus.Count
     StatusEquivalent = $statusEquivalent
     IndexSha256 = $sourceIndexHash
+    IndexSemanticEquivalent = $indexSemanticEquivalent
+    IndexEntries = [long]$sourceIndexEntries.Count
     VerifiedWorkingFiles = $presentFiles
     VerifiedWorkingBytes = $bytes
     SourceRetained = $true

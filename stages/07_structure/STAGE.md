@@ -61,3 +61,6 @@ The canonical folder tree, and the proposal that maps files into it.
 | 20 | verified source retirement preserves paths relative to its sealed source root | `test:tests/test_verified_copy.ps1:retirement manifest flattened repeated leaf names` |
 | 23 | recursive live-copy retirement derives provenance from the authenticated frozen SourceRoot | `test:tests/test_layout_copy_manifest.ps1:did not preserve provenance from the frozen source root` |
 | 26 | destination cleanup runs only after every retirement gate that depends on that copy has re-read it | `test:tests/test_layout_copy_manifest.ps1:copy retirement accepted a destination moved before its dependent receipt` |
+| 31 | dedupe evidence scans cheaply prefilter and positively recognize owned document kinds, ignoring unrelated valid JSON | `test:tests/test_ingress_duplicate_quarantine.ps1:valid JSON without an evidence kind` |
+| 32 | duplicate quarantine reserves every planned destination and resolves same-name collisions before execution | `test:tests/test_ingress_duplicate_quarantine.ps1:produced colliding quarantine destinations` |
+| 33 | empty-directory execution records locked shells and continues the independently safe remainder | `code:stages/07_structure/invoke_empty_directory_manifest.ps1:remove-failed` |

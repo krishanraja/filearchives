@@ -245,3 +245,43 @@ parallelism exceeds the number of eligible files. The executor must emit an
 authenticated zero-file, zero-byte receipt and the shard-set verifier must
 include it in the exact reconciliation instead of crashing or silently
 discarding it.
+
+## 31. Evidence directories are heterogeneous
+
+A run directory contains manifests, receipts, reports and support metadata,
+including very large inventory segments. An evidence consumer must cheaply
+prefilter and then positively recognize the document kind it owns, ignoring
+valid unrelated JSON without fully deserializing it. Strict-mode property
+access is not a substitute for schema discrimination and must not make a broad
+evidence scan fail.
+
+## 32. A quarantine plan must reserve destinations before execution
+
+Checking only the live filesystem while planning is insufficient: two source
+files with the same basename and content bucket can select the same destination
+before either exists. Every planned destination is reserved in-memory, and a
+stable source-path digest plus ordinal resolves both live and intra-manifest
+collisions before the first move.
+
+## 33. One locked empty shell must not abort the cleanup cohort
+
+Windows can keep a directory rename or removal handle open after every file has
+been retired. Empty-directory execution revalidates each target independently,
+records locked or reappeared folders as changed/unavailable, and continues with
+the remaining deepest-first targets instead of losing the cohort receipt.
+
+## 34. A live repository snapshot needs a final full reconciliation
+
+PowerShell may unwrap a one-line Git result into a scalar, so indexing it can
+silently capture the first character of a commit hash. Git command output is
+array-normalized before selection. After copying, the snapshot also rechecks
+the complete file set, every source/destination content hash, source status,
+destination status, index and full HEAD before it can emit a receipt.
+
+## 35. Git index bytes are not a durable semantic assertion
+
+Git may rewrite `.git/index` stat-cache fields during an otherwise read-only
+`status`, so a later byte hash can differ even when every staged entry is
+identical. Verify the raw index copy immediately, then make the final durable
+assertion against the ordered `ls-files --stage` entries and record that
+semantic equivalence in the receipt.

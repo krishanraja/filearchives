@@ -10,8 +10,10 @@ $config = Join-Path $scratch 'workspace.json'
 try {
     New-Item -ItemType Directory -Path (Join-Path $destination 'a') -Force | Out-Null
     New-Item -ItemType Directory -Path (Join-Path $destination 'much-longer-provenance') -Force | Out-Null
+    New-Item -ItemType Directory -Path (Join-Path $destination 'another-long-provenance') -Force | Out-Null
     [IO.File]::WriteAllText((Join-Path $destination 'a\same.txt'), 'same bytes')
     [IO.File]::WriteAllText((Join-Path $destination 'much-longer-provenance\copy.txt'), 'same bytes')
+    [IO.File]::WriteAllText((Join-Path $destination 'another-long-provenance\copy.txt'), 'same bytes')
     [IO.File]::WriteAllText((Join-Path $destination 'different.txt'), 'different')
     New-Item -ItemType Directory -Path (Join-Path $destination 'stream-a'),(Join-Path $destination 'stream-much-longer') -Force | Out-Null
     [IO.File]::WriteAllText((Join-Path $destination 'stream-a\same.txt'), 'stream bytes')
@@ -24,6 +26,10 @@ try {
         }
     })
     New-Item -ItemType Directory -Path $evidence -Force | Out-Null
+    [IO.File]::WriteAllText(
+        (Join-Path $evidence 'unrelated-report.json'),
+        ([ordered]@{ Status='complete'; Note='valid JSON without an evidence kind' } | ConvertTo-Json),
+        [Text.UTF8Encoding]::new($false))
     $copyManifest = [ordered]@{ SchemaVersion=1; Kind='verified-folder-copy-v1'; Destination=$destination; Files=$rows }
     [IO.File]::WriteAllText((Join-Path $evidence 'manifest.json'), ($copyManifest | ConvertTo-Json -Depth 8), [Text.UTF8Encoding]::new($false))
     $streamFiles = @(Get-ChildItem -LiteralPath $destination -Recurse -File | Where-Object FullName -match '\\stream-' | ForEach-Object {
@@ -48,10 +54,13 @@ try {
         -EvidenceRoot $evidence -VolumeRoot $volume -QuarantineRoot (Join-Path $volume 'quarantine') `
         -ManifestPath $manifest -ApprovalReason 'test exact ingress duplicate' -ConfigPath $config
     $frozen=Get-Content -LiteralPath $manifest -Raw|ConvertFrom-Json
-    if($frozen.MoveCount -ne 2 -or
-        @($frozen.Moves | Where-Object Survivor -match '\\a\\same\.txt$').Count -ne 1 -or
+    if($frozen.MoveCount -ne 3 -or
+        @($frozen.Moves | Where-Object Survivor -match '\\a\\same\.txt$').Count -ne 2 -or
         @($frozen.Moves | Where-Object Survivor -match '\\stream-a\\same\.txt$').Count -ne 1){
         throw 'ingress duplicate planner did not include streaming receipts or keep shortest proven paths'
+    }
+    if(@($frozen.Moves.Destination | Sort-Object -Unique).Count -ne $frozen.MoveCount){
+        throw 'ingress duplicate planner produced colliding quarantine destinations'
     }
     & (Join-Path $repo 'stages\07_structure\invoke_live_file_move_manifest.ps1') `
         -ManifestPath $manifest -ReceiptPath $receipt -Execute -ConfigPath $config

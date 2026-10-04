@@ -38,13 +38,26 @@ try {
     if ($result.Status -ne 'complete' -or $result.SourceRetained -ne $true) {
         throw 'repository snapshot receipt is incorrect'
     }
+    $expectedHead = (& git -C $source rev-parse HEAD).Trim()
+    if ($result.Head -ne $expectedHead -or $result.Head.Length -ne 40) {
+        throw 'repository snapshot receipt truncated the Git HEAD'
+    }
     $a = @(& git -C $source status --porcelain=v1 --untracked-files=all)
     $b = @(& git -C $destination status --porcelain=v1 --untracked-files=all)
     if ([string]::Join("`n", $a) -ne [string]::Join("`n", $b)) {
         throw 'fixture snapshot status differs'
     }
+    if ($result.StatusEquivalent -ne $true) {
+        throw 'repository snapshot did not prove final status equivalence'
+    }
+    $sourceIndexEntries = @(& git -C $source ls-files --stage)
+    $destinationIndexEntries = @(& git -C $destination ls-files --stage)
+    if ([string]::Join("`n", $sourceIndexEntries) -ne [string]::Join("`n", $destinationIndexEntries) -or
+        $result.IndexSemanticEquivalent -ne $true -or
+        $result.IndexEntries -ne $sourceIndexEntries.Count) {
+        throw 'repository snapshot did not prove semantic index equivalence'
+    }
     Write-Host 'PASS: dirty repository snapshot preserves HEAD, index and working state'
 } finally {
     if (Test-Path -LiteralPath $scratch) { Remove-Item -LiteralPath $scratch -Recurse -Force }
 }
-

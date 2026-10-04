@@ -281,6 +281,11 @@
     {"id": "learning-27-shard-after-expensive-freeze", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_verified_copy_sharding.ps1"]},
     {"id": "learning-28-stream-hash-cold-cloud", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_streaming_folder_copy.ps1"]},
     {"id": "learning-29-profile-ingress-coverage", "owner_stage": "source-survey", "enforced_by": ["tests/test_windows_profile_coverage.ps1"]},
-    {"id": "learning-30-empty-shards-are-valid", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_streaming_folder_copy.ps1"]}
+    {"id": "learning-30-empty-shards-are-valid", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_streaming_folder_copy.ps1"]},
+    {"id": "learning-31-heterogeneous-evidence", "owner_stage": "structure", "enforced_by": ["tests/test_ingress_duplicate_quarantine.ps1"]},
+    {"id": "learning-32-reserve-quarantine-destinations", "owner_stage": "structure", "enforced_by": ["tests/test_ingress_duplicate_quarantine.ps1"]},
+    {"id": "learning-33-locked-empty-shells", "owner_stage": "structure", "enforced_by": ["stages/07_structure/invoke_empty_directory_manifest.ps1"]},
+    {"id": "learning-34-final-repository-reconciliation", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_repository_snapshot.ps1"]},
+    {"id": "learning-35-semantic-git-index-proof", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_repository_snapshot.ps1"]}
   ]
 }

@@ -40,22 +40,27 @@ function Get-PathDigest {
 }
 
 $candidates = @{}
+$supportedKindPattern = '"Kind"\s*:\s*"(?:verified-folder-copy-v1|live-file-copy-v1|live-file-move-v1|streaming-folder-copy-receipt-v1)"'
 foreach ($file in @(Get-ChildItem -LiteralPath $evidence -Recurse -Filter '*.json' -File -Force -ErrorAction Stop)) {
+    if (-not (Select-String -LiteralPath $file.FullName -Pattern $supportedKindPattern -Quiet)) { continue }
     $document = try { Get-Content -LiteralPath $file.FullName -Raw | ConvertFrom-Json -Depth 48 -DateKind String } catch { continue }
+    $kindProperty = $document.PSObject.Properties['Kind']
+    if (-not $kindProperty) { continue }
+    $kind = [string]$kindProperty.Value
     $rows = @()
-    if ($document.Kind -eq 'verified-folder-copy-v1') {
+    if ($kind -eq 'verified-folder-copy-v1') {
         $rows = @($document.Files | ForEach-Object {
             [pscustomobject]@{ Path=(Join-Path ([string]$document.Destination) ([string]$_.RelativePath)); Length=[long]$_.Length; Sha256=[string]$_.Sha256 }
         })
-    } elseif ($document.Kind -eq 'live-file-copy-v1') {
+    } elseif ($kind -eq 'live-file-copy-v1') {
         $rows = @($document.Copies | ForEach-Object {
             [pscustomobject]@{ Path=[string]$_.Destination; Length=[long]$_.Length; Sha256=[string]$_.Sha256 }
         })
-    } elseif ($document.Kind -eq 'live-file-move-v1') {
+    } elseif ($kind -eq 'live-file-move-v1') {
         $rows = @($document.Moves | Where-Object { $_.Sha256 } | ForEach-Object {
             [pscustomobject]@{ Path=[string]$_.Destination; Length=[long]$_.Length; Sha256=[string]$_.Sha256 }
         })
-    } elseif ($document.Kind -eq 'streaming-folder-copy-receipt-v1' -and $document.Status -eq 'complete') {
+    } elseif ($kind -eq 'streaming-folder-copy-receipt-v1' -and $document.Status -eq 'complete') {
         $rows = @($document.Files | Where-Object { $_.Sha256 } | ForEach-Object {
             [pscustomobject]@{ Path=[string]$_.Destination; Length=[long]$_.Length; Sha256=[string]$_.Sha256 }
         })
@@ -72,6 +77,7 @@ foreach ($file in @(Get-ChildItem -LiteralPath $evidence -Recurse -Filter '*.jso
 }
 
 $moves = [Collections.Generic.List[object]]::new()
+$reserved = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 $groups = @($candidates.Values | Group-Object { "$($_.Length)|$($_.Sha256)" } | Where-Object Count -gt 1)
 foreach ($group in $groups) {
     $proven = @($group.Group | Where-Object {
@@ -83,9 +89,14 @@ foreach ($group in $groups) {
         $item = Get-Item -LiteralPath $redundant.Path -Force
         $bucket = $redundant.Sha256.Substring(0, 2)
         $destination = Join-Path (Join-Path $quarantine $bucket) $item.Name
-        if (Test-Path -LiteralPath $destination) {
+        if ((Test-Path -LiteralPath $destination) -or -not $reserved.Add($destination)) {
             $stem = [IO.Path]::GetFileNameWithoutExtension($item.Name)
             $destination = Join-Path (Split-Path -Parent $destination) ("{0}__{1}{2}" -f $stem, (Get-PathDigest $redundant.Path).Substring(0, 12), $item.Extension)
+            $ordinal = 1
+            while ((Test-Path -LiteralPath $destination) -or -not $reserved.Add($destination)) {
+                $destination = Join-Path (Split-Path -Parent $destination) ("{0}__{1}-{2}{3}" -f $stem, (Get-PathDigest $redundant.Path).Substring(0, 12), $ordinal, $item.Extension)
+                $ordinal++
+            }
         }
         $moves.Add([pscustomobject]@{
             Source = $redundant.Path
