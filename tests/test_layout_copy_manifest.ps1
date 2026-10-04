@@ -12,6 +12,8 @@ $proposal = Join-Path $audit 'layout-proposal.jsonl'
 $manifest = Join-Path $audit 'copy.manifest.json'
 $receipt = Join-Path $audit 'copy.receipt.json'
 $retireManifest = Join-Path $audit 'retire.manifest.json'
+$shardRoot = Join-Path $audit 'shards'
+$residualManifest = Join-Path $audit 'residual.manifest.json'
 try {
     New-Item -ItemType Directory -Path (Join-Path $source 'nested'),$audit -Force | Out-Null
     $paths = @{
@@ -51,6 +53,16 @@ try {
     if (@($frozen.Skipped | Where-Object { $_.Reason -eq 'system-metadata-excluded' }).Count -ne 1) {
         throw 'system metadata must be excluded independently of classification order'
     }
+    & (Join-Path $repo 'stages\02_ingest\split_live_file_copy_manifest.ps1') `
+        -InputManifestPath $manifest -OutputRoot $shardRoot -ShardCount 2 -ConfigPath $config | Out-Null
+    $shards = @(Get-ChildItem -LiteralPath $shardRoot -Filter '*.manifest.json' | ForEach-Object {
+        Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Json
+    })
+    if ($shards.Count -ne 2 -or @($shards.Copies).Count -ne 2 -or
+        @($shards.Copies.Destination | Sort-Object -Unique).Count -ne 2 -or
+        @($shards.ParentManifestSha256 | Sort-Object -Unique).Count -ne 1) {
+        throw 'copy shards are not an exact non-overlapping partition of the parent manifest'
+    }
     & (Join-Path $repo 'stages\02_ingest\invoke_live_file_copy_manifest.ps1') `
         -ManifestPath $manifest -ReceiptPath $receipt -Execute -ConfigPath $config
     $result = Get-Content -LiteralPath $receipt -Raw | ConvertFrom-Json
@@ -67,6 +79,15 @@ try {
     if ($retire.MoveCount -ne 2 -or
         @($retire.Moves.Destination | Where-Object { $_ -match 'quarantine\\nested\\brief\.md$' }).Count -ne 1) {
         throw 'live layout retirement did not preserve provenance from the frozen source root'
+    }
+    Move-Item -LiteralPath $paths.personal -Destination (Join-Path $scratch 'already-retired-passport.pdf')
+    & (Join-Path $repo 'stages\02_ingest\new_residual_live_file_copy_manifest.ps1') `
+        -InputManifestPath $manifest -OutputManifestPath $residualManifest `
+        -ApprovalReason 'test already-satisfied recovery' -ConfigPath $config
+    $residual = Get-Content -LiteralPath $residualManifest -Raw | ConvertFrom-Json
+    if ($residual.CopyCount -ne 1 -or $residual.AlreadySatisfiedCount -ne 1 -or
+        $residual.AlreadySatisfied[0].Sha256 -ne $result.Copies[1].Sha256) {
+        throw 'residual copy recovery did not require exact destination content for its absent source'
     }
     if (-not (Test-Path -LiteralPath (Join-Path $current '01_VENTURE\L-Documents\nested\brief.md')) -or
         -not (Test-Path -LiteralPath (Join-Path $personal '01_IDENTITY\L-Documents\passport.pdf'))) {

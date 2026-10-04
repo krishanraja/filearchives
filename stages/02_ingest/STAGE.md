@@ -33,6 +33,8 @@ Bring a document into the archive once, deduplicated by content.
 | `stages/02_ingest/new_layout_copy_manifest.ps1` | turn sealed recursive layout proposals into collision-safe, source-preserving copy manifests while excluding credentials and low-confidence rows by disposition |
 | `stages/02_ingest/new_explicit_file_copy_manifest.ps1` | freeze a small reviewed cross-volume mapping with whole-file hashes and collision-safe destinations |
 | `stages/02_ingest/invoke_live_file_copy_manifest.ps1` | revalidate and copy loose files through whole-file SHA-256 destination readback while retaining every source and journalling per-file progress |
+| `stages/02_ingest/split_live_file_copy_manifest.ps1` | deterministically partition one approved live-file copy manifest into non-overlapping shards that reconcile exactly to their authenticated parent |
+| `stages/02_ingest/new_residual_live_file_copy_manifest.ps1` | resume an interrupted parent manifest after an independently retired source by omitting only rows whose destination still matches the frozen whole-file hash |
 
 ## Tests
 - `tests/test_hash_plan.ps1`

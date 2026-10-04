@@ -335,3 +335,29 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   uncommitted and untracked work.
 - Revisit trigger: the exact dirty state is committed and proven on a durable
   remote, or another independently verified off-machine copy exists.
+
+## D-028: parallel copy work is partitioned in frozen manifests
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: large small-file copy manifests may be parallelized only by a
+  deterministic index partition whose shard counts and unique destinations
+  reconcile exactly to the authenticated parent manifest.
+- Reason: cloud per-file latency dominated 1 GB batches. Ad-hoc worker filters
+  risk overlap, omission and conflicting writes; frozen shards retain the
+  ordinary action-time validation and destination readback contract.
+- Revisit trigger: a transactional work queue with equivalent exactly-once
+  partition evidence.
+
+## D-029: an absent copy source is satisfied only by its frozen destination hash
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: when a verified source was independently retired before an
+  overlapping parent copy finished, a residual manifest may omit that row only
+  if the destination exists and its current whole-file SHA-256 equals the
+  frozen parent row. Otherwise the run stops.
+- Reason: source absence alone is never success, while re-copying a source that
+  has already moved to quarantine is impossible and unnecessary when the exact
+  destination objective is independently re-derived.
+- Revisit trigger: a unified receipt graph that records the same relationship.
