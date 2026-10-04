@@ -38,10 +38,18 @@ The canonical folder tree, and the proposal that maps files into it.
 | `stages/07_structure/invoke_empty_directory_manifest.ps1` | revalidate emptiness at action time, remove only still-empty targets and journal changed directories |
 | `stages/07_structure/new_atomic_tree_relocation_manifest.ps1` | freeze a fast same-volume quarantine relocation for very large retained trees using a shallow entry seal |
 | `stages/07_structure/invoke_atomic_tree_relocation_manifest.ps1` | revalidate and atomically rename a retained tree on one volume, proving source absence and destination shallow equivalence without claiming child hashes |
+| `stages/07_structure/new_ingress_duplicate_quarantine_manifest.ps1` | aggregate hashes already sealed by completed ingest manifests, rehash same-authority candidates and freeze only exact redundant destination copies for quarantine |
+| `stages/07_structure/new_sensitive_name_quarantine_manifest.ps1` | freeze same-volume metadata-only moves for direct or recursive credential-like files without opening or hashing their content; recursive mode preserves source-relative provenance |
+| `stages/07_structure/new_temporary_family_consolidation_manifest.ps1` | keep the newest conservatively name-normalized temporary plan/instruction family member in archive and quarantine older members while excluding evergreen knowledge |
+| `stages/07_structure/new_path_regex_quarantine_manifest.ps1` | quarantine explicitly matched files from selected safe roots while preserving root-relative provenance and never broadening the scan to a protected sibling |
 
 ## Tests
 - `tests/test_layout_classifier.ps1`
 - `tests/test_atomic_tree_relocation.ps1`
+- `tests/test_ingress_duplicate_quarantine.ps1`
+- `tests/test_sensitive_name_quarantine.ps1`
+- `tests/test_temporary_family_consolidation.ps1`
+- `tests/test_path_regex_quarantine.ps1`
 
 ## Lessons
 | # | what this stage does about it | enforced by |
@@ -51,3 +59,4 @@ The canonical folder tree, and the proposal that maps files into it.
 | 18 | protected families have a positive preserve rule rather than relying on a deletion exception | `test:tests/test_layout_classifier.ps1:family-admin` |
 | 19 | temporary AI-document families remain review cohorts until a newest representative is proven | `test:tests/test_layout_classifier.ps1:temporary-family-review` |
 | 20 | verified source retirement preserves paths relative to its sealed source root | `test:tests/test_verified_copy.ps1:retirement manifest flattened repeated leaf names` |
+| 23 | recursive live-copy retirement derives provenance from the authenticated frozen SourceRoot | `test:tests/test_layout_copy_manifest.ps1:did not preserve provenance from the frozen source root` |

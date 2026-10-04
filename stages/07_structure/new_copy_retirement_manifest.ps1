@@ -20,8 +20,16 @@ if ($receipt.Status -ne 'complete' -or $receipt.SourceRetained -ne $true) {
 $copyRows = @()
 $retirementSourceRoot = $null
 if ($receipt.Kind -eq 'live-file-copy-receipt-v1') {
+    if (-not $CopyManifestPath) {
+        throw 'live-file copy retirement requires CopyManifestPath so the frozen source root can be proven'
+    }
+    $copyManifest = Get-Content -LiteralPath $CopyManifestPath -Raw | ConvertFrom-Json -Depth 32 -DateKind String
+    if ($copyManifest.Kind -ne 'live-file-copy-v1' -or
+        (Get-FaSha256 -Path $CopyManifestPath) -ne [string]$receipt.ManifestSha256) {
+        throw 'live-file copy manifest does not match the complete receipt'
+    }
     $copyRows = @($receipt.Copies)
-    if ($copyRows.Count -gt 0) { $retirementSourceRoot = Split-Path -Parent ([string]$copyRows[0].Source) }
+    $retirementSourceRoot = ConvertTo-FaCanonicalPath ([string]$copyManifest.SourceRoot)
 } elseif ($receipt.Kind -eq 'verified-folder-copy-receipt-v1') {
     if (-not $CopyManifestPath) {
         $CopyManifestPath = Join-Path (Split-Path -Parent $CopyReceiptPath) 'manifest.json'
@@ -31,7 +39,12 @@ if ($receipt.Kind -eq 'live-file-copy-receipt-v1') {
         (Get-FaSha256 -Path $CopyManifestPath) -ne [string]$receipt.ManifestSha256) {
         throw 'verified-folder copy manifest does not match the complete receipt'
     }
-    $copyRows = @($copyManifest.Files | ForEach-Object {
+    $skipped = if ($receipt.PSObject.Properties.Name -contains 'SkippedRelativePaths') {
+        @($receipt.SkippedRelativePaths)
+    } else { @() }
+    $copyRows = @($copyManifest.Files | Where-Object {
+        $skipped -notcontains [string]$_.RelativePath
+    } | ForEach-Object {
         [pscustomobject]@{
             Source = Join-Path ([string]$copyManifest.Source) ([string]$_.RelativePath)
             Destination = Join-Path ([string]$copyManifest.Destination) ([string]$_.RelativePath)

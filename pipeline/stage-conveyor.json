@@ -220,14 +220,14 @@
       "id": "workspace-safety",
       "owner": "path and protected-root boundary",
       "owned_paths": ["guards/workspace.ps1", "guards/paths.py"],
-      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "structure"],
+      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "structure", "canonical-audit"],
       "enforced_by": ["tests/test_powershell_guards.ps1"]
     },
     {
       "id": "atomic-artifacts",
       "owner": "durable artifact writes",
       "owned_paths": ["guards/atomic.ps1", "guards/files.py"],
-      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "structure", "orchestration"],
+      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "structure", "orchestration", "canonical-audit"],
       "enforced_by": ["tests/test_inventory_resume.ps1"]
     }
   ],
@@ -272,6 +272,9 @@
     {"id": "learning-18-preserve-is-positive", "owner_stage": "structure", "enforced_by": ["tests/test_layout_classifier.ps1"]},
     {"id": "learning-19-ai-family-proof", "owner_stage": "structure", "enforced_by": ["tests/test_layout_classifier.ps1"]},
     {"id": "learning-20-quarantine-keeps-provenance", "owner_stage": "structure", "enforced_by": ["tests/test_verified_copy.ps1"]},
-    {"id": "learning-21-cloud-eventual-consistency", "owner_stage": "duplicate-analysis", "enforced_by": ["stages/02_ingest/invoke_live_file_copy_manifest.ps1"]}
+    {"id": "learning-21-cloud-eventual-consistency", "owner_stage": "duplicate-analysis", "enforced_by": ["stages/02_ingest/invoke_live_file_copy_manifest.ps1"]},
+    {"id": "learning-22-system-metadata-boundary", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]},
+    {"id": "learning-23-retirement-source-root", "owner_stage": "structure", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]},
+    {"id": "learning-24-live-copy-progress", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]}
   ]
 }

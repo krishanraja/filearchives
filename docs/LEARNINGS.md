@@ -177,3 +177,24 @@ be opened again through the mounted filesystem. A single immediate readback
 turns a successful mutation into a false failure and tempts an unsafe retry.
 Executors retry bounded destination reads, recognize already-verified outputs
 and recover their own `.fa-copying` files without replacing content.
+
+## 22. System metadata is excluded again at the mutation boundary
+
+Classification order can label `desktop.ini` from its parent path before a
+basename rule sees it. The copy boundary independently rejects `desktop.ini`,
+`Thumbs.db` and `.DS_Store`; a routing label may never make generated platform
+metadata valuable.
+
+## 23. Recursive retirement uses the authenticated source root
+
+The parent of the first copied file says nothing about the other files in a
+recursive batch. A retirement plan loads the exact copy manifest named by the
+receipt, verifies its hash, and calculates every quarantine path relative to
+that manifest's frozen `SourceRoot`.
+
+## 24. Idempotent is not observable
+
+A long copy can be safe to restart and still be impossible to supervise if it
+emits nothing until the final receipt. Live-file copies append one durable row
+after every destination readback; the journal reports progress, while a restart
+still re-hashes the filesystem rather than trusting the journal.

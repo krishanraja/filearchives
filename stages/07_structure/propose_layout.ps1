@@ -304,7 +304,7 @@ function Invoke-FaLayoutProposal {
             $segmentsPath = Join-Path $sourceRun 'segments'
             if (-not (Test-Path -LiteralPath $segmentsPath -PathType Container)) { continue }
             foreach ($segmentFile in @(Get-ChildItem -LiteralPath $segmentsPath -Filter 'segment-*.json' -File | Sort-Object Name)) {
-                $segment = Get-Content -LiteralPath $segmentFile.FullName -Raw | ConvertFrom-Json -Depth 32
+                $segment = Get-Content -LiteralPath $segmentFile.FullName -Raw | ConvertFrom-Json -Depth 32 -DateKind String
                 foreach ($item in @($segment.Items)) {
                     if ($item.Kind -ne 'file') { continue }
                     $classification = Get-FaLayoutClassification -Item $item `

@@ -9,7 +9,14 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_hash_plan.ps1
 .\tests\test_layout_classifier.ps1
 .\tests\test_verified_copy.ps1
+.\tests\test_layout_copy_manifest.ps1
 .\tests\test_repository_snapshot.ps1
+.\tests\test_empty_directory_cleanup.ps1
+.\tests\test_atomic_tree_relocation.ps1
+.\tests\test_ingress_duplicate_quarantine.ps1
+.\tests\test_sensitive_name_quarantine.ps1
+.\tests\test_temporary_family_consolidation.ps1
+.\tests\test_path_regex_quarantine.ps1
 node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
   --root . --manifest pipeline\stage-conveyor.json
 ```
@@ -34,15 +41,16 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 - `C:`, `E:`, `G:` and `H:` were inventoried. `L:` is the intermittently
   connected share `\\LORIMER\C(LORIMER)` and is reachable in the current pass;
   its eight roots are being added resumably to the sealed run
-- `C:\Users\krish\dev\krishanraja\mm-ctrl` has substantial uncommitted work
-  and is protected as unique current work until an independent verified copy
-  exists
-- `C:\Users\krish\dev\filearchives` is a clean second clone at the same
-  revision; it is a candidate only, not approved for removal
+- `C:\Users\krish\dev\krishanraja\mm-ctrl` has substantial uncommitted work.
+  Its original remains untouched and a content-reconciled snapshot with the
+  exact HEAD, index and 677 dirty/untracked status entries exists at
+  `C:\Users\krish\.scratch\filearchives\critical-snapshots\mm-ctrl-20261004`
+- the clean second `filearchives` clone has been retired into local quarantine;
+  this canonical clone is pushed to `origin/main`
 - PowerShell 7 is the zero-install runtime; Python 3.12 is currently available
   for the inherited topology test but is not required by new estate stages
-- sealed run `estate-20261003-v1` contains 890,609 files, 99,554 directories
-  and 169,201,774,716 bytes across 12 available source roots
+- sealed run `estate-20261003-v1` contains 1,308,625 files, 149,768
+  directories and 199,161,374,424 bytes across all 20 configured source roots
 - every present source passed structural verification; `c-documents` is
   qualified by 14 terminal access errors, all in generated Codex dependency
   trees
@@ -57,9 +65,10 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 - the first 18 high-confidence H folders have moved through sealed manifests;
   105 identity, finance, property, medical and education files were copied to
   G with SHA-256 verification and their H sources moved to pre-backup quarantine
-- L contains eight dirty repositories. Every one is a preservation target on C
-  before L cleanup; snapshot receipts preserve actual worktree content, index
-  and HEAD without assuming L remains connected
+- L contains eight dirty repositories. All eight verified recovery snapshots
+  are already under
+  `C:\Users\krish\dev\krishanraja\_recovery\20261004`; L inventory is being
+  sealed before its visible dev tree is retired
 - three-tier duplicate proof completed for readable candidates: 18,256 exact
   groups, 81,482 files in those groups, 63,226 redundant copies and a 9.25 GB
   theoretical maximum reclaim; 4,357 groups touch managed repos

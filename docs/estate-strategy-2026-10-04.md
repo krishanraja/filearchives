@@ -27,12 +27,10 @@ duplicates do not enter the archive. Unique old work and personal records do.
 ## Scope and trust
 
 - 12 available source roots were inventoried and structurally verified.
-- All eight L-machine roots are absent in this execution context. There is no
-  L mapping in `Get-PSDrive`, `net use`, the SMB mapping table or the current
-  user's `HKCU:\Network\L`; `LORIMER` resolves to `192.168.0.242`, but TCP 445
-  is unreachable and the configured share cannot be opened. L remains
-  unproven, never empty, regardless of whether another interactive session
-  still displays a remembered mapping.
+- All eight L-machine roots are mounted and are being added to the sealed run
+  resumably. The L dev tree is the largest root; its eight dirty repositories
+  were independently snapshotted to C before any L retirement. A later
+  disconnect remains unavailable, never empty.
 - `H:\My Drive\ContentLibrary` was met once at its boundary and skipped. No
   descendant was enumerated, hashed or compared.
 - `C:\Users\krish\Documents` is partial only because 14 generated Python
@@ -68,11 +66,10 @@ and backup-set identity must qualify age.
 
 ### 1. Important and recent
 
-- `C:\Users\krish\dev\krishanraja\mm-ctrl` is the highest priority item. It
-  is on `codex/g20-context-exchange-proof`, contains 50 tracked changes and 627
-  untracked entries at the latest observation, and is not independently
-  preserved. No cleanup may touch it before a verified snapshot and remote
-  coverage exist.
+- `C:\Users\krish\dev\krishanraja\mm-ctrl` is the highest priority item. Its
+  original worktree remains untouched. A verified recovery snapshot now
+  reconciles its exact HEAD, index and all 677 dirty/untracked status entries;
+  the snapshot is an emergency copy, not a second active worktree.
 - The active source estate contains 17 Git repositories. Only `mm-ctrl` and
   this `filearchives` engine are dirty. Clean branch worktrees may still be
   important, but can be recreated once their commits are proven remote.

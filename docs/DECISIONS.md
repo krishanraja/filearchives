@@ -218,3 +218,120 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   Drive metadata moves then preserved both folder IDs and verified their new
   parent.
 - Revisit trigger: a verified ownership transfer to the personal account.
+
+## D-019: G business-native ownership is an explicit noncanonical exception
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: business files owned by the personal Google account move under
+  `G:\My Drive\_BUSINESS-NATIVE-OWNERSHIP`. Readable binaries are copied to
+  the appropriate H category; Google-native originals remain in G so their
+  IDs, sharing and revision history survive. New business work belongs in H.
+- Reason: a cross-account filesystem move cannot safely transfer native Google
+  ownership, while leaving the files loose in G creates a second apparent
+  business authority.
+- Revisit trigger: a verified native ownership transfer to the H account.
+
+## D-020: source cleanup means recoverable retirement before backup
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: after a cross-volume destination is SHA-256 verified, the source
+  may move into a dated quarantine. Massive generated trees may use a
+  same-volume atomic directory relocation with a shallow seal because that
+  operation retains all child bytes and makes no content-identity claim.
+- Reason: the visible estate can be made usable now without pretending the
+  external-backup and 30-day destruction gates have been met.
+- Revisit trigger: verified external backup plus quarantine expiry.
+
+## D-021: recursive proposals execute through a separate copy boundary
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: recursive classification output never mutates the estate directly.
+  A separate module admits only explicitly allowed dispositions and confidence
+  levels, revalidates source metadata, hashes readable content, preserves
+  source-relative provenance beneath a named cohort, and emits the existing
+  verified-copy contract.
+- Reason: analysis and mutation have different failure modes. Keeping the
+  boundary explicit lets future autonomous runs improve classification without
+  silently broadening what may be copied or retired.
+- Revisit trigger: a new copy contract with equal or stronger independent
+  verification.
+
+## D-022: credential-like files are movable without content inspection
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: credential-classified rows never enter ordinary canonical copies.
+  A direct credential-like file may move only to a same-volume secure local
+  quarantine under a metadata-only manifest that does not open, hash or log
+  its content.
+- Reason: leaving secrets loose is unsafe, while hashing them still reads the
+  secret material and is unnecessary for a same-volume recoverable move.
+- Revisit trigger: an approved encrypted secret-store import with a receipt
+  that exposes no secret content.
+
+## D-023: layout proposals preserve inventory timestamps as strings
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: inventory JSON is deserialized with `-DateKind String` when a
+  layout proposal is built, and the proposal-to-copy boundary compares the
+  original round-trip timestamp at execution.
+- Evidence: the first L proposal converted timestamps through the machine
+  display culture; all 18 passport/family-image rows then correctly failed
+  action-time metadata revalidation. No copy was admitted. The parser and a
+  sub-second regression fixture now enforce the fix.
+- Revisit trigger: never without an equally precise identity field.
+
+## D-024: system metadata is excluded at every copy boundary
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: proposal classification may never override the copy boundary's
+  explicit exclusion of `desktop.ini`, `Thumbs.db` and `.DS_Store`.
+- Evidence: a temporary-family path rule classified a nested `desktop.ini`
+  before the basename rule could see it. Google Drive did not materialize the
+  copied metadata file, so destination readback correctly stopped the batch.
+  The boundary now excludes these names independently of classification.
+- Revisit trigger: never; these files are regenerated platform metadata.
+
+## D-025: live-copy retirement inherits the frozen source root
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: a live-file copy receipt may produce a retirement manifest only
+  when its exact copy manifest is supplied and hash-matches the receipt. Source
+  provenance is calculated from that manifest's `SourceRoot`, never from the
+  first copied file's parent.
+- Reason: one recursive batch can span unrelated subfolders. Using the first
+  file's parent falsely makes later verified sources appear to escape the
+  retirement boundary.
+- Revisit trigger: a receipt schema that embeds and authenticates SourceRoot.
+
+## D-026: live-file copy progress is durable per file
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: the live-file copy executor appends one compact progress row after
+  each destination readback succeeds. A restart still revalidates source and
+  destination content rather than trusting that journal.
+- Reason: a 2,753-file cloud copy produced no visibility until its final
+  receipt even though its idempotent destination checks made it technically
+  resumable. Durable progress is needed for autonomous operation and diagnosis.
+- Revisit trigger: a transactional receipt store with the same per-file
+  durability and independent readback semantics.
+
+## D-027: dirty local work needs an off-machine recovery artifact
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: a local dirty-worktree snapshot is not independently preserved
+  until an integrity-checked package has also been copied and SHA-256 read back
+  from a non-local authority. The original worktree remains untouched.
+- Reason: a second path on the same machine protects against an editing error,
+  not machine loss or network disconnection. Git remotes do not contain
+  uncommitted and untracked work.
+- Revisit trigger: the exact dirty state is committed and proven on a durable
+  remote, or another independently verified off-machine copy exists.

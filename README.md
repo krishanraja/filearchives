@@ -106,8 +106,8 @@ the verifier contract.
 **Accepted estate policy under verified execution, 2026-10-04. No permanent
 deletion has occurred.**
 
-The sealed `estate-20261003-v1` run inventories 890,609 files (169.20 GB)
-across every currently available configured root. `H:\My Drive\ContentLibrary`
+The sealed `estate-20261003-v1` run inventories 1,308,625 files (199.16 GB)
+across all 20 configured roots. `H:\My Drive\ContentLibrary`
 is an absolute exclusion and has not been traversed. L is reachable in the
 current pass; every dirty L repository is preserved onto C before local
 cleanup. Duplicate proofing uses the three content-identity tiers above. The
@@ -118,3 +118,14 @@ cross-volume copies have frozen manifests and readback receipts in the audit
 tree outside this repository.
 
 Start at `RESUME.md`.
+The completed-run evidence and backup handoff are in
+`docs/RUN-2026-10-04.md`.
+
+After a consolidation run, verify the user-facing navigation without entering
+any protected boundary:
+
+```powershell
+.\stages\09_mirror\test_canonical_state.ps1 `
+  -ConfigPath C:\Users\krish\.scratch\filearchives\workspace.json `
+  -ReportPath C:\Users\krish\.scratch\filearchives\canonical-state.json
+```

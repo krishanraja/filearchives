@@ -53,7 +53,7 @@ foreach ($name in $missingPersonal) {
 foreach ($name in @($gNames | Where-Object { $_ -notin @('Personal', '_BUSINESS-NATIVE-OWNERSHIP') })) {
     $issues.Add([pscustomobject]@{ Code='unexpected-g-root'; Path=(Join-Path $gRoot $name) })
 }
-foreach ($name in @($cNames | Where-Object { $_ -notin @('krishanraja', 'README-CANONICAL.md') })) {
+foreach ($name in @($cNames | Where-Object { $_ -notin @('krishanraja', 'README-CANONICAL.md', 'AGENTS.md') })) {
     $issues.Add([pscustomobject]@{ Code='unexpected-c-dev-root'; Path=(Join-Path $cDev $name) })
 }
 if (-not (Test-Path -LiteralPath 'C:\Users\krish\dev\krishanraja\mm-ctrl' -PathType Container)) {

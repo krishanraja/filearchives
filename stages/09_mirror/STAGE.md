@@ -1,4 +1,4 @@
-# 09 mirror
+# 09 canonical audit
 
 Prove that the finished estate exposes one shallow authority for business,
 personal and local repository work. This stage checks navigation and boundaries;
@@ -10,27 +10,24 @@ it does not mirror cloud content onto intermittently connected machines.
 |---|---|
 | `stages/09_mirror/test_canonical_state.ps1` | inspect only the top-level navigation surfaces, verify every required category and critical worktree, and report unexpected roots without traversing protected boundaries |
 
-The same structure, identically, on every drive.
-
 ## Inputs
-- the canonical archive
+- workspace configuration
+- accepted user policy
+- verified structure receipts
 
 ## Outputs
-- an identical tree on each target drive, verified
+- an independently derived canonical-state report
 
 ## Invariants
-- a copy is verified by re-derivation, never by reading back what was written
-- a mirror that only ADDS diverges silently; removal is explicit machinery
-
-## Code
-| file | role |
-|---|---|
-| `stages/09_mirror/mirror_tree.py` | copy the canonical tree to a target drive and prove it arrived |
+- protected roots are checked only at their boundary
+- expected and unexpected top-level navigation roots are explicit
+- a missing or disconnected source is unavailable, never empty
 
 ## Tests
-- none yet
+- canonical-state audit in the completed estate run
 
 ## Lessons
 | # | what this stage does about it | enforced by |
 |---|---|---|
-| - | none claimed yet | - |
+| 07 | absent is not empty | `tests/test_powershell_guards.ps1` |
+| 09 | long work is resumable | canonical-state report is replaceable and atomic |

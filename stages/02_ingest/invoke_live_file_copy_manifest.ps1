@@ -20,6 +20,17 @@ if ($manifest.SchemaVersion -ne 1 -or $manifest.Kind -ne 'live-file-copy-v1') {
 if ($manifest.Approved -ne $true) { throw 'live file copy manifest is not approved' }
 $workspace = Import-FaWorkspace -ConfigPath $ConfigPath
 $completed = [Collections.Generic.List[object]]::new()
+$progressPath = $ReceiptPath + '.progress.jsonl'
+New-Item -ItemType Directory -Path (Split-Path -Parent $progressPath) -Force | Out-Null
+[IO.File]::WriteAllText($progressPath, '', [Text.UTF8Encoding]::new($false))
+function Add-FaCompletedCopy {
+    param([Parameter(Mandatory)] $Row)
+    $completed.Add($Row)
+    [IO.File]::AppendAllText(
+        $progressPath,
+        (($Row | ConvertTo-Json -Compress -Depth 8) + [Environment]::NewLine),
+        [Text.UTF8Encoding]::new($false))
+}
 function Get-FaReadbackHash {
     param([string] $Path, [int] $Attempts = 80)
     for ($attempt = 1; $attempt -le $Attempts; $attempt++) {
@@ -56,7 +67,7 @@ foreach ($copy in @($manifest.Copies)) {
                 throw "destination conflicts with a valid temporary copy: $destination"
             }
             Remove-Item -LiteralPath $temp -Force
-            $completed.Add([pscustomobject]@{
+            Add-FaCompletedCopy ([pscustomobject]@{
                 Source = $source; Destination = $destination; Length = [long]$copy.Length
                 Sha256 = [string]$copy.Sha256; Status = 'already-verified'
             })
@@ -73,7 +84,7 @@ foreach ($copy in @($manifest.Copies)) {
         if ((Get-FaReadbackHash -Path $destination) -ne [string]$copy.Sha256) {
             throw "recovered temporary copy failed readback: $destination"
         }
-        $completed.Add([pscustomobject]@{
+        Add-FaCompletedCopy ([pscustomobject]@{
             Source = $source; Destination = $destination; Length = [long]$copy.Length
             Sha256 = [string]$copy.Sha256; Status = 'recovered-temporary-copy'
         })
@@ -83,7 +94,7 @@ foreach ($copy in @($manifest.Copies)) {
         if ((Get-FaReadbackHash -Path $destination) -ne [string]$copy.Sha256) {
             throw "copy destination appeared with different content after manifest freeze: $destination"
         }
-        $completed.Add([pscustomobject]@{
+        Add-FaCompletedCopy ([pscustomobject]@{
             Source = $source; Destination = $destination; Length = [long]$copy.Length
             Sha256 = [string]$copy.Sha256; Status = 'already-verified'
         })
@@ -106,7 +117,7 @@ foreach ($copy in @($manifest.Copies)) {
     if ((Get-FaReadbackHash -Path $destination) -ne [string]$copy.Sha256) {
         throw "copy destination failed readback: $destination"
     }
-    $completed.Add([pscustomobject]@{
+    Add-FaCompletedCopy ([pscustomobject]@{
         Source = $source
         Destination = $destination
         Length = [long]$copy.Length

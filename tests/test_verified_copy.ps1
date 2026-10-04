@@ -16,6 +16,7 @@ try {
     [IO.File]::WriteAllText((Join-Path $source 'one.txt'), 'alpha')
     [IO.File]::WriteAllText((Join-Path $source 'nested\two.txt'), 'beta')
     [IO.File]::WriteAllText((Join-Path $source 'nested\one.txt'), 'different file, same leaf name')
+    [IO.File]::WriteAllText((Join-Path $source 'nested\skip-me.txt'), 'provider metadata')
     [IO.File]::WriteAllText((Join-Path $source 'ignored.json'), '{}')
     $workspace = [ordered]@{
         schema_version = 2
@@ -33,9 +34,10 @@ try {
         throw 'extension filtering or required-directory pruning is incorrect'
     }
     & (Join-Path $repo 'stages\02_ingest\invoke_verified_copy_manifest.ps1') `
-        -ManifestPath $manifest -ReceiptPath $receipt -Execute -ConfigPath $config
+        -ManifestPath $manifest -ReceiptPath $receipt -SkipRelativePathRegex 'skip-me\.txt$' -Execute -ConfigPath $config
     $result = Get-Content -LiteralPath $receipt -Raw | ConvertFrom-Json
-    if ($result.Status -ne 'complete' -or $result.Files -ne 3 -or $result.SourceRetained -ne $true) {
+    if ($result.Status -ne 'complete' -or $result.Files -ne 3 -or
+        @($result.SkippedRelativePaths).Count -ne 1 -or $result.SourceRetained -ne $true) {
         throw 'verified-copy receipt is incorrect'
     }
     foreach ($relative in @('one.txt', 'nested\two.txt', 'nested\one.txt')) {
@@ -44,7 +46,7 @@ try {
         if ($a -ne $b) { throw "copy hash mismatch: $relative" }
     }
     & (Join-Path $repo 'stages\02_ingest\invoke_verified_copy_manifest.ps1') `
-        -ManifestPath $manifest -ReceiptPath $receipt -Execute -ConfigPath $config
+        -ManifestPath $manifest -ReceiptPath $receipt -SkipRelativePathRegex 'skip-me\.txt$' -Execute -ConfigPath $config
     $retireManifest = Join-Path $audit 'retire.manifest.json'
     & (Join-Path $repo 'stages\07_structure\new_copy_retirement_manifest.ps1') `
         -CopyReceiptPath $receipt -CopyManifestPath $manifest `

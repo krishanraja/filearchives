@@ -103,4 +103,26 @@ try {
 }
 if (-not $blocked) { throw 'H ContentLibrary leakage was not refused' }
 
-Write-Host "layout classifier tests passed: $($cases.Count + 4) assertions groups"
+$scratch = Join-Path ([IO.Path]::GetTempPath()) ('filearchives-layout-time-' + [guid]::NewGuid().ToString('n'))
+try {
+    $inventory = Join-Path $scratch 'inventory'
+    $segments = Join-Path $inventory 'fixture\segments'
+    $output = Join-Path $scratch 'output'
+    $source = Join-Path $scratch 'source'
+    $audit = Join-Path $scratch 'audit'
+    New-Item -ItemType Directory -Path $segments,$source,$audit -Force | Out-Null
+    $stamp = '2026-10-03T12:34:56.1234567+00:00'
+    $segment = @{ Items=@(@{ Kind='file'; RelativePath='Mindmaker\brief.md'; Extension='.md'; Length=5; LastWriteTimeUtc=$stamp; GeneratedHint=$null }) }
+    [IO.File]::WriteAllText((Join-Path $segments 'segment-00000001.json'), ($segment|ConvertTo-Json -Depth 8), [Text.UTF8Encoding]::new($false))
+    $workspacePath = Join-Path $scratch 'workspace.json'
+    $workspace = @{ schema_version=2; audit=$audit; sources=@(@{id='fixture';path=$source;kind='test';follow_reparse_points=$false}); protected_roots=@((Join-Path $scratch 'protected')); protected_names=@() }
+    [IO.File]::WriteAllText($workspacePath, ($workspace|ConvertTo-Json -Depth 8), [Text.UTF8Encoding]::new($false))
+    Invoke-FaLayoutProposal -WorkspacePath $workspacePath -InventoryPath $inventory -ResultPath $output `
+        -RulesPath (Join-Path $repo 'policy\estate-policy-v1.json') -OnlySourceId fixture -AnalysisDate $asOf | Out-Null
+    $proposalRow = Get-Content -LiteralPath (Join-Path $output 'layout-proposal.jsonl') -Raw | ConvertFrom-Json -DateKind String
+    Assert-Equal $proposalRow.LastWriteTimeUtc $stamp 'layout proposal preserves round-trip inventory timestamp'
+} finally {
+    if (Test-Path -LiteralPath $scratch) { Remove-Item -LiteralPath $scratch -Recurse -Force }
+}
+
+Write-Host "layout classifier tests passed: $($cases.Count + 5) assertions groups"

@@ -30,11 +30,14 @@ Bring a document into the archive once, deduplicated by content.
 | `stages/02_ingest/invoke_verified_copy_manifest.ps1` | resumably copy each manifest row through a temporary file, verify destination content, and retain the source |
 | `stages/02_ingest/snapshot_dirty_repository.ps1` | clone a dirty repository locally, hash-reconcile every tracked and non-ignored file, preserve the exact index and HEAD, and report rather than hide latent status drift |
 | `stages/02_ingest/new_live_file_copy_manifest.ps1` | classify direct loose files and freeze only high-confidence, content-readable cross-volume copy rows |
-| `stages/02_ingest/invoke_live_file_copy_manifest.ps1` | revalidate and copy loose files through whole-file SHA-256 destination readback while retaining every source |
+| `stages/02_ingest/new_layout_copy_manifest.ps1` | turn sealed recursive layout proposals into collision-safe, source-preserving copy manifests while excluding credentials and low-confidence rows by disposition |
+| `stages/02_ingest/new_explicit_file_copy_manifest.ps1` | freeze a small reviewed cross-volume mapping with whole-file hashes and collision-safe destinations |
+| `stages/02_ingest/invoke_live_file_copy_manifest.ps1` | revalidate and copy loose files through whole-file SHA-256 destination readback while retaining every source and journalling per-file progress |
 
 ## Tests
 - `tests/test_hash_plan.ps1`
 - `tests/test_verified_copy.ps1`
+- `tests/test_layout_copy_manifest.ps1`
 - `tests/test_repository_snapshot.ps1`
 
 ## Lessons
@@ -47,3 +50,5 @@ Bring a document into the archive once, deduplicated by content.
 | 15 | JSON identity timestamps remain round-trip strings instead of culture-formatted DateTime values | `code:stages/02_ingest/build_hash_plan.ps1:ConvertFrom-Json -Depth 32 -DateKind String` |
 | 16 | provider failures remain a per-source unproven cohort in final evidence | `code:stages/02_ingest/analyze_duplicate_groups.ps1:SignatureUnprovenBySource` |
 | 21 | copy executors retry cloud readback and safely resume verified destinations or their own temporary files | `code:stages/02_ingest/invoke_live_file_copy_manifest.ps1:Get-FaReadbackHash` |
+| 22 | system metadata is rejected at the copy boundary even when an earlier path rule classified it differently | `test:tests/test_layout_copy_manifest.ps1:system metadata must be excluded independently` |
+| 24 | every verified live-file destination appends a durable progress row | `test:tests/test_layout_copy_manifest.ps1:did not journal per-file progress` |

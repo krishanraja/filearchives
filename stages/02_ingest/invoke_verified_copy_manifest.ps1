@@ -3,6 +3,7 @@ param(
     [Parameter(Mandatory)][string] $ManifestPath,
     [Parameter(Mandatory)][string] $ReceiptPath,
     [string] $ProgressPath,
+    [string] $SkipRelativePathRegex = '(?i)(^|\\)(desktop\.ini|thumbs\.db)$',
     [Parameter(Mandatory)][switch] $Execute,
     [string] $ConfigPath
 )
@@ -64,6 +65,7 @@ $progressWriter = [IO.StreamWriter]::new($progressStream, [Text.UTF8Encoding]::n
 $started = [DateTimeOffset]::Now
 [long]$verifiedFiles = 0
 [long]$verifiedBytes = 0
+$skippedRelativePaths = [Collections.Generic.List[string]]::new()
 function Get-FaReadbackHash {
     param([string] $Path, [int] $Attempts = 80)
     for ($attempt = 1; $attempt -le $Attempts; $attempt++) {
@@ -76,6 +78,10 @@ function Get-FaReadbackHash {
 try {
     foreach ($file in @($manifest.Files)) {
         $relative = [string]$file.RelativePath
+        if ($SkipRelativePathRegex -and $relative -match $SkipRelativePathRegex) {
+            $skippedRelativePaths.Add($relative)
+            continue
+        }
         $source = ConvertTo-FaCanonicalPath (Join-Path $sourceRoot $relative)
         $destination = ConvertTo-FaCanonicalPath (Join-Path $destinationRoot $relative)
         if (-not (Test-FaPathWithin -Path $source -Root $sourceRoot) -or
@@ -142,14 +148,23 @@ try {
     $progressWriter.Dispose()
     $progressStream.Dispose()
 }
-if ($verifiedFiles -ne [long]$manifest.FileCount -or $verifiedBytes -ne [long]$manifest.Bytes) {
+$expectedFiles = [long]$manifest.FileCount - [long]$skippedRelativePaths.Count
+[long]$skippedBytes = 0
+foreach ($candidate in @($manifest.Files)) {
+    if ($SkipRelativePathRegex -and ([string]$candidate.RelativePath -match $SkipRelativePathRegex)) {
+        $skippedBytes += [long]$candidate.Length
+    }
+}
+$expectedBytes = [long]$manifest.Bytes - $skippedBytes
+if ($verifiedFiles -ne $expectedFiles -or $verifiedBytes -ne $expectedBytes) {
     throw 'verified copy totals do not reconcile to the manifest'
 }
 $receipt = [ordered]@{
     SchemaVersion = 1
     Kind = 'verified-folder-copy-receipt-v1'
     Status = 'complete'
-    Coverage = if ($manifest.Status -eq 'ready-partial') { 'included-readable-files-only' } else { 'all-non-excluded-files' }
+    Coverage = if ($skippedRelativePaths.Count -gt 0) { 'included-readable-files-minus-explicit-skip' } `
+        elseif ($manifest.Status -eq 'ready-partial') { 'included-readable-files-only' } else { 'all-non-excluded-files' }
     ManifestSha256 = Get-FaSha256 -Path $ManifestPath
     Source = $sourceRoot
     Destination = $destinationRoot
@@ -158,6 +173,7 @@ $receipt = [ordered]@{
     Bytes = $verifiedBytes
     SourceRetained = $true
     UnprovenRetained = [long](@($manifest.Unproven).Count)
+    SkippedRelativePaths = @($skippedRelativePaths)
     VerificationClaim = [string]$manifest.VerificationClaim
     StartedAt = $started.ToString('o')
     CompletedAt = [DateTimeOffset]::Now.ToString('o')
