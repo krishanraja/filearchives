@@ -206,3 +206,10 @@ obvious waste hidden below a valuable venture folder. Copying those bytes and
 quarantining them afterward wastes time and cloud capacity. A filtered child
 manifest authenticates its parent, accounts for every row, and records explicit
 exclusions before any transfer starts.
+
+## 26. Destination cleanup waits for every dependent retirement receipt
+
+A copied destination can be correctly identified as generated waste and still
+be evidence required by a source-retirement gate. Moving that destination too
+early makes the retirement proof fail. Complete every receipt that authenticates
+the destination first, then quarantine the generated destination cohort.

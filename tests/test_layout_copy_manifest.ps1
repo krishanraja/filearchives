@@ -72,6 +72,24 @@ try {
     if ((Get-Content -LiteralPath ($receipt + '.progress.jsonl') | Measure-Object -Line).Lines -ne 2) {
         throw 'live layout copy did not journal per-file progress'
     }
+    $heldDestination = [string]$result.Copies[0].Destination
+    $temporaryHold = $heldDestination + '.retirement-gate-test'
+    Move-Item -LiteralPath $heldDestination -Destination $temporaryHold
+    $blockedOnMissingDestination = $false
+    try {
+        & (Join-Path $repo 'stages\07_structure\new_copy_retirement_manifest.ps1') `
+            -CopyReceiptPath $receipt -CopyManifestPath $manifest `
+            -QuarantineRoot (Join-Path $scratch 'invalid-quarantine') `
+            -ManifestPath (Join-Path $audit 'invalid-retire.manifest.json') `
+            -ApprovalReason 'test missing destination gate' -ConfigPath $config
+    } catch {
+        $blockedOnMissingDestination = $true
+    } finally {
+        Move-Item -LiteralPath $temporaryHold -Destination $heldDestination
+    }
+    if (-not $blockedOnMissingDestination) {
+        throw 'copy retirement accepted a destination moved before its dependent receipt'
+    }
     & (Join-Path $repo 'stages\07_structure\new_copy_retirement_manifest.ps1') `
         -CopyReceiptPath $receipt -CopyManifestPath $manifest -QuarantineRoot (Join-Path $scratch 'quarantine') `
         -ManifestPath $retireManifest -ApprovalReason 'test fixture' -ConfigPath $config

@@ -60,3 +60,4 @@ The canonical folder tree, and the proposal that maps files into it.
 | 19 | temporary AI-document families remain review cohorts until a newest representative is proven | `test:tests/test_layout_classifier.ps1:temporary-family-review` |
 | 20 | verified source retirement preserves paths relative to its sealed source root | `test:tests/test_verified_copy.ps1:retirement manifest flattened repeated leaf names` |
 | 23 | recursive live-copy retirement derives provenance from the authenticated frozen SourceRoot | `test:tests/test_layout_copy_manifest.ps1:did not preserve provenance from the frozen source root` |
+| 26 | destination cleanup runs only after every retirement gate that depends on that copy has re-read it | `test:tests/test_layout_copy_manifest.ps1:copy retirement accepted a destination moved before its dependent receipt` |
