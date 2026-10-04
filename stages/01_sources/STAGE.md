@@ -32,4 +32,4 @@ Find every tree that holds documents, and record what was seen.
 |---|---|---|
 | 7 | an absent root is recorded as unavailable with null counts, never zero | `test:tests/test_powershell_guards.ps1:missing source is not reported as zero files` |
 | 11 | a survey reports what is THERE, and narrowing to what MATTERS is a separate, arguable step | prose-only |
-| 29 | a drive-level inventory is not proof that every local profile ingress was handled; every existing known folder must be named by a source boundary before completion | `test:tests/test_windows_profile_coverage.ps1` |
+| 29 | a drive-level inventory is not proof that every local profile ingress was handled; every existing known folder must be named by a source boundary before completion | `test:tests/test_windows_profile_coverage.ps1:Windows profile known-folder coverage is a completion gate` |

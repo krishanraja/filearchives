@@ -279,6 +279,8 @@
     {"id": "learning-25-filter-waste-before-transfer", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_filtered_copy_manifest.ps1"]},
     {"id": "learning-26-retirement-before-destination-cleanup", "owner_stage": "structure", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]},
     {"id": "learning-27-shard-after-expensive-freeze", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_verified_copy_sharding.ps1"]},
-    {"id": "learning-28-stream-hash-cold-cloud", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_streaming_folder_copy.ps1"]}
+    {"id": "learning-28-stream-hash-cold-cloud", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_streaming_folder_copy.ps1"]},
+    {"id": "learning-29-profile-ingress-coverage", "owner_stage": "source-survey", "enforced_by": ["tests/test_windows_profile_coverage.ps1"]},
+    {"id": "learning-30-empty-shards-are-valid", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_streaming_folder_copy.ps1"]}
   ]
 }
