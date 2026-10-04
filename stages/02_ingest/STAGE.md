@@ -35,11 +35,13 @@ Bring a document into the archive once, deduplicated by content.
 | `stages/02_ingest/invoke_live_file_copy_manifest.ps1` | revalidate and copy loose files through whole-file SHA-256 destination readback while retaining every source and journalling per-file progress |
 | `stages/02_ingest/split_live_file_copy_manifest.ps1` | deterministically partition one approved live-file copy manifest into non-overlapping shards that reconcile exactly to their authenticated parent |
 | `stages/02_ingest/new_residual_live_file_copy_manifest.ps1` | resume an interrupted parent manifest after an independently retired source by omitting only rows whose destination still matches the frozen whole-file hash |
+| `stages/02_ingest/new_filtered_live_file_copy_manifest.ps1` | derive an authenticated child manifest that excludes explicit installer, cache, path, extension, or size cohorts before transfer while accounting for every parent row |
 
 ## Tests
 - `tests/test_hash_plan.ps1`
 - `tests/test_verified_copy.ps1`
 - `tests/test_layout_copy_manifest.ps1`
+- `tests/test_filtered_copy_manifest.ps1`
 - `tests/test_repository_snapshot.ps1`
 
 ## Lessons
@@ -54,3 +56,4 @@ Bring a document into the archive once, deduplicated by content.
 | 21 | copy executors retry cloud readback and safely resume verified destinations or their own temporary files | `code:stages/02_ingest/invoke_live_file_copy_manifest.ps1:Get-FaReadbackHash` |
 | 22 | system metadata is rejected at the copy boundary even when an earlier path rule classified it differently | `test:tests/test_layout_copy_manifest.ps1:system metadata must be excluded independently` |
 | 24 | every verified live-file destination appends a durable progress row | `test:tests/test_layout_copy_manifest.ps1:did not journal per-file progress` |
+| 25 | obvious installation media and cache cohorts are filtered before cross-volume transfer, not after | `test:tests/test_filtered_copy_manifest.ps1:explicit waste filters preserve useful copy rows and parent lineage` |

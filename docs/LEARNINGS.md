@@ -198,3 +198,11 @@ A long copy can be safe to restart and still be impossible to supervise if it
 emits nothing until the final receipt. Live-file copies append one durable row
 after every destination readback; the journal reports progress, while a restart
 still re-hashes the filesystem rather than trusting the journal.
+
+## 25. Filter obvious waste before cross-volume transfer
+
+An approved route can still contain installer payloads, cache trees or other
+obvious waste hidden below a valuable venture folder. Copying those bytes and
+quarantining them afterward wastes time and cloud capacity. A filtered child
+manifest authenticates its parent, accounts for every row, and records explicit
+exclusions before any transfer starts.
