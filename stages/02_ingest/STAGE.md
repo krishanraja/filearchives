@@ -36,12 +36,14 @@ Bring a document into the archive once, deduplicated by content.
 | `stages/02_ingest/split_live_file_copy_manifest.ps1` | deterministically partition one approved live-file copy manifest into non-overlapping shards that reconcile exactly to their authenticated parent |
 | `stages/02_ingest/new_residual_live_file_copy_manifest.ps1` | resume an interrupted parent manifest after an independently retired source by omitting only rows whose destination still matches the frozen whole-file hash |
 | `stages/02_ingest/new_filtered_live_file_copy_manifest.ps1` | derive an authenticated child manifest that excludes explicit installer, cache, path, extension, or size cohorts before transfer while accounting for every parent row |
+| `stages/02_ingest/new_live_file_copy_manifest_from_verified.ps1` | convert one expensive frozen folder-hash manifest into an authenticated live-copy manifest that can be split into exact parallel shards without redoing discovery |
 
 ## Tests
 - `tests/test_hash_plan.ps1`
 - `tests/test_verified_copy.ps1`
 - `tests/test_layout_copy_manifest.ps1`
 - `tests/test_filtered_copy_manifest.ps1`
+- `tests/test_verified_copy_sharding.ps1`
 - `tests/test_repository_snapshot.ps1`
 
 ## Lessons
@@ -57,3 +59,4 @@ Bring a document into the archive once, deduplicated by content.
 | 22 | system metadata is rejected at the copy boundary even when an earlier path rule classified it differently | `test:tests/test_layout_copy_manifest.ps1:system metadata must be excluded independently` |
 | 24 | every verified live-file destination appends a durable progress row | `test:tests/test_layout_copy_manifest.ps1:did not journal per-file progress` |
 | 25 | obvious installation media and cache cohorts are filtered before cross-volume transfer, not after | `test:tests/test_filtered_copy_manifest.ps1:explicit waste filters preserve useful copy rows and parent lineage` |
+| 27 | an expensive verified folder freeze becomes the parent of exact copy shards instead of forcing another serial discovery pass | `test:tests/test_verified_copy_sharding.ps1:a frozen verified folder copy converts into exact parallel live-copy shards` |

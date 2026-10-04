@@ -213,3 +213,10 @@ A copied destination can be correctly identified as generated waste and still
 be evidence required by a source-retirement gate. Moving that destination too
 early makes the retirement proof fail. Complete every receipt that authenticates
 the destination first, then quarantine the generated destination cohort.
+
+## 27. Shard after the expensive freeze, not before it
+
+A slow cloud folder may take hours to enumerate and hash. That completed freeze
+is valuable evidence and must not be discarded merely because a serial copy
+would also be slow. Convert the frozen rows into one authenticated live-copy
+manifest, partition it exactly, and let independent workers consume the shards.

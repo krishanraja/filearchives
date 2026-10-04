@@ -277,6 +277,7 @@
     {"id": "learning-23-retirement-source-root", "owner_stage": "structure", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]},
     {"id": "learning-24-live-copy-progress", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]},
     {"id": "learning-25-filter-waste-before-transfer", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_filtered_copy_manifest.ps1"]},
-    {"id": "learning-26-retirement-before-destination-cleanup", "owner_stage": "structure", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]}
+    {"id": "learning-26-retirement-before-destination-cleanup", "owner_stage": "structure", "enforced_by": ["tests/test_layout_copy_manifest.ps1"]},
+    {"id": "learning-27-shard-after-expensive-freeze", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_verified_copy_sharding.ps1"]}
   ]
 }

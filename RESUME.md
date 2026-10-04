@@ -14,6 +14,7 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_empty_directory_cleanup.ps1
 .\tests\test_extension_move.ps1
 .\tests\test_filtered_copy_manifest.ps1
+.\tests\test_verified_copy_sharding.ps1
 .\tests\test_atomic_tree_relocation.ps1
 .\tests\test_ingress_duplicate_quarantine.ps1
 .\tests\test_sensitive_name_quarantine.ps1
