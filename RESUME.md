@@ -2,10 +2,100 @@
 
 **The document engine. Start here.**
 
-```bash
-cd C:\Users\krish\dev\filearchives
-python tests/test_stage_contracts.py     # the conveyor is intact
+```powershell
+cd C:\Users\krish\dev\krishanraja\filearchives
+.\tests\test_powershell_guards.ps1
+.\tests\test_inventory_resume.ps1
+.\tests\test_hash_plan.ps1
+node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
+  --root . --manifest pipeline\stage-conveyor.json
 ```
+
+---
+
+## ACTIVE MISSION: whole-estate consolidation (2026-10-04)
+
+### Outcome
+
+- one canonical current-work tree in `H:\My Drive`
+- one canonical archive tree in `H:\My Drive`
+- one deterministic local repository policy for both local machines
+- a reusable engine that can survey, propose, verify and execute the same
+  cleanup safely on a future machine
+
+### Current truth
+
+- repository revision inspected: `dd5c9ecc4976ad378f4e4e2b3ffc27772ad3ccd5`
+- canonical local clone for this mission:
+  `C:\Users\krish\dev\krishanraja\filearchives`
+- `C:`, `E:`, `G:` and `H:` were inventoried. `L:` is the intermittently
+  connected share `\\LORIMER\C(LORIMER)` and is currently unreachable with no
+  Windows mapping; its eight roots are recorded as unavailable, never empty
+- `C:\Users\krish\dev\krishanraja\mm-ctrl` has substantial uncommitted work
+  and is protected as unique current work until an independent verified copy
+  exists
+- `C:\Users\krish\dev\filearchives` is a clean second clone at the same
+  revision; it is a candidate only, not approved for removal
+- this machine has PowerShell 7 but no `python`, `python3`, `py` or `uv`
+  command available
+- sealed run `estate-20261003-v1` contains 890,609 files, 99,554 directories
+  and 169,201,774,716 bytes across 12 available source roots
+- every present source passed structural verification; `c-documents` is
+  qualified by 14 terminal access errors, all in generated Codex dependency
+  trees
+- estate analysis and the target schema are documented in
+  `docs/estate-strategy-2026-10-04.md`
+- three-tier duplicate proof completed for readable candidates: 18,256 exact
+  groups, 81,482 files in those groups, 63,226 redundant copies and a 9.25 GB
+  theoretical maximum reclaim; 4,357 groups touch managed repos
+- content proof remains unavailable for 15,486 signature rows (all G/H
+  candidates, 1,025 OneDrive placeholders, seven source changes and seven
+  document read/missing errors) plus two actively edited filearchives files at
+  the whole-hash tier; all remain explicitly unproven
+
+### Locked constraints
+
+- do not enumerate, hash, compare, move, rename or delete anything inside a
+  configured `ContentLibrary` protected root
+- discovery is read-only
+- every move, dedupe and deletion is first emitted as a reviewable manifest
+- deletion always requires separate exact action-time approval
+- cloud and peer-machine sources may disappear; absence is never interpreted
+  as an empty tree
+- credentials are reported only by category and location, never read into
+  logs or copied into the archive without an approved secure destination
+
+### Authority
+
+- authorised now: repository implementation, tests, read-only filesystem
+  discovery and bounded content hashing outside protected roots
+- not authorised yet: file moves, renames, deletions, cloud reorganisation,
+  credential relocation or mirror replacement
+
+### Pass signals
+
+- a protected-root traversal attempt fails before enumeration
+- a disconnected source is recorded as unavailable and never as empty
+- every proposed mutation has source identity, destination, evidence,
+  collision handling, rollback and current-state revalidation
+- the final current-work and archive trees can be independently re-inventoried
+  with no unexplained loss, duplicate canonical identity or source residue
+
+### Current gate
+
+Present-source inventory, strategic classification and duplicate proof for
+readable files are complete. Remaining evidence gates are the disconnected L
+machine and cloud-provider content access for G, H and OneDrive placeholders.
+Provider failures are recorded as unproven. `H:\My Drive\ContentLibrary`
+remains completely excluded.
+
+### Next action
+
+Restore provider access and run the unproven retry queue; reconnect and inventory
+L when its SMB service is reachable. Then freeze the proposed H/G routing policy,
+build structure/survivor manifests and create a credential-aware independent
+preservation plan for the dirty `mm-ctrl` working tree. Do not move or delete
+from the current evidence report.
 
 ---
 
@@ -19,13 +109,14 @@ across every drive.
 Krish, 2026-09-20: *"sort all of my old non-content documents, dedupe them, and
 create the same folder structure in every drive that I have as fresh."*
 
-**Content stays in `contentarchives`. Documents live here.** If a file is a
-photograph or a video it belongs in the other engine, and the two must not
-fight over the same trees.
+`H:\My Drive\ContentLibrary` stays completely outside this engine. Useful
+photographs and videos discovered elsewhere are classified for
+`H:\My Drive\CONTENT-EXTRA`; the engines must never traverse the same protected
+tree.
 
 ---
 
-## RIGHT NOW: scaffolded, nothing ingested (2026-09-20)
+## RIGHT NOW: sealed inventory and duplicate proofing (2026-10-04)
 
 Built so far, carried from `contentarchives` because each piece was paid for
 there:
@@ -37,9 +128,10 @@ there:
 | `filearchives/safety.py` | the deletion allowlist; garbage is a CLOSED list |
 | `guards/guarded_delete.py` | the only sanctioned delete: proven survivor, different inode, re-hashed at the unlink, journalled first |
 | `guards/files.py` | atomic writes, absent-input stops, whole lines only |
-| `docs/LEARNINGS.md` | 14 rules, each owned by a stage or the build fails |
+| `docs/LEARNINGS.md` | 15 rules, each owned by a stage or the build fails |
 
-**Nothing has been scanned, ingested, deduped or deleted.**
+The available estate has been surveyed, inventoried and classified. No source
+file has been moved, renamed or deleted.
 
 ---
 
@@ -102,10 +194,10 @@ engine was wrong - often by a factor of ten, once by a factor of a hundred.
    size and tree. Write it down. Delete nothing, move nothing, decide nothing.
    Expect the answer to surprise you: the photograph library's "OneDrive holds
    140 GB" turned out to be 1.1 GB.
-2. **`04_inventory` - one row per file** with every signal: path, size, hash,
-   dates from three sources, extension, origin tree.
-3. **`02_ingest` - bring them in once**, content-deduplicated, hardlinked where
-   the volume allows so a second copy costs no bytes.
+2. **`04_inventory` - one metadata row per item** with path, size, dates,
+   extension, origin and classification hints; never claim identity here.
+3. **`02_ingest` - prove content identity**, using size, then an edge signature,
+   then a whole-file hash. Only after structure manifests exist may files move.
 4. **`03_dating`** - filename, then folder, then the document's own text.
 5. **`05_classify`** - what KIND: statement, contract, scan, receipt, export.
 6. **`06_index`** - full-text search over the documents themselves. Unlike
@@ -113,7 +205,8 @@ engine was wrong - often by a factor of ten, once by a factor of a hundred.
 7. **`07_structure`** - the canonical tree, and a REVIEWABLE PROPOSAL mapping
    files into it. Never an automatic move.
 8. **`08_reclaim`** - free the space. The only stage that destroys.
-9. **`09_mirror`** - the same structure, identically, on every drive.
+9. **`09_mirror`** - independently verify the external backup of the canonical
+   current/archive structure without turning every source drive into a peer.
 
 ---
 

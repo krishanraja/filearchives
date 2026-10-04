@@ -1,0 +1,168 @@
+# Decision log
+
+Append-only record of consequential decisions for the filearchives engine and
+the current consolidation. Operational progress stays in `RESUME.md`.
+
+## D-001: ContentLibrary is outside the session
+
+- Date: 2026-10-03
+- Status: locked
+- Decision: `ContentLibrary` is a hard exclusion boundary. The engine must not
+  enumerate, index, hash, compare, move, rename or delete content below a
+  configured protected root.
+- Reason: Krish explicitly excluded it from the entire session.
+- Revisit trigger: only a new explicit instruction from Krish naming the exact
+  root and newly authorised operation.
+
+## D-002: destructive work is manifest-gated
+
+- Date: 2026-10-03
+- Status: locked
+- Decision: discovery and proposals may run autonomously. Moves, dedupe actions
+  and deletions require a frozen manifest, current-state revalidation and exact
+  action-time approval. Deletion remains a separate approval even when a file
+  is proven byte-identical or appears to be generated garbage.
+- Reason: this estate contains irreplaceable personal records, active work and
+  intermittently available sources.
+- Revisit trigger: none for deletion. A future explicit decision may authorise
+  a named non-destructive move batch after its manifest is reviewed.
+
+## D-003: mm-ctrl is unique current work until independently preserved
+
+- Date: 2026-10-03
+- Status: locked
+- Decision: treat
+  `C:\Users\krish\dev\krishanraja\mm-ctrl` as protected unique work. Do not
+  clean, relocate or deduplicate it until a separate destination has been
+  verified from content and Git state.
+- Evidence: the working tree is on branch `codex/g20-context-exchange-proof`
+  at `1afe495208876b09f2f9e34dfa79ac20aaf3fbdc` with approximately 315
+  modified or untracked entries at discovery time.
+- Revisit trigger: a verified independent snapshot or committed and remotely
+  retrievable state that covers every intended working-tree item.
+
+## D-004: Windows-only runtime
+
+- Date: 2026-10-03
+- Status: locked
+- Decision: target Windows machines and use PowerShell 7 as the zero-install
+  runtime for new engine stages.
+- Reason: both machines are Windows, PowerShell 7 is available on the active
+  machine, and Python is not. Cross-platform machinery would add a dependency
+  without serving the current estate.
+- Revisit trigger: a real macOS or Linux operating requirement.
+
+## D-005: E ContentLibrary is in scope; H ContentLibrary is not
+
+- Date: 2026-10-03
+- Status: locked
+- Decision: `E:\ContentLibrary` may be inventoried and later considered in
+  reviewed cleanup manifests. `H:\My Drive\ContentLibrary` remains completely
+  excluded from enumeration, hashing, comparison and mutation.
+- Reason: Krish believes the E tree is empty or garbage and explicitly
+  authorised its inventory. The H tree was explicitly excluded from the full
+  session.
+- Revisit trigger: none for H without a new exact instruction from Krish.
+
+## D-006: classify before designing the destination structure
+
+- Date: 2026-10-03
+- Status: locked
+- Decision: inventory the full estate, assess content and age, and classify
+  each item before choosing the canonical current-work and archive schema.
+- Classes: important and recent; important and old; unimportant but worth
+  archiving; duplicate; delete completely.
+- Reason: a preselected folder tree would encode guesses about an estate that
+  has not yet been measured or understood.
+- Revisit trigger: completion of the evidence-backed inventory and
+  classification proposal.
+
+## D-007: useful discovered media routes to CONTENT-EXTRA
+
+- Date: 2026-10-03
+- Status: locked destination, pending classification and move manifest
+- Decision: worthwhile photographs and videos found outside the excluded H
+  ContentLibrary are destined for `H:\My Drive\CONTENT-EXTRA`. Screenshots,
+  memes, caches, duplicates and ambiguous media are classified before action.
+- Reason: Krish explicitly named the destination and excluded low-value media.
+- Revisit trigger: evidence that an item belongs to a current-work project or
+  another user-owned category where moving it would break that work.
+
+## D-008: autonomous analysis, manifest-gated mutation
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: run discovery, verification, classification and reversible engine
+  development without routine questions. Batch privilege requests where the
+  runtime requires them. Irreversible deletion remains governed by D-002.
+- Reason: Krish explicitly requested autonomous completion and fewer prompts.
+- Revisit trigger: an external access block or a material policy conflict that
+  cannot be resolved from existing evidence.
+
+## D-009: Git state outranks copied timestamps for source work
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: repository identity, dirty state, branch and remote coverage decide
+  source-work recency. Filesystem modified dates are supporting evidence only.
+- Reason: clones and restored directories make historical content look recent.
+- Revisit trigger: none.
+
+## D-010: proposed canonical roots
+
+- Date: 2026-10-04
+- Status: proposed until the first move manifest is frozen
+- Decision: use `H:\My Drive\CURRENT`, `H:\My Drive\ARCHIVE` and
+  `H:\My Drive\CONTENT-EXTRA`, while leaving the protected ContentLibrary
+  unchanged and retaining personal material under `G:\My Drive\Personal`.
+- Reason: this yields one business current tree, one business archive, a named
+  media intake and a clear privacy boundary.
+- Revisit trigger: move-manifest review or conflict with the active machine
+  routing policy.
+
+## D-011: generated does not mean immediately deletable
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: generated-tree evidence creates a cleanup candidate only. Deletion
+  still requires rebuild proof, an exact manifest and action-time validation.
+- Reason: generated directories can contain unique configuration or accidental
+  user work despite their conventional names.
+- Revisit trigger: none.
+
+## D-012: the engine is a sealed stage conveyor
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: each capability owns one bounded task and hands a sealed artifact
+  to the next stage. Survey, inventory, verification, classification, size
+  filtering, edge signatures, whole hashes, duplicate evidence, structure,
+  reclaim and destination QA remain separate concerns.
+- Reason: interruption, partial access or a defect in one stage must not make a
+  later stage guess or silently broaden its authority.
+- Revisit trigger: none; new capabilities join through an explicit stage or
+  declared extension of one existing owner.
+
+## D-013: recommend H CURRENT as business authority
+
+- Date: 2026-10-04
+- Status: proposed until routing policy is reconciled
+- Decision: recommend revising the machine routing rule for single-venture
+  deliverables from `G:\My Drive\Ventures\Active` to
+  `H:\My Drive\CURRENT\10_VENTURES`, making G personal-only and H the one
+  business-current authority requested for this consolidation.
+- Reason: two canonical current-work roots defeat the stated end state and make
+  autonomous routing ambiguous.
+- Revisit trigger: acceptance or rejection at the first structure manifest.
+
+## D-014: cloud metadata does not establish content identity
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: retain G, H and OneDrive rows in the inventory when metadata is
+  readable, but exclude provider-refused content from duplicate and uniqueness
+  conclusions. Carry those rows as a source-specific retry queue.
+- Evidence: this run inventoried the mounts but could not read content for all
+  8,176 G candidates, all 6,270 H candidates and 1,025 OneDrive placeholders.
+- Revisit trigger: provider access returns and the retry pass produces sealed
+  content evidence.

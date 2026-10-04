@@ -17,11 +17,14 @@ One row per document, carrying every signal about it.
 | file | role |
 |---|---|
 | `stages/04_inventory/build_inventory.py` | one row per file with every signal, written incrementally |
+| `stages/04_inventory/build_inventory.ps1` | Windows-first item inventory in immutable atomic segments; resumes by replaying committed segments and records media, generated-tree and sensitive-name hints without reading content |
+| `stages/04_inventory/verify_inventory.ps1` | independently verifies segment seals, unique and bounded paths, protected-root exclusion, and optionally reconciles every identity against the live source |
 
 ## Tests
-- none yet
+- `tests/test_inventory_resume.ps1`
 
 ## Lessons
 | # | what this stage does about it | enforced by |
 |---|---|---|
-| 9 | the inventory is built in resumable slices that flush as they go | prose-only |
+| 9 | immutable fsynced segments are the checkpoint; resume replays them without duplicate rows | `test:tests/test_inventory_resume.ps1:resume emits no duplicate item rows` |
+| 5 | completion is independently re-derived from sealed segments and, when requested, the live filesystem | `test:tests/test_inventory_resume.ps1:independent live verification passes` |

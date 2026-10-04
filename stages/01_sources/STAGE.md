@@ -18,13 +18,15 @@ Find every tree that holds documents, and record what was seen.
 | file | role |
 |---|---|
 | `stages/01_sources/survey_roots.py` | walk a tree and count documents by extension, size band and folder - metadata only, so a cloud placeholder is measured without being downloaded |
+| `stages/01_sources/survey_roots.ps1` | Windows-first survey of all file types, directories and empty folders; refuses protected roots before traversal and records unavailable peers distinctly from empty trees |
+| `guards/workspace.ps1` | schema-v2 workspace validation, canonical path boundaries and protected-root enforcement |
 | `chains/chain_survey.ps1` | the survey, supervised and resumable: proves at least one source is mounted before walking terabytes, re-derives the newest row against the disk at every checkpoint, and refuses to call a run that wrote nothing a success |
 
 ## Tests
-- none yet - the first tool written here must arrive with one
+- `tests/test_powershell_guards.ps1`
 
 ## Lessons
 | # | what this stage does about it | enforced by |
 |---|---|---|
-| 7 | an absent root stops the survey rather than reporting zero | prose-only |
+| 7 | an absent root is recorded as unavailable with null counts, never zero | `test:tests/test_powershell_guards.ps1:missing source is not reported as zero files` |
 | 11 | a survey reports what is THERE, and narrowing to what MATTERS is a separate, arguable step | prose-only |

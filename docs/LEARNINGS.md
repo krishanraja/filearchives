@@ -122,3 +122,20 @@ because the rules lived in a document and reached new machinery only through
 whoever remembered them. A learning here is claimed by a stage, and the claim
 names the function or test that enforces it. A claim whose enforcement has been
 deleted fails the build.
+
+## 15. Identity metadata must survive serialization exactly
+
+PowerShell helpfully converts ISO timestamps in JSON back into `DateTime`
+objects. Casting those objects to strings uses the machine's display culture
+and can silently discard sub-second precision. An unchanged file then appears
+stale, and a resumable content pass can misclassify every row without failing.
+Identity fields cross stage boundaries as round-trip strings; comparisons use
+UTC ticks, and a regression fixture includes real sub-second timestamps.
+
+## 16. Metadata-visible is not content-readable
+
+Cloud mounts can enumerate names, sizes and timestamps while refusing every
+content read because the provider or account is unavailable. That is a valid
+metadata inventory and an incomplete identity proof. Provider failures remain
+an explicit per-source retry queue; they are never re-labelled unique, absent,
+empty or disposable.

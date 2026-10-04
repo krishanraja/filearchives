@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "pipeline_id": "filearchives-estate-consolidation",
+  "inventory": {
+    "roots": ["."],
+    "extensions": [".ps1", ".py"],
+    "exclude": [".git/**", "**/__pycache__/**", "**/.venv/**"]
+  },
+  "external_inputs": [
+    "workspace-config",
+    "source-filesystems",
+    "user-policy",
+    "repository-filesystems",
+    "owned-learnings"
+  ],
+  "terminal_outputs": ["estate-strategy", "deletion-journal", "qa-receipt"],
+  "stages": [
+    {
+      "id": "source-survey",
+      "owner": "source discovery",
+      "owned_paths": ["stages/01_sources/*.ps1", "stages/01_sources/*.py", "chains/chain_survey.ps1"],
+      "inputs": ["workspace-config", "source-filesystems"],
+      "outputs": ["source-survey"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
+      "side_effects": ["writes audit metadata only"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "per-source survey record and heartbeat",
+        "recovery_entrypoint": "source-survey-recovery"
+      },
+      "completion": {
+        "source": "authoritative_output",
+        "evidence": "source survey JSONL distinguishes complete, partial and unavailable roots"
+      }
+    },
+    {
+      "id": "inventory",
+      "owner": "item inventory and verification",
+      "owned_paths": ["stages/04_inventory/*.ps1"],
+      "inputs": ["workspace-config", "source-filesystems", "source-survey"],
+      "outputs": ["inventory-segments", "inventory-verification"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
+      "side_effects": ["writes immutable audit segments and verification receipts"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "immutable source-specific inventory segments",
+        "recovery_entrypoint": "inventory-recovery"
+      },
+      "completion": {
+        "source": "independent_rederivation",
+        "evidence": "sealed segments, unique bounded paths and optional live reconciliation receipt"
+      }
+    },
+    {
+      "id": "classification",
+      "owner": "estate and repository analysis",
+      "owned_paths": ["stages/05_classify/*.ps1"],
+      "inputs": ["inventory-segments", "inventory-verification", "repository-filesystems"],
+      "outputs": ["estate-analysis", "estate-strategy"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
+      "side_effects": ["writes analysis artifacts only"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "atomic analysis JSON and repository analysis JSON",
+        "recovery_entrypoint": "classification-recovery"
+      },
+      "completion": {
+        "source": "authoritative_output",
+        "evidence": "analysis JSON reconciles to verified inventory totals and records missing sources"
+      }
+    },
+    {
+      "id": "duplicate-analysis",
+      "owner": "content identity",
+      "owned_paths": ["filearchives/dedupe.py", "stages/02_ingest/*.ps1"],
+      "inputs": ["inventory-segments", "source-filesystems"],
+      "outputs": ["duplicate-evidence"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
+      "side_effects": ["reads candidate file content for signatures and whole-file hashes"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "content hash index",
+        "recovery_entrypoint": "duplicate-analysis-recovery"
+      },
+      "completion": {
+        "source": "authoritative_output",
+        "evidence": "whole-file content hashes for every claimed duplicate group"
+      }
+    },
+    {
+      "id": "reclaim",
+      "owner": "destructive execution",
+      "owned_paths": ["guards/guarded_delete.py", "filearchives/safety.py"],
+      "inputs": ["duplicate-evidence", "source-filesystems", "user-policy"],
+      "outputs": ["deletion-journal"],
+      "consumed_guards": [],
+      "side_effects": ["may delete exact manifest targets after action-time validation"],
+      "retry": {
+        "mode": "at_most_once",
+        "total_attempt_cap": 1,
+        "checkpoint": "fsynced pre-deletion journal",
+        "recovery_entrypoint": "reclaim-recovery"
+      },
+      "completion": {
+        "source": "destination_readback",
+        "evidence": "survivor rehash, different file identity and fsynced deletion journal"
+      }
+    },
+    {
+      "id": "orchestration",
+      "owner": "run control",
+      "owned_paths": ["guards/arm.ps1", "guards/steps.ps1", "stagepath.py", "tools/scaffold_stages.py"],
+      "inputs": ["workspace-config", "user-policy"],
+      "outputs": ["run-control"],
+      "consumed_guards": ["atomic-artifacts"],
+      "side_effects": ["registers bounded scheduled work and writes run state"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "scheduled-task and chain state",
+        "recovery_entrypoint": "orchestration-recovery"
+      },
+      "completion": {
+        "source": "destination_readback",
+        "evidence": "task state and stage postconditions are read back independently"
+      }
+    },
+    {
+      "id": "quality",
+      "owner": "regression and topology proof",
+      "owned_paths": ["tests/*.ps1", "tests/*.py"],
+      "inputs": [
+        "owned-learnings",
+        "source-survey",
+        "inventory-segments",
+        "inventory-verification",
+        "estate-analysis",
+        "duplicate-evidence",
+        "run-control"
+      ],
+      "outputs": ["qa-receipt"],
+      "consumed_guards": [],
+      "side_effects": ["creates and removes bounded test fixtures under scratch"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "test result receipt",
+        "recovery_entrypoint": "quality-recovery"
+      },
+      "completion": {
+        "source": "independent_rederivation",
+        "evidence": "focused tests and stage conveyor checker both pass"
+      }
+    }
+  ],
+  "edges": [
+    {"from": "source-survey", "to": "inventory", "artifact": "source-survey"},
+    {"from": "source-survey", "to": "quality", "artifact": "source-survey"},
+    {"from": "inventory", "to": "classification", "artifact": "inventory-segments"},
+    {"from": "inventory", "to": "classification", "artifact": "inventory-verification"},
+    {"from": "inventory", "to": "duplicate-analysis", "artifact": "inventory-segments"},
+    {"from": "inventory", "to": "quality", "artifact": "inventory-segments"},
+    {"from": "inventory", "to": "quality", "artifact": "inventory-verification"},
+    {"from": "classification", "to": "quality", "artifact": "estate-analysis"},
+    {"from": "duplicate-analysis", "to": "reclaim", "artifact": "duplicate-evidence"},
+    {"from": "duplicate-analysis", "to": "quality", "artifact": "duplicate-evidence"},
+    {"from": "orchestration", "to": "quality", "artifact": "run-control"}
+  ],
+  "guards": [
+    {
+      "id": "workspace-safety",
+      "owner": "path and protected-root boundary",
+      "owned_paths": ["guards/workspace.ps1", "guards/paths.py"],
+      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis"],
+      "enforced_by": ["tests/test_powershell_guards.ps1"]
+    },
+    {
+      "id": "atomic-artifacts",
+      "owner": "durable artifact writes",
+      "owned_paths": ["guards/atomic.ps1", "guards/files.py"],
+      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "orchestration"],
+      "enforced_by": ["tests/test_inventory_resume.ps1"]
+    }
+  ],
+  "entrypoints": [
+    {"id": "source-survey-primary", "stage": "source-survey", "path": "stages/01_sources/survey_roots.ps1", "kind": "primary"},
+    {"id": "source-survey-recovery", "stage": "source-survey", "path": "stages/01_sources/survey_roots.ps1", "kind": "recovery"},
+    {"id": "inventory-primary", "stage": "inventory", "path": "stages/04_inventory/build_inventory.ps1", "kind": "primary"},
+    {"id": "inventory-recovery", "stage": "inventory", "path": "stages/04_inventory/build_inventory.ps1", "kind": "recovery"},
+    {"id": "classification-primary", "stage": "classification", "path": "stages/05_classify/analyze_inventory.ps1", "kind": "primary"},
+    {"id": "classification-recovery", "stage": "classification", "path": "stages/05_classify/analyze_inventory.ps1", "kind": "recovery"},
+    {"id": "duplicate-analysis-primary", "stage": "duplicate-analysis", "path": "filearchives/dedupe.py", "kind": "primary"},
+    {"id": "duplicate-analysis-recovery", "stage": "duplicate-analysis", "path": "filearchives/dedupe.py", "kind": "recovery"},
+    {"id": "reclaim-primary", "stage": "reclaim", "path": "guards/guarded_delete.py", "kind": "primary"},
+    {"id": "reclaim-recovery", "stage": "reclaim", "path": "guards/guarded_delete.py", "kind": "recovery"},
+    {"id": "orchestration-primary", "stage": "orchestration", "path": "guards/arm.ps1", "kind": "primary"},
+    {"id": "orchestration-recovery", "stage": "orchestration", "path": "guards/arm.ps1", "kind": "recovery"},
+    {"id": "quality-primary", "stage": "quality", "path": "tests/test_powershell_guards.ps1", "kind": "primary"},
+    {"id": "quality-recovery", "stage": "quality", "path": "tests/test_inventory_resume.ps1", "kind": "recovery"}
+  ],
+  "learnings": [
+    {"id": "learning-01-path-not-deletion", "owner_stage": "reclaim", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-02-hash-proves-duplicate", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-03-name-size-not-identity", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-04-distinct-file-identity", "owner_stage": "reclaim", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-05-revalidate-at-action", "owner_stage": "reclaim", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-06-journal-before-delete", "owner_stage": "reclaim", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-07-absent-is-not-empty", "owner_stage": "source-survey", "enforced_by": ["tests/test_powershell_guards.ps1"]},
+    {"id": "learning-08-unreadable-is-unproven", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-09-resumable-long-work", "owner_stage": "inventory", "enforced_by": ["tests/test_inventory_resume.ps1"]},
+    {"id": "learning-10-summary-action-same-set", "owner_stage": "quality", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-11-unique-does-not-mean-important", "owner_stage": "classification", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-12-version-is-not-duplicate", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-13-folder-date-fallback", "owner_stage": "classification", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-14-learning-needs-owner", "owner_stage": "quality", "enforced_by": ["tests/test_stage_contracts.py"]},
+    {"id": "learning-15-identity-metadata-round-trips", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_hash_plan.ps1"]},
+    {"id": "learning-16-metadata-is-not-content", "owner_stage": "duplicate-analysis", "enforced_by": ["stages/02_ingest/analyze_duplicate_groups.ps1"]}
+  ]
+}

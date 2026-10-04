@@ -1,4 +1,5 @@
 {
+  "schema_version": 2,
   "_comment": [
     "Copy this to %USERPROFILE%\\.filearchives\\workspace.json and edit it,",
     "or point FILEARCHIVES_WORKSPACE at a copy for a one-off run against",
@@ -8,26 +9,50 @@
     "instructions rather than inventing D:\\ and writing records somewhere",
     "nobody will think to look.",
     "",
-    "archive  - where the curated document archive lives on THIS machine",
+    "current  - optional canonical current-work destination",
+    "archive  - optional canonical archive destination",
     "audit    - where the engine writes its own records and journals",
-    "staging  - optional; defaults to <audit>\\_staging",
-    "sources  - read-only trees to survey and ingest FROM. May include drives",
+    "sources  - read-only trees to survey and ingest FROM. May include peers",
     "           that are not always mounted: an absent source is reported and",
     "           skipped, never silently treated as empty.",
-    "targets  - where mirrors of the archive go. Same rule."
+    "protected_roots - exact trees the engine must never enter",
+    "protected_names - optional path-segment names to exclude everywhere"
   ],
 
-  "archive": "D:\\DocumentArchive",
-  "audit": "D:\\_FileAudit",
-  "staging": "D:\\_FileAudit\\_staging",
+  "audit": "C:\\Users\\<you>\\.scratch\\filearchives-audit",
+  "current": "H:\\My Drive\\Current",
+  "archive": "H:\\My Drive\\Archive",
 
   "sources": [
-    "E:\\",
-    "G:\\My Drive",
-    "C:\\Users\\<you>\\OneDrive"
+    {
+      "id": "external-e",
+      "path": "E:\\",
+      "kind": "external",
+      "follow_reparse_points": false
+    },
+    {
+      "id": "google-personal",
+      "path": "G:\\My Drive",
+      "kind": "cloud",
+      "follow_reparse_points": false
+    },
+    {
+      "id": "onedrive",
+      "path": "C:\\Users\\<you>\\OneDrive",
+      "kind": "cloud",
+      "follow_reparse_points": true
+    },
+    {
+      "id": "peer-dev",
+      "path": "L:\\Users\\<you>\\dev",
+      "kind": "peer",
+      "follow_reparse_points": false
+    }
   ],
 
-  "targets": [
-    "H:\\My Drive\\DocumentArchive"
-  ]
+  "protected_roots": [
+    "H:\\My Drive\\ContentLibrary"
+  ],
+
+  "protected_names": []
 }

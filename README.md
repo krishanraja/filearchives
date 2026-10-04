@@ -21,9 +21,11 @@ create the same folder structure in every drive that I have as fresh."*
 Three jobs, in this order, because each depends on the one before it:
 
 1. **Find every document** across every drive, and know what is a copy of what.
-2. **Dedupe by content**, never by name, keeping one canonical copy.
-3. **Impose one folder structure**, identically, on every drive - so that the
-   same path means the same thing everywhere.
+2. **Classify and dedupe by content**, never by name, while preserving versions
+   and recording anything that cannot be proven.
+3. **Consolidate into one current-work authority and one archive**, with one
+   machine-local repo convention that remains usable while another machine or
+   the network is offline.
 
 ---
 
@@ -61,6 +63,27 @@ below exist because of them:
 Same shape as `contentarchives`: each stage owns its inputs, outputs,
 invariants, code, tests and the lessons it enforces, in its own `STAGE.md`.
 
+The executable estate flow is deliberately narrower than the numbered folder
+names inherited from the original scaffold:
+
+```text
+source survey
+  -> immutable inventory + independent verification
+  -> estate/repository classification
+  -> same-size shortlist
+  -> head+tail signature shortlist
+  -> whole-file SHA-256 proof
+  -> exact-duplicate evidence
+  -> survivor + structure manifests
+  -> copy/verify/retire
+  -> destination re-inventory
+```
+
+Every arrow is a sealed artifact boundary. A failed or interrupted stage
+resumes from committed segments; it does not make the following stage guess.
+Filesystem mutation is downstream of analysis and requires a frozen manifest,
+action-time revalidation and a durable journal.
+
 | Stage | Does |
 |---|---|
 | `01_sources` | Find the drives and trees that hold documents; record what was seen, never act on it |
@@ -80,6 +103,13 @@ the verifier contract.
 
 ## Status
 
-**Scaffolded 2026-09-20. Nothing has been ingested yet.**
+**Active estate analysis, 2026-10-04. No source mutation has occurred.**
+
+The sealed `estate-20261003-v1` run inventories 890,609 files (169.20 GB)
+across every currently available configured root. `H:\My Drive\ContentLibrary`
+is an absolute exclusion and has not been traversed. The L machine is recorded
+as unavailable, never as empty. Duplicate proofing is in progress through the
+three content-identity tiers above. The current evidence-backed structure
+recommendation is in `docs/estate-strategy-2026-10-04.md`.
 
 Start at `RESUME.md`.
