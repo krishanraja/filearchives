@@ -55,6 +55,10 @@ foreach ($file in @(Get-ChildItem -LiteralPath $evidence -Recurse -Filter '*.jso
         $rows = @($document.Moves | Where-Object { $_.Sha256 } | ForEach-Object {
             [pscustomobject]@{ Path=[string]$_.Destination; Length=[long]$_.Length; Sha256=[string]$_.Sha256 }
         })
+    } elseif ($document.Kind -eq 'streaming-folder-copy-receipt-v1' -and $document.Status -eq 'complete') {
+        $rows = @($document.Files | Where-Object { $_.Sha256 } | ForEach-Object {
+            [pscustomobject]@{ Path=[string]$_.Destination; Length=[long]$_.Length; Sha256=[string]$_.Sha256 }
+        })
     }
     foreach ($row in $rows) {
         if (-not $row.Sha256) { continue }
