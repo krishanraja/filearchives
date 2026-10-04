@@ -220,3 +220,12 @@ A slow cloud folder may take hours to enumerate and hash. That completed freeze
 is valuable evidence and must not be discarded merely because a serial copy
 would also be slow. Convert the frozen rows into one authenticated live-copy
 manifest, partition it exactly, and let independent workers consume the shards.
+
+## 28. Hash cold cloud content while transferring it
+
+Pre-hashing an entire cold cloud tree before copying can spend hours reading
+remote bytes without producing a single destination or durable per-file
+checkpoint. Freeze path, length and timestamp first; balance rows by bytes; then
+hash each source stream as it is copied. A whole-file hash readback from the
+destination volume must match before the temporary file is renamed, and the
+source remains intact until every shard has a complete receipt.
