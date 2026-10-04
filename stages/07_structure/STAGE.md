@@ -29,7 +29,7 @@ The canonical folder tree, and the proposal that maps files into it.
 | `stages/07_structure/invoke_verified_folder_move.ps1` | revalidate, move and independently read back one approved folder move |
 | `stages/07_structure/new_live_file_move_manifest.ps1` | classify only direct loose files, freeze an injective same-volume destination map and skip every low-confidence or cross-volume row |
 | `stages/07_structure/invoke_live_file_move_manifest.ps1` | revalidate and read back each exact loose-file move, using content hashes whenever the provider permits |
-| `stages/07_structure/new_extension_move_manifest.ps1` | freeze recursive same-volume media routing by explicit extension with one content hash per item |
+| `stages/07_structure/new_extension_move_manifest.ps1` | freeze recursive same-volume routing by explicit extension, with content hashes by default or explicit metadata-only relocation for provider-managed same-volume renames |
 | `stages/07_structure/new_copy_retirement_manifest.ps1` | turn only a complete copy receipt into a separate pre-backup source-quarantine move manifest while preserving source-relative paths |
 | `stages/07_structure/new_explicit_file_move_manifest.ps1` | freeze reviewed one-to-one file routing, including ownership-bound cloud-native metadata moves |
 | `stages/07_structure/new_root_quarantine_manifest.ps1` | freeze recoverable routing of remaining loose root items after valuable cohorts have moved |

@@ -6,6 +6,7 @@ param(
     [Parameter(Mandatory)][string] $ManifestPath,
     [Parameter(Mandatory)][string] $ApprovalReason,
     [string] $Category = 'extension-routed',
+    [switch] $MetadataOnly,
     [string] $ConfigPath
 )
 
@@ -37,14 +38,14 @@ foreach ($file in @(Get-ChildItem -LiteralPath $sourceBase -Recurse -Force -File
     if ((Test-Path -LiteralPath $destination) -or -not $reserved.Add($destination)) {
         throw "extension move destination collision: $destination"
     }
-    $hash = Get-FaSha256 -Path $file.FullName
+    $hash = if ($MetadataOnly) { $null } else { Get-FaSha256 -Path $file.FullName }
     $moves.Add([pscustomobject]@{
         Source = ConvertTo-FaCanonicalPath $file.FullName
         Destination = $destination
         Length = [long]$file.Length
         LastWriteTimeUtc = ([DateTimeOffset]$file.LastWriteTimeUtc).ToString('o')
         Sha256 = $hash
-        VerificationMode = 'sha256-and-metadata'
+        VerificationMode = if ($MetadataOnly) { 'metadata-only-same-volume-relocation' } else { 'sha256-and-metadata' }
         Category = $Category
         Disposition = 'move'
         RuleId = 'extension-routing'
@@ -64,4 +65,3 @@ $manifest = [ordered]@{
 }
 Write-FaAtomicJson -Path $ManifestPath -Value $manifest -Depth 16
 Write-Host ("extension move manifest: moves={0} path={1}" -f $moves.Count, $ManifestPath)
-
