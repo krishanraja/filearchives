@@ -40,6 +40,7 @@ Bring a document into the archive once, deduplicated by content.
 | `stages/02_ingest/new_streaming_folder_copy_manifest.ps1` | freeze recursive source and destination metadata without forcing a serial cloud-content pre-read |
 | `stages/02_ingest/split_streaming_folder_copy_manifest.ps1` | deterministically balance frozen streaming rows by bytes across exact non-overlapping shards |
 | `stages/02_ingest/invoke_streaming_folder_copy_manifest.ps1` | hash source bytes while streaming once, require destination-volume whole-file hash readback, journal each file, and retain the source |
+| `stages/02_ingest/test_copy_shard_set.ps1` | authenticate every shard and receipt, then prove the rows reconcile exactly and uniquely to their approved parent before source retirement |
 
 ## Tests
 - `tests/test_hash_plan.ps1`
@@ -64,4 +65,4 @@ Bring a document into the archive once, deduplicated by content.
 | 24 | every verified live-file destination appends a durable progress row | `test:tests/test_layout_copy_manifest.ps1:did not journal per-file progress` |
 | 25 | obvious installation media and cache cohorts are filtered before cross-volume transfer, not after | `test:tests/test_filtered_copy_manifest.ps1:explicit waste filters preserve useful copy rows and parent lineage` |
 | 27 | an expensive verified folder freeze becomes the parent of exact copy shards instead of forcing another serial discovery pass | `test:tests/test_verified_copy_sharding.ps1:a frozen verified folder copy converts into exact parallel live-copy shards` |
-| 28 | cold cloud sources are not serially pre-read before copying; bytes are hashed during transfer and shards are balanced by bytes | `test:tests/test_streaming_folder_copy.ps1:streaming folder copy shards are exact, balanced, source-retaining, and hash-readback verified` |
+| 28 | cold cloud sources are not serially pre-read before copying; bytes are hashed during transfer and shards are balanced by bytes | `test:tests/test_streaming_folder_copy.ps1:streaming folder copy shards and their receipts reconcile exactly with hash readback` |

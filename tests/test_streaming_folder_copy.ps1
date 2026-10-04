@@ -32,8 +32,16 @@ try {
     $shards = @(Get-ChildItem -LiteralPath $shardRoot -Filter '*.manifest.json'|Sort-Object Name)
     if ($shards.Count -ne 2) { throw 'expected exactly two streaming shards' }
     foreach ($shard in $shards) {
+        $receiptPath = $shard.FullName -replace '\.manifest\.json$','.receipt.json'
         & (Join-Path $repo 'stages\02_ingest\invoke_streaming_folder_copy_manifest.ps1') `
-            -ManifestPath $shard.FullName -ReceiptPath ($shard.FullName + '.receipt.json') -Execute -ConfigPath $config
+            -ManifestPath $shard.FullName -ReceiptPath $receiptPath -Execute -ConfigPath $config
+    }
+    $setReport = Join-Path $audit 'shard-set.report.json'
+    & (Join-Path $repo 'stages\02_ingest\test_copy_shard_set.ps1') `
+        -ParentManifestPath $parent -ShardRoot $shardRoot -ReportPath $setReport -ConfigPath $config
+    $set = Get-Content -LiteralPath $setReport -Raw|ConvertFrom-Json
+    if ($set.Status -ne 'complete' -or $set.FileCount -ne 2 -or $set.ShardCount -ne 2) {
+        throw 'streaming copy shard-set verification failed'
     }
     foreach ($relative in @('one.txt','nested\two.txt')) {
         $sourceHash = (Get-FileHash -LiteralPath (Join-Path $source $relative) -Algorithm SHA256).Hash
@@ -44,7 +52,7 @@ try {
         (Test-Path -LiteralPath (Join-Path $destination 'desktop.ini'))) {
         throw 'streaming copy source retention or explicit skip failed'
     }
-    Write-Host 'PASS: streaming folder copy shards are exact, balanced, source-retaining, and hash-readback verified'
+    Write-Host 'PASS: streaming folder copy shards and their receipts reconcile exactly with hash readback'
 } finally {
     if (Test-Path -LiteralPath $scratch) { Remove-Item -LiteralPath $scratch -Recurse -Force }
 }
