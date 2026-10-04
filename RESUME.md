@@ -7,6 +7,9 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_powershell_guards.ps1
 .\tests\test_inventory_resume.ps1
 .\tests\test_hash_plan.ps1
+.\tests\test_layout_classifier.ps1
+.\tests\test_verified_copy.ps1
+.\tests\test_repository_snapshot.ps1
 node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
   --root . --manifest pipeline\stage-conveyor.json
 ```
@@ -29,15 +32,15 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 - canonical local clone for this mission:
   `C:\Users\krish\dev\krishanraja\filearchives`
 - `C:`, `E:`, `G:` and `H:` were inventoried. `L:` is the intermittently
-  connected share `\\LORIMER\C(LORIMER)` and is currently unreachable with no
-  Windows mapping; its eight roots are recorded as unavailable, never empty
+  connected share `\\LORIMER\C(LORIMER)` and is reachable in the current pass;
+  its eight roots are being added resumably to the sealed run
 - `C:\Users\krish\dev\krishanraja\mm-ctrl` has substantial uncommitted work
   and is protected as unique current work until an independent verified copy
   exists
 - `C:\Users\krish\dev\filearchives` is a clean second clone at the same
   revision; it is a candidate only, not approved for removal
-- this machine has PowerShell 7 but no `python`, `python3`, `py` or `uv`
-  command available
+- PowerShell 7 is the zero-install runtime; Python 3.12 is currently available
+  for the inherited topology test but is not required by new estate stages
 - sealed run `estate-20261003-v1` contains 890,609 files, 99,554 directories
   and 169,201,774,716 bytes across 12 available source roots
 - every present source passed structural verification; `c-documents` is
@@ -45,6 +48,18 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
   trees
 - estate analysis and the target schema are documented in
   `docs/estate-strategy-2026-10-04.md`
+- Krish accepted every recommended policy default. The executable policy is
+  `policy/estate-policy-v1.json`; Labs is not active, historical Mindmaker is
+  Mind/make, and Mindmake-OS/mm-ctrl/control-center is mindmakeOS
+- the canonical H/G shallow folder skeleton exists and has a readback receipt
+- Maa and Loz are under H `FAMILY-ADMIN`, `Lozatron Briefings` is inside Loz,
+  and G Personal holds stable pointers so Google ownership and IDs are retained
+- the first 18 high-confidence H folders have moved through sealed manifests;
+  105 identity, finance, property, medical and education files were copied to
+  G with SHA-256 verification and their H sources moved to pre-backup quarantine
+- L contains eight dirty repositories. Every one is a preservation target on C
+  before L cleanup; snapshot receipts preserve actual worktree content, index
+  and HEAD without assuming L remains connected
 - three-tier duplicate proof completed for readable candidates: 18,256 exact
   groups, 81,482 files in those groups, 63,226 redundant copies and a 9.25 GB
   theoretical maximum reclaim; 4,357 groups touch managed repos
@@ -57,9 +72,9 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 
 - do not enumerate, hash, compare, move, rename or delete anything inside a
   configured `ContentLibrary` protected root
-- discovery is read-only
 - every move, dedupe and deletion is first emitted as a reviewable manifest
-- deletion always requires separate exact action-time approval
+- permanent deletion is disabled until a verified external backup exists and
+  the accepted 30-day quarantine has expired
 - cloud and peer-machine sources may disappear; absence is never interpreted
   as an empty tree
 - credentials are reported only by category and location, never read into
@@ -67,10 +82,12 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 
 ### Authority
 
-- authorised now: repository implementation, tests, read-only filesystem
-  discovery and bounded content hashing outside protected roots
-- not authorised yet: file moves, renames, deletions, cloud reorganisation,
-  credential relocation or mirror replacement
+- authorised now: autonomous analysis, accepted high-confidence H/G filing,
+  source-preserving verified copies, same-account Google metadata moves,
+  pre-backup quarantine, repository preservation and engine development
+- not authorised by the accepted policy: permanent purge before backup,
+  credential-content reads, deleting unproven files, or touching H
+  `ContentLibrary`
 
 ### Pass signals
 
@@ -83,19 +100,19 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 
 ### Current gate
 
-Present-source inventory, strategic classification and duplicate proof for
-readable files are complete. Remaining evidence gates are the disconnected L
-machine and cloud-provider content access for G, H and OneDrive placeholders.
-Provider failures are recorded as unproven. `H:\My Drive\ContentLibrary`
-remains completely excluded.
+Present-source inventory, accepted classification policy and duplicate proof
+for readable files are complete. L is reachable and its resumable inventory is
+in progress. Cloud-native and provider-unreadable rows remain unproven, while
+provider-readable cross-volume copies are verified individually. H
+`ContentLibrary` remains completely excluded.
 
 ### Next action
 
-Restore provider access and run the unproven retry queue; reconnect and inventory
-L when its SMB service is reachable. Then freeze the proposed H/G routing policy,
-build structure/survivor manifests and create a credential-aware independent
-preservation plan for the dirty `mm-ctrl` working tree. Do not move or delete
-from the current evidence report.
+Finish L inventory and all eight dirty-repository C snapshots; complete the
+current verified music/media and loose-H batches; migrate valuable OneDrive and
+E/G/C cohorts through copy/readback manifests; re-inventory the live end state;
+then emit the external-backup handoff. Keep all retired sources in
+`99_DELETE-QUARANTINE` until backup plus 30 days.
 
 ---
 
@@ -130,8 +147,8 @@ there:
 | `guards/files.py` | atomic writes, absent-input stops, whole lines only |
 | `docs/LEARNINGS.md` | 15 rules, each owned by a stage or the build fails |
 
-The available estate has been surveyed, inventoried and classified. No source
-file has been moved, renamed or deleted.
+The available estate has been surveyed, inventoried and classified. Verified
+filing is active; no permanent deletion has occurred.
 
 ---
 

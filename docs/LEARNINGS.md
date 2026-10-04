@@ -139,3 +139,41 @@ content read because the provider or account is unavailable. That is a valid
 metadata inventory and an incomplete identity proof. Provider failures remain
 an explicit per-source retry queue; they are never re-labelled unique, absent,
 empty or disposable.
+
+## 17. Age controls visibility, not value or deletion
+
+Thirty-one days is a useful boundary for an uncluttered CURRENT view. It is not
+evidence that a file has ceased to matter. Identity, visa, medical, financial,
+property, completed forms, canonical systems, theory and corpuses remain
+evergreen; ordinary older deliverables route to archive; deletion needs a
+separate reason and proof.
+
+## 18. Preserve is a positive disposition, not merely the absence of delete
+
+Named families, critical dirty work and ownership-bound cloud folders need an
+explicit `preserve-in-place` result. A fall-through rule that happens not to
+delete them today is not a safety property and will fail when policy evolves.
+
+## 19. Similar-looking AI documents are a family, not proven duplicates
+
+Repeated agent instructions and business plans can be mostly redundant while
+still differing byte-for-byte. The latest useful representative is archived,
+but older members do not become deletion targets until semantic family proof
+selects that representative and excludes contracts, forms, human theory and
+canonical systems.
+
+## 20. A quarantine preserves source-relative paths
+
+Large folders routinely contain many unrelated files with the same leaf name:
+`config.xml`, `index.json`, `desktop.ini`. Flattening retired sources into one
+quarantine directory both creates collisions and destroys provenance. A
+verified folder retirement therefore recreates the path relative to the sealed
+source root; a hash suffix is only a final collision escape hatch.
+
+## 21. Cloud visibility is eventually consistent after a write
+
+Google Drive and OneDrive may accept a copy or move before the destination can
+be opened again through the mounted filesystem. A single immediate readback
+turns a successful mutation into a false failure and tempts an unsafe retry.
+Executors retry bounded destination reads, recognize already-verified outputs
+and recover their own `.fa-copying` files without replacing content.

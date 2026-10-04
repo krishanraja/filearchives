@@ -166,3 +166,55 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   8,176 G candidates, all 6,270 H candidates and 1,025 OneDrive placeholders.
 - Revisit trigger: provider access returns and the retry pass produces sealed
   content evidence.
+
+## D-015: accepted shallow information architecture
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: H is the business-current and business-archive authority; G
+  `Personal` is the private-record authority. Both use a single shallow
+  category layer. Current business categories are Mind/make, mindmakeOS,
+  Fractionl, Full-time, Legibility, makeyourmindup, DoThinkDo, business theory
+  and corpuses, Cold Ideas and Inspo, and business administration. Labs is not
+  active and receives no current-work folder.
+- Reason: Krish accepted every recommended default, marked Labs unimportant,
+  and confirmed that historical Mindmaker names normalize to Mind/make while
+  Mindmake-OS/mm-ctrl/control-center normalize to mindmakeOS.
+- Revisit trigger: an explicit change to a venture or customer lifecycle.
+
+## D-016: 31 days controls line of sight, not preservation
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: ordinary venture deliverables older than 31 days route out of
+  CURRENT. Identity, immigration, finance, medical, property, completed forms,
+  life admin, canonical systems, business theory, corpuses, critical source
+  work and active-customer material are evergreen. Age alone never authorises
+  deletion.
+- Reason: Krish wants a two-second current view without losing scarce records
+  or foundational theory.
+- Revisit trigger: explicit retention-policy change.
+
+## D-017: permanent deletion waits for verified external backup
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: before the consolidated estate has a verified external backup,
+  deletion candidates may only enter a dated quarantine. Permanent purge is a
+  separate maintenance action after the accepted 30-day retention period.
+- Reason: Krish accepted the recommended deletion defaults and intends to back
+  up the single archive externally.
+- Revisit trigger: verified external-backup receipt plus expiry of quarantine.
+
+## D-018: family admin preserves Google ownership
+
+- Date: 2026-10-04
+- Status: locked
+- Decision: Maa and Loz are family administration. Their Google-native
+  originals remain in the owning H account under `FAMILY-ADMIN`; G Personal
+  contains the canonical personal index and shortcuts. `Lozatron Briefings`
+  is inside Loz. Maa and Loz are never deletion candidates.
+- Evidence: Windows cross-account move failed without changing either source;
+  Drive metadata moves then preserved both folder IDs and verified their new
+  parent.
+- Revisit trigger: a verified ownership transfer to the personal account.

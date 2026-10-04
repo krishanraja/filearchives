@@ -13,7 +13,7 @@
     "repository-filesystems",
     "owned-learnings"
   ],
-  "terminal_outputs": ["estate-strategy", "deletion-journal", "qa-receipt"],
+  "terminal_outputs": ["estate-strategy", "deletion-journal", "canonical-state", "qa-receipt"],
   "stages": [
     {
       "id": "source-survey",
@@ -92,6 +92,25 @@
       }
     },
     {
+      "id": "structure",
+      "owner": "accepted taxonomy, per-file routing proposals and verified folder moves",
+      "owned_paths": ["stages/07_structure/*.ps1"],
+      "inputs": ["inventory-segments", "duplicate-evidence", "user-policy", "source-filesystems"],
+      "outputs": ["layout-proposal", "folder-move-receipt"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
+      "side_effects": ["proposal is read-only; approved folder-move entrypoint may move exactly one sealed folder"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "atomic layout proposal or one folder-move receipt",
+        "recovery_entrypoint": "structure-recovery"
+      },
+      "completion": {
+        "source": "destination_readback",
+        "evidence": "proposal reconciles to inventory; any move receipt proves source absence and destination metadata seal"
+      }
+    },
+    {
       "id": "reclaim",
       "owner": "destructive execution",
       "owned_paths": ["guards/guarded_delete.py", "filearchives/safety.py"],
@@ -130,6 +149,25 @@
       }
     },
     {
+      "id": "canonical-audit",
+      "owner": "finished navigation and authority proof",
+      "owned_paths": ["stages/09_mirror/*.ps1"],
+      "inputs": ["workspace-config", "user-policy", "folder-move-receipt"],
+      "outputs": ["canonical-state"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
+      "side_effects": ["writes a read-only top-level canonical-state report without traversing protected boundaries"],
+      "retry": {
+        "mode": "idempotent",
+        "total_attempt_cap": 3,
+        "checkpoint": "atomic canonical-state report",
+        "recovery_entrypoint": "canonical-audit-recovery"
+      },
+      "completion": {
+        "source": "independent_rederivation",
+        "evidence": "required canonical roots and the critical worktree exist, with no unexpected navigation roots"
+      }
+    },
+    {
       "id": "quality",
       "owner": "regression and topology proof",
       "owned_paths": ["tests/*.ps1", "tests/*.py"],
@@ -140,6 +178,8 @@
         "inventory-verification",
         "estate-analysis",
         "duplicate-evidence",
+        "layout-proposal",
+        "canonical-state",
         "run-control"
       ],
       "outputs": ["qa-receipt"],
@@ -163,11 +203,16 @@
     {"from": "inventory", "to": "classification", "artifact": "inventory-segments"},
     {"from": "inventory", "to": "classification", "artifact": "inventory-verification"},
     {"from": "inventory", "to": "duplicate-analysis", "artifact": "inventory-segments"},
+    {"from": "inventory", "to": "structure", "artifact": "inventory-segments"},
     {"from": "inventory", "to": "quality", "artifact": "inventory-segments"},
     {"from": "inventory", "to": "quality", "artifact": "inventory-verification"},
     {"from": "classification", "to": "quality", "artifact": "estate-analysis"},
     {"from": "duplicate-analysis", "to": "reclaim", "artifact": "duplicate-evidence"},
+    {"from": "duplicate-analysis", "to": "structure", "artifact": "duplicate-evidence"},
     {"from": "duplicate-analysis", "to": "quality", "artifact": "duplicate-evidence"},
+    {"from": "structure", "to": "quality", "artifact": "layout-proposal"},
+    {"from": "structure", "to": "canonical-audit", "artifact": "folder-move-receipt"},
+    {"from": "canonical-audit", "to": "quality", "artifact": "canonical-state"},
     {"from": "orchestration", "to": "quality", "artifact": "run-control"}
   ],
   "guards": [
@@ -175,14 +220,14 @@
       "id": "workspace-safety",
       "owner": "path and protected-root boundary",
       "owned_paths": ["guards/workspace.ps1", "guards/paths.py"],
-      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis"],
+      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "structure"],
       "enforced_by": ["tests/test_powershell_guards.ps1"]
     },
     {
       "id": "atomic-artifacts",
       "owner": "durable artifact writes",
       "owned_paths": ["guards/atomic.ps1", "guards/files.py"],
-      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "orchestration"],
+      "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "structure", "orchestration"],
       "enforced_by": ["tests/test_inventory_resume.ps1"]
     }
   ],
@@ -195,10 +240,14 @@
     {"id": "classification-recovery", "stage": "classification", "path": "stages/05_classify/analyze_inventory.ps1", "kind": "recovery"},
     {"id": "duplicate-analysis-primary", "stage": "duplicate-analysis", "path": "filearchives/dedupe.py", "kind": "primary"},
     {"id": "duplicate-analysis-recovery", "stage": "duplicate-analysis", "path": "filearchives/dedupe.py", "kind": "recovery"},
+    {"id": "structure-primary", "stage": "structure", "path": "stages/07_structure/propose_layout.ps1", "kind": "primary"},
+    {"id": "structure-recovery", "stage": "structure", "path": "stages/07_structure/propose_layout.ps1", "kind": "recovery"},
     {"id": "reclaim-primary", "stage": "reclaim", "path": "guards/guarded_delete.py", "kind": "primary"},
     {"id": "reclaim-recovery", "stage": "reclaim", "path": "guards/guarded_delete.py", "kind": "recovery"},
     {"id": "orchestration-primary", "stage": "orchestration", "path": "guards/arm.ps1", "kind": "primary"},
     {"id": "orchestration-recovery", "stage": "orchestration", "path": "guards/arm.ps1", "kind": "recovery"},
+    {"id": "canonical-audit-primary", "stage": "canonical-audit", "path": "stages/09_mirror/test_canonical_state.ps1", "kind": "primary"},
+    {"id": "canonical-audit-recovery", "stage": "canonical-audit", "path": "stages/09_mirror/test_canonical_state.ps1", "kind": "recovery"},
     {"id": "quality-primary", "stage": "quality", "path": "tests/test_powershell_guards.ps1", "kind": "primary"},
     {"id": "quality-recovery", "stage": "quality", "path": "tests/test_inventory_resume.ps1", "kind": "recovery"}
   ],
@@ -218,6 +267,11 @@
     {"id": "learning-13-folder-date-fallback", "owner_stage": "classification", "enforced_by": ["tests/test_stage_contracts.py"]},
     {"id": "learning-14-learning-needs-owner", "owner_stage": "quality", "enforced_by": ["tests/test_stage_contracts.py"]},
     {"id": "learning-15-identity-metadata-round-trips", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_hash_plan.ps1"]},
-    {"id": "learning-16-metadata-is-not-content", "owner_stage": "duplicate-analysis", "enforced_by": ["stages/02_ingest/analyze_duplicate_groups.ps1"]}
+    {"id": "learning-16-metadata-is-not-content", "owner_stage": "duplicate-analysis", "enforced_by": ["stages/02_ingest/analyze_duplicate_groups.ps1"]},
+    {"id": "learning-17-age-is-visibility", "owner_stage": "structure", "enforced_by": ["tests/test_layout_classifier.ps1"]},
+    {"id": "learning-18-preserve-is-positive", "owner_stage": "structure", "enforced_by": ["tests/test_layout_classifier.ps1"]},
+    {"id": "learning-19-ai-family-proof", "owner_stage": "structure", "enforced_by": ["tests/test_layout_classifier.ps1"]},
+    {"id": "learning-20-quarantine-keeps-provenance", "owner_stage": "structure", "enforced_by": ["tests/test_verified_copy.ps1"]},
+    {"id": "learning-21-cloud-eventual-consistency", "owner_stage": "duplicate-analysis", "enforced_by": ["stages/02_ingest/invoke_live_file_copy_manifest.ps1"]}
   ]
 }

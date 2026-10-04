@@ -9,11 +9,13 @@ Bring a document into the archive once, deduplicated by content.
 ## Outputs
 - files placed in the archive, hardlinked where the volume allows
 - a journal of what was added and what was refused as a duplicate
+- cross-volume folder copies whose every destination file has been read back and SHA-256 verified
 
 ## Invariants
 - a duplicate is declared only on a whole-file hash, never a name
 - an unreadable candidate is UNPROVEN and is never admitted as new
 - a VERSION is not a duplicate and is never collapsed without a human
+- cross-volume consolidation is copy/verify/retire; copying never removes its source
 
 ## Code
 | file | role |
@@ -24,9 +26,16 @@ Bring a document into the archive once, deduplicated by content.
 | `stages/02_ingest/build_whole_hash_plan.ps1` | verifies every signature segment seal and emits only signature-collision rows for whole-file hashing |
 | `stages/02_ingest/compute_whole_hashes.ps1` | resumable whole-file SHA-256 proof with before/after metadata checks; this is the only stage that may establish content identity |
 | `stages/02_ingest/analyze_duplicate_groups.ps1` | verifies all whole-hash seals, emits exact duplicate groups, cross-source overlap, unproven rows, and theoretical—not actionable—reclaim |
+| `stages/02_ingest/new_verified_copy_manifest.ps1` | freeze a folder copy with one whole-file hash per readable source file and block on any unproven item |
+| `stages/02_ingest/invoke_verified_copy_manifest.ps1` | resumably copy each manifest row through a temporary file, verify destination content, and retain the source |
+| `stages/02_ingest/snapshot_dirty_repository.ps1` | clone a dirty repository locally, hash-reconcile every tracked and non-ignored file, preserve the exact index and HEAD, and report rather than hide latent status drift |
+| `stages/02_ingest/new_live_file_copy_manifest.ps1` | classify direct loose files and freeze only high-confidence, content-readable cross-volume copy rows |
+| `stages/02_ingest/invoke_live_file_copy_manifest.ps1` | revalidate and copy loose files through whole-file SHA-256 destination readback while retaining every source |
 
 ## Tests
 - `tests/test_hash_plan.ps1`
+- `tests/test_verified_copy.ps1`
+- `tests/test_repository_snapshot.ps1`
 
 ## Lessons
 | # | what this stage does about it | enforced by |
@@ -37,3 +46,4 @@ Bring a document into the archive once, deduplicated by content.
 | 12 | a version is refused rather than collapsed | `code:filearchives/safety.py:def looks_like_a_version` |
 | 15 | JSON identity timestamps remain round-trip strings instead of culture-formatted DateTime values | `code:stages/02_ingest/build_hash_plan.ps1:ConvertFrom-Json -Depth 32 -DateKind String` |
 | 16 | provider failures remain a per-source unproven cohort in final evidence | `code:stages/02_ingest/analyze_duplicate_groups.ps1:SignatureUnprovenBySource` |
+| 21 | copy executors retry cloud readback and safely resume verified destinations or their own temporary files | `code:stages/02_ingest/invoke_live_file_copy_manifest.ps1:Get-FaReadbackHash` |

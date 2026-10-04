@@ -103,13 +103,18 @@ the verifier contract.
 
 ## Status
 
-**Active estate analysis, 2026-10-04. No source mutation has occurred.**
+**Accepted estate policy under verified execution, 2026-10-04. No permanent
+deletion has occurred.**
 
 The sealed `estate-20261003-v1` run inventories 890,609 files (169.20 GB)
 across every currently available configured root. `H:\My Drive\ContentLibrary`
-is an absolute exclusion and has not been traversed. The L machine is recorded
-as unavailable, never as empty. Duplicate proofing is in progress through the
-three content-identity tiers above. The current evidence-backed structure
-recommendation is in `docs/estate-strategy-2026-10-04.md`.
+is an absolute exclusion and has not been traversed. L is reachable in the
+current pass; every dirty L repository is preserved onto C before local
+cleanup. Duplicate proofing uses the three content-identity tiers above. The
+accepted shallow taxonomy, 31-day visibility rule, personal/business split and
+quarantine policy are machine-readable in `policy/estate-policy-v1.json` and
+explained in `docs/estate-strategy-2026-10-04.md`. Executed folder moves and
+cross-volume copies have frozen manifests and readback receipts in the audit
+tree outside this repository.
 
 Start at `RESUME.md`.

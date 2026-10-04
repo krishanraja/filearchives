@@ -1,6 +1,6 @@
 # Estate analysis and target structure
 
-Status: evidence-backed recommendation, before mutation
+Status: accepted policy under verified execution; no permanent deletion
 Inventory run: `estate-20261003-v1`
 Analysis date: 2026-10-04
 
@@ -170,44 +170,56 @@ Documents `headshots`, G `Lozzy Mems`, H personal video and current work video.
 Low-value cohorts include E `_thumbs`, OneDrive screenshots and generated test
 assets. “Mems” is treated as memories, not automatically as memes.
 
-## Target structure
+## Accepted target structure
 
 ```text
 H:\My Drive\
-├── ContentLibrary\                 # total exclusion, unchanged
+├── ContentLibrary\                  # total exclusion, unchanged
+├── FAMILY-ADMIN\                    # ownership-bound Google-native originals
+│   ├── Maa\
+│   └── Loz\Lozatron Briefings\
 ├── CURRENT\
-│   ├── 00_INDEX\
-│   │   ├── WHERE-IS-EVERYTHING.md
-│   │   ├── REPOSITORIES.json
-│   │   └── MACHINE-POLICY.json
-│   ├── 10_VENTURES\
-│   │   ├── Mindmaker\
-│   │   ├── Mindmaker-OS\
-│   │   ├── Fractionl\
-│   │   └── Labs\
-│   ├── 20_OPERATIONS\
-│   │   ├── Company\
-│   │   ├── Finance\
-│   │   ├── Legal\
-│   │   └── People\
-│   ├── 30_KNOWLEDGE\
-│   │   ├── AI-Systems\
-│   │   ├── Brand\
-│   │   └── Research\
-│   └── 90_INBOX\
+│   ├── 00_INBOX\
+│   ├── 01_MIND-MAKE\
+│   ├── 02_MINDMAKE-OS\
+│   ├── 03_FRACTIONL\
+│   ├── 04_FULL-TIME\
+│   ├── 05_LEGIBILITY\
+│   ├── 06_MAKEYOURMINDUP\
+│   ├── 07_DOTHINKDO\
+│   ├── 08_BUSINESS-THEORY-CORPUSES\
+│   ├── 09_COLD-IDEAS-AND-INSPO\
+│   └── 10_BUSINESS-ADMIN\
 ├── ARCHIVE\
-│   ├── Ventures\<venture>\<year>\
-│   ├── Work-History\<organisation>\<year>\
-│   ├── Devices-and-Exports\<device-or-service>\<date>\
-│   └── Records\<category>\<year>\
+│   ├── 01_OLD-WORK-DOCUMENTS\
+│   ├── 02_BUSINESS-HISTORY\
+│   ├── 03_PODCAST-RECORDINGS\
+│   ├── 04_DEVICE-AND-SERVICE-EXPORTS\
+│   ├── 05_CANONICAL-OLD-VERSIONS\
+│   ├── 06_RETIRED-VENTURES-PROJECTS\
+│   ├── 90_UNCLASSIFIED-UNIQUE\
+│   └── 99_DELETE-QUARANTINE\       # retained until backup + 30 days
 └── CONTENT-EXTRA\
-    ├── Photos\<year-or-event>\
-    └── Video\<year-or-project>\
+    ├── PHOTOS\
+    └── VIDEO\
+
+G:\My Drive\Personal\
+├── 01_IDENTITY-IMMIGRATION\
+├── 02_FINANCIAL\
+├── 03_MEDICAL\
+├── 04_PROPERTY-BRISBANE\
+├── 05_JOB-SEARCH-APPLICATIONS\
+├── 06_FORMS-AND-LIFE-ADMIN\
+├── 07_CANONICAL-PERSONAL-SYSTEMS\
+├── 08_FAMILY-ADMIN\                # index/shortcuts for ownership-bound originals
+├── 09_PERSONAL-HISTORY\
+└── 10_PERSONAL-MEDIA\
 ```
 
-`G:\My Drive\Personal` remains the canonical personal tree. After migration,
-G should otherwise contain only explicitly retained personal material and any
-policy-required venture locations until that routing policy is revised.
+Historical `Mindmaker` names normalize to Mind/make. `Mindmake-OS`,
+`Mindmaker-OS`, `mm-ctrl` and control-center names normalize to mindmakeOS.
+Pulse and Circle are Fractionl products. Labs is not an active venture and has
+no current folder; unique Labs work routes to retired projects.
 
 ## Source disposition recommendation
 
@@ -220,15 +232,11 @@ policy-required venture locations until that routing policy is revised.
 | `E:\ContentLibrary` | Classify its 3.17 GB normally. Preserve unique documents/media; remove only proven duplicates, disposable packages and the empty skeleton through a manifest. |
 | `G:\My Drive` | Remains canonical for personal material. Reconcile non-personal venture material against the routing-policy decision below. |
 | `H:\My Drive` excluding `ContentLibrary` | Consolidate business material into `CURRENT` and `ARCHIVE`, plus useful visual media into `CONTENT-EXTRA`; retire the old top-level taxonomy only after readback. |
-| `L:\Users\krish\...` | Same local-repo convention as C once the execution context can see the mapping. It is currently unproven, not empty. |
+| `L:\Users\krish\...` | Reachable as of the accepted execution pass. Preserve every dirty repository onto C first; then retain only intentional offline clones using the same remote-owner convention. |
 
-There is one policy conflict, not an analytical ambiguity: the requested end
-state says all current work should live under H `CURRENT`, while the supplied
-machine routing policy currently sends single-venture deliverables to
-`G:\My Drive\Ventures\Active`. My recommendation is to revise that rule so H
-`CURRENT` becomes the business-current authority and G becomes personal-only.
-Until that governance change is accepted, the engine will report both locations
-but will not silently choose between contradictory canonical roots.
+Krish accepted the routing recommendation: H `CURRENT` is the business-current
+authority, H `ARCHIVE` is the business archive, and G is personal-only. The old
+`G:\My Drive\Ventures\Active` rule is therefore superseded for this estate.
 
 ## Local repository policy
 
@@ -246,8 +254,8 @@ but will not silently choose between contradictory canonical roots.
 
 ## Execution order
 
-1. Reconnect and inventory L. Merge it into this run without treating absence
-   as empty.
+1. Inventory the now-reachable L and merge it into this run without treating
+   any later disconnect as empty.
 2. Preserve `mm-ctrl` through a credential-aware, independently verified
    snapshot before any local cleanup.
 3. Run signature then whole-file hashing over non-generated, non-zero files.
@@ -260,4 +268,8 @@ but will not silently choose between contradictory canonical roots.
 7. Re-inventory every destination and every source. Completion requires zero
    unexplained unique residue and no protected-root access.
 
-No destructive action has been executed by this report.
+No permanent deletion has been executed. Same-account H moves are sealed and
+read back; cross-volume transfers are copy-first and whole-file SHA-256
+verified; their sources remain in the dated pre-backup quarantine. Permanent
+purge is blocked until a verified external backup exists and quarantine has
+aged 30 days.

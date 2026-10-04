@@ -1,5 +1,15 @@
 # 09 mirror
 
+Prove that the finished estate exposes one shallow authority for business,
+personal and local repository work. This stage checks navigation and boundaries;
+it does not mirror cloud content onto intermittently connected machines.
+
+## Code
+
+| file | role |
+|---|---|
+| `stages/09_mirror/test_canonical_state.ps1` | inspect only the top-level navigation surfaces, verify every required category and critical worktree, and report unexpected roots without traversing protected boundaries |
+
 The same structure, identically, on every drive.
 
 ## Inputs
