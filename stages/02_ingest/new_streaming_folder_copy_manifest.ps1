@@ -4,6 +4,7 @@ param(
     [Parameter(Mandatory)][string] $Destination,
     [Parameter(Mandatory)][string] $ManifestPath,
     [Parameter(Mandatory)][string] $ApprovalReason,
+    [string[]] $IncludeExtension = @(),
     [string] $ExcludePathRegex = '(?i)(^|\\)(desktop\.ini|thumbs\.db|\.DS_Store)$',
     [string] $ConfigPath
 )
@@ -38,6 +39,11 @@ $skipped = [Collections.Generic.List[object]]::new()
 foreach ($item in @(Get-ChildItem -LiteralPath $sourceRoot -Recurse -Force -File -ErrorAction Stop |
     Sort-Object FullName)) {
     $relative = $item.FullName.Substring($prefix.Length).Replace('/', '\')
+    $extension = $item.Extension.ToLowerInvariant()
+    if ($IncludeExtension.Count -gt 0 -and $IncludeExtension -notcontains $extension) {
+        $skipped.Add([pscustomobject]@{ RelativePath=$relative; Length=[long]$item.Length; Reason='extension-not-included' })
+        continue
+    }
     if ($ExcludePathRegex -and $relative -match $ExcludePathRegex) {
         $skipped.Add([pscustomobject]@{ RelativePath=$relative; Length=[long]$item.Length; Reason='explicit-skip' })
         continue

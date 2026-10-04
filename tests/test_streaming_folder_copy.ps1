@@ -13,6 +13,7 @@ try {
     [IO.File]::WriteAllText((Join-Path $source 'one.txt'),('one-' * 10000))
     [IO.File]::WriteAllText((Join-Path $source 'nested\two.txt'),('two-' * 3000))
     [IO.File]::WriteAllText((Join-Path $source 'desktop.ini'),'system')
+    [IO.File]::WriteAllText((Join-Path $source 'installer.bin'),'not selected')
     $workspace = [ordered]@{
         schema_version = 2
         audit = $audit
@@ -23,9 +24,10 @@ try {
     [IO.File]::WriteAllText($config,($workspace|ConvertTo-Json -Depth 8),[Text.UTF8Encoding]::new($false))
     $parent = Join-Path $audit 'parent.manifest.json'
     & (Join-Path $repo 'stages\02_ingest\new_streaming_folder_copy_manifest.ps1') `
-        -Source $source -Destination $destination -ManifestPath $parent -ApprovalReason 'fixture' -ConfigPath $config
+        -Source $source -Destination $destination -ManifestPath $parent -ApprovalReason 'fixture' `
+        -IncludeExtension @('.txt') -ConfigPath $config
     $frozen = Get-Content -LiteralPath $parent -Raw|ConvertFrom-Json
-    if ($frozen.FileCount -ne 2 -or @($frozen.Skipped).Count -ne 1) { throw 'streaming manifest accounting failed' }
+    if ($frozen.FileCount -ne 2 -or @($frozen.Skipped).Count -ne 2) { throw 'streaming manifest accounting failed' }
     $shardRoot = Join-Path $audit 'shards'
     & (Join-Path $repo 'stages\02_ingest\split_streaming_folder_copy_manifest.ps1') `
         -InputManifestPath $parent -OutputRoot $shardRoot -ShardCount 2 -ConfigPath $config | Out-Null
