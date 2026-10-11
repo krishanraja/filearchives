@@ -26,7 +26,7 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 
 ---
 
-## ACTIVE MISSION: whole-estate consolidation (2026-10-04)
+## CLOSED MISSION: whole-estate consolidation (2026-10-04 to 2026-10-11)
 
 ### Outcome
 
@@ -66,16 +66,24 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
   quarantined superseded members
 - 856 cloud-category empty descendants and 3,685 local empty descendants were
   removed; provider-changed and locked shells were retained and recorded
-- no permanent deletion occurred; provider-unreadable and otherwise unproven
-  objects remain retained
+- the approved 1,223-file G quarantine purge was backed up to H, revalidated
+  at unlink and completed with zero refusals, removing 21,048,508,824
+  live-tree bytes
+- the 3,997-row business retirement manifest deleted 2,434 current verified
+  pairs and removed 1,029,225,206 live-tree bytes; 1,500 victims were already absent and
+  63 substantive refusals remain intact on G
+- the closeout removed 22,077,734,030 live-tree bytes from G in total; all 41 quarantine
+  exceptions remain, and Google Photos, WhatsApp, generated `node_modules` and
+  H `ContentLibrary` were not touched
 
 ### Locked constraints
 
 - do not enumerate, hash, compare, move, rename or delete anything inside a
   configured `ContentLibrary` protected root
 - every move, dedupe and deletion is first emitted as a reviewable manifest
-- permanent deletion is disabled until a verified external backup exists and
-  the accepted 30-day quarantine has expired
+- permanent deletion requires a verified external survivor, a frozen manifest,
+  current-state revalidation and exact action-time approval; the 30-day wait
+  was waived only for the exact 2026-10-11 backed-up quarantine manifest
 - cloud and peer-machine sources may disappear; absence is never interpreted
   as an empty tree
 - credentials are reported only by category and location, never read into
@@ -101,17 +109,16 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 
 ### Current gate
 
-The consolidation and its final canonical/profile/repository verification are
-complete. H `ContentLibrary` remained completely excluded. The only remaining
-destructive gate is external-backup verification plus the accepted 30-day
-quarantine hold.
+Closed. The consolidation and its approved cleanup are complete. H
+`ContentLibrary` remained completely excluded, the 41 quarantine exceptions
+and 63 substantive business refusals remain retained, and there is no remaining
+authorized deletion queue.
 
 ### Next action
 
-Copy H and G canonical authorities plus H
-`ARCHIVE\04_DEVICE-AND-SERVICE-EXPORTS\Critical-Local-Recovery` to the external
-drive, then run an independent readback verification. Start the 30-day hold
-only from that verified backup date; permanent purge remains disabled before it.
+None for this run. Any future cleanup starts a new dated run with a fresh
+manifest, survivor proof, current-state verification and action-time approval.
+See `docs/RUN-2026-10-11.md` for the closeout evidence.
 
 ---
 

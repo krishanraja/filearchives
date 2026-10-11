@@ -103,8 +103,8 @@ the verifier contract.
 
 ## Status
 
-**Accepted estate policy under verified execution, 2026-10-04. No permanent
-deletion has occurred.**
+**Estate consolidation completed 2026-10-04 and its approved guarded cleanup
+closed 2026-10-11.**
 
 The sealed `estate-20261003-v1` run inventories 1,308,625 files (199.16 GB)
 across all 20 configured roots. `H:\My Drive\ContentLibrary`
@@ -119,7 +119,8 @@ tree outside this repository.
 
 Start at `RESUME.md`.
 The completed-run evidence and backup handoff are in
-`docs/RUN-2026-10-04.md`.
+`docs/RUN-2026-10-04.md`. The verified deletion results, retained exceptions
+and final closeout are in `docs/RUN-2026-10-11.md`.
 
 After a consolidation run, verify the user-facing navigation without entering
 any protected boundary:
