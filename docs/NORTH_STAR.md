@@ -4,7 +4,7 @@ Status: Current
 Owner: Krish Raja
 Last verified: 2026-10-18
 
-> By 18 December 2026, every document Krish owns, across every drive, laptop and cloud, lives in one verified library he can search in seconds, and nothing he cannot replace is ever lost.
+> By 18 November 2026, every document Krish owns, across every drive, laptop and cloud, lives in one verified library he can search in seconds, and nothing he cannot replace is ever lost.
 >
 > From then on, the engine checks in on a regular schedule to keep it clean and stop new sprawl building up.
 
