@@ -361,3 +361,23 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   has already moved to quarantine is impossible and unnecessary when the exact
   destination objective is independently re-derived.
 - Revisit trigger: a unified receipt graph that records the same relationship.
+
+## D-030: H CURRENT and PERSONAL-SYSTEMS are dissolved into Ventures
+
+- Date: 2026-10-22
+- Status: locked
+- Decision: `H:\My Drive\CURRENT` and `H:\My Drive\Family Admin\PERSONAL-SYSTEMS`
+  no longer exist. Business work lives in `H:\My Drive\Ventures` (one folder per
+  active venture, `_Archive` inside each for anything older than 30 days, and
+  `Ventures\_Archive` for retired ventures). Personal material lives in
+  `H:\My Drive\Family Admin\Krish`. Exact duplicates were sent to Drive Trash
+  with a verified surviving copy. This supersedes D-010 and D-013 for the
+  business current tree. The policy's `business_current` destination is set
+  to a non-path sentinel so any future run stops instead of recreating CURRENT.
+- Reason: Krish asked for one venture-shaped home with nothing stale in the
+  line of sight. The engine's shallow-folder rule cannot express nested
+  venture paths without a redesign.
+- Evidence: `C:\Users\krish\.scratch\h-reorg-20261022\` (manifest.frozen.csv,
+  receipts.jsonl, ventures_pre.tsv, verify.txt).
+- Revisit trigger: the next engine run that needs a business current
+  destination; remap `business_current` to venture paths first.

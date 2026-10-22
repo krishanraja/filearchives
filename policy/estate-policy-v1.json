@@ -3,7 +3,7 @@
   "policy_id": "krish-estate-v1",
   "visibility_days": 31,
   "destinations": {
-    "business_current": "H:\\My Drive\\CURRENT",
+    "business_current": "RETIRED-2026-10-22 (see docs/DECISIONS.md D-030; business work now lives in H:\\My Drive\\Ventures)",
     "business_archive": "H:\\My Drive\\ARCHIVE",
     "content_extra": "H:\\My Drive\\CONTENT-EXTRA",
     "personal": "G:\\My Drive\\Personal"
