@@ -14,6 +14,9 @@ $title = 'filearchives weekly folder check-in'
 # Best effort: answers Krish wrote on GitHub arrive this way. Offline is fine.
 & git -C $repo pull --ff-only origin main 2>&1 | Out-Null
 
+# Strict mode: $LASTEXITCODE is unset until something sets it, and the
+# step only sets it when it stops.
+$global:LASTEXITCODE = 0
 & (Join-Path $repo 'stages' '07_structure' 'weekly_folder_checkin.ps1') -Interactive
 if ($LASTEXITCODE -eq 3) {
     [Windows.Forms.MessageBox]::Show("Your folders have not been recorded yet.`n`nPress RECORD-MY-FOLDERS.cmd in the filearchives folder first.",

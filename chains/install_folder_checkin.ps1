@@ -39,6 +39,9 @@ foreach ($t in $paused) {
     catch { $notPaused.Add($t.TaskName) }
 }
 
+# Strict mode: $LASTEXITCODE is unset until something sets it, and the
+# step only sets it when it stops.
+$global:LASTEXITCODE = 0
 & (Join-Path $repo 'stages' '07_structure' 'record_folder_preferences.ps1')
 if ($LASTEXITCODE -eq 3) {
     [Windows.Forms.MessageBox]::Show("None of the drives is connected, so nothing was recorded.`n`nConnect Google Drive and press the button again.",
