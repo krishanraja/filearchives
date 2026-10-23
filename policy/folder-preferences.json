@@ -2,13 +2,22 @@
   "schema_version": 1,
   "kind": "krish-folder-preferences-v1",
   "ruling": "Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without asking first.",
-  "recorded_at": null,
-  "recorded_on": null,
+  "recorded_at": "2026-10-23T16:31:56.2782043+01:00",
+  "recorded_on": "LORIMER",
   "last_checkin_at": null,
   "watch_roots": [
-    { "path": "H:\\My Drive", "max_depth": 4 },
-    { "path": "G:\\My Drive", "max_depth": 4 },
-    { "path": "C:\\Users\\krish\\dev", "max_depth": 1 }
+    {
+      "path": "H:\\My Drive",
+      "max_depth": 4
+    },
+    {
+      "path": "G:\\My Drive",
+      "max_depth": 4
+    },
+    {
+      "path": "C:\\Users\\krish\\dev",
+      "max_depth": 1
+    }
   ],
   "never_enter": [
     "H:\\My Drive\\ContentLibrary"
@@ -27,6 +36,4822 @@
     "AGENTS.md",
     "desktop.ini"
   ],
-  "folders": [],
+  "folders": [
+    {
+      "path": "C:\\Users\\krish\\dev\\content-engine",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\fractionl",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\krishanraja",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\Circle",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\control center",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\CTRL",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\CTRL\\theory",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\Full Time",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\issues",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\issues\\circle",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\issues\\ctrl",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\Pulse",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\App Issues\\visa",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Family",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Family\\Health Records",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Family\\Health Records\\Vaccination and immunisation",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Family\\Photo library - answers backup",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\Debugging-Visa-Recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\H-01-Identity",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\H-01-Identity-1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\L-Downloads\\_IMM_TMP2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\L-OneDrive-Recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\L-OneDrive-Recovered\\11_degrees_and_transcripts",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\L-OneDrive\\Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\L-OneDrive\\Documents\\1 Home & Personal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\Loose-Legacy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records\\01 Identity and citizenship",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records\\02 Visas petitions and status",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records\\03 Travel history and entry records",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records\\04 Police court and waivers",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records\\05 Education and credentials",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records\\06 Case strategy and correspondence",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Legal\\Life Records\\90 Indexes and source manifests",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Music Production",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Tax Return History",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Tax Return History\\Krishan Raja - Accountant pack — AU FY2024-25 & FY2025-26 — DRAFT",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Tax Return History\\Krishan Raja - Accountant pack — AU FY2024-25 & FY2025-26 — DRAFT\\ANZ Mortgage",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2015",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2020-04-16 11.01.26 Krish Raja's Zoom Meeting 91618613410",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2020-04-16 17.41.46 Krish Raja's Zoom Meeting 91361146968",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2020-04-16 17.43.40 Krish Raja's Zoom Meeting 91361146968",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2020-04-16 17.58.41 Krish Raja's Zoom Meeting 91361146968",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2020-04-30 15.29.17 Linear TV - Take 2  96508537008",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2020-05-01 10.40.28 AWAPAC + Amobee 91461734831",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\2020-05-13 17.00.43 Jazz Hands_ Challenge 96131914605",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\AMP Video",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\Audience Match",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\August 2016",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\August 2016 - 2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\ChromeEXT_dev",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\Contract",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\data",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\Data Sizzle Video",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\dev-artefacts",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\industry-reference",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\internet change",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\June 2016",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\My Received Files",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\Old Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\PR Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\Presentation Collateral",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\proof of address",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\Sizzle Reel",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\T&E",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\team-photo-shoot",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\v2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\v4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\06-Work\\work",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\L-OneDrive\\Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\OneDrive-AdFixus",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\OneDrive-AdFixus\\Decks",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\OneDrive-AdFixus\\exec strategy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\OneDrive-AdFixus\\Handover",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\Published Work",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\Published Work\\Articles",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\01_OLD-WORK-DOCUMENTS\\Published Work\\Presentations",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Austin Leonard",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Cal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Captify",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Captify\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Client Work",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Client Work\\Legacy Ascend (Steph Darmanin)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Client Work\\Legacy Life Coaching and Consulting",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\Engagement",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-Downloads\\_archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-Downloads\\_archived",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-Downloads\\_inbox",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-Downloads\\feedback",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-Downloads\\harness",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-Downloads\\Telegram Desktop",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\L-OneDrive\\Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\01_Strategy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\02_Decks",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\03_Sales-Outreach",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\04_Content",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\05_Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\06_Admin",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\ctrl-upgrades-maven",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\GoBold",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\GTM playbook for autonomous agents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\Repo",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\supabase",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\upgrades",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\v1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\OneDrive-Mindmaker\\v2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\02_BUSINESS-HISTORY\\PPLA",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\E-Drive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\E-Drive\\Samsung Backup",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\L-Downloads-Audio",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\L-Downloads-Audio\\_inbox",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\L-Downloads\\_archived",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\L-OneDrive-Audio",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\L-OneDrive-Audio\\Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\03_PODCAST-RECORDINGS\\Signal & Noise — Cannes Lions 2026 — Speaker Briefings (FINAL)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Critical-Local-Recovery",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Critical-Local-Recovery\\mm-ctrl-20261004-final",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Critical-Local-Recovery\\mm-ctrl-20261004-incremental",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Backup - Captify laptop Nov 2024",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Captify PC",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Laptop 2024 files",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Pictures",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Samsung Backup",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Samsung S9+ Backup - Sep 2020",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Surface laptop backup Aug 2024",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\Surface Laptop Backup July 2025",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\work backup 2016",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\work backup 2017",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\work backup 2020",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\E-Drive\\work backup 2022",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Business-Retirement-20261011",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Business-Retirement-20261011\\_BUSINESS-NATIVE-OWNERSHIP",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Business-Retirement-20261011\\Debugging",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Drive-Legacy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Drive-Legacy\\Debugging",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Drive-Legacy\\harness",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Drive-Legacy\\Skills",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\00",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\01",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\02",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\03",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\04",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\05",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\06",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\07",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\08",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\09",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\0a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\0b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\0c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\0d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\0e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\0f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\10",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\11",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\12",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\13",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\14",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\15",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\17",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\18",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\19",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\1a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\1b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\1c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\1d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\1e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\1f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\20",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\21",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\22",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\23",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\24",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\25",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\26",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\27",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\28",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\29",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\2a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\2b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\2c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\2d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\2e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\2f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\30",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\31",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\32",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\33",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\34",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\35",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\36",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\37",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\38",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\39",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\3a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\3b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\3c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\3d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\3e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\3f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\40",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\41",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\42",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\43",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\44",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\45",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\46",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\47",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\48",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\49",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\4a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\4b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\4c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\4d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\4e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\4f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\50",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\51",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\52",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\53",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\54",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\55",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\56",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\57",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\58",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\59",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\5a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\5b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\5c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\5d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\5e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\5f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\60",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\61",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\62",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\63",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\64",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\65",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\66",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\67",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\68",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\69",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\6a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\6b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\6c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\6d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\6e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\6f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\70",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\71",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\72",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\74",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\75",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\76",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\77",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\78",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\79",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\7a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\7b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\7c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\7d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\7e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\7f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\80",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\81",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\82",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\83",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\84",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\85",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\86",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\87",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\88",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\89",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\8a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\8b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\8c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\8d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\8e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\8f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\90",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\91",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\92",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\93",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\94",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\95",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\96",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\97",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\98",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\99",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\9a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\9b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\9c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\9d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\9e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\9f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\a9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\aa",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ab",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ac",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ad",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ae",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\af",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\b9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ba",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\bb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\bc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\bd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\be",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\bf",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\c9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ca",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\cb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\cc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\cd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ce",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\cf",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\d9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\da",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\db",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\dc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\dd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\de",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\df",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\e9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ea",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\eb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ec",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ed",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ee",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ef",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\f9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\fa",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\fb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\fc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\fd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\fe",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\G-Quarantine-Backup-20261011\\ff",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Google Meet",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Google Meet\\James x Krish  Workspace Walk Through - 2026 08 03 11 40 EDT",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Google-Native-Ownership",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Google-Native-Ownership\\Career",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\L-Claude-Scheduled",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\L-Claude-Scheduled\\job-sweep--warm-path-monthu-6am-et-single-session",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\L-Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\L-Documents-ChatGPT",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\L-Documents-ChatGPT\\dothinkdo",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\OneDrive-Apps",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\OneDrive-Apps\\Clipchamp Classic",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\OneDrive-Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\C-Codex-Task-Work",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\C-Codex-Task-Work\\2026-08-27",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\C-Codex-Task-Work\\2026-09-04",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\L-Downloads\\_archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\L-Downloads\\_inbox",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\L-Downloads\\harness",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\L-OneDrive\\Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\Mind-Make",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\Mind-Make\\L-OneDrive-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\MindmakeOS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\MindmakeOS\\L-OneDrive-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\Temporary-Family-Keepers",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\Versions",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\Versions\\Business Operations",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\05_CANONICAL-OLD-VERSIONS\\Versions\\Root",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-Downloads\\_archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-OneDrive-Residual-Code",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-OneDrive-Residual-Code\\adfixus-sales-quiz",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-OneDrive-Residual-Code\\bgn",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-OneDrive-Residual-Code\\conclusiv",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-OneDrive-Residual-Code\\sev",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\06_RETIRED-VENTURES-PROJECTS\\L-OneDrive-Residual-Code\\thebuildereconomy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\Archive_Trash_Queue",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\Archive_Trash_Queue\\Agent Briefs — Org OS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\Archive_Trash_Queue\\Content Intelligence System",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\Archive_Trash_Queue\\Mindmaker",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\Archive_Trash_Queue\\Mindmaker Live Newsletter",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\Archive_Trash_Queue\\NOT USING",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\Archive_Trash_Queue\\Weekly Plans",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\G-Root-Legacy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\_archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\_archived",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\_inbox",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\_LargeMedia_move-manually",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\DTD",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\feedback",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\harness",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\intake",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\My Contacts",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\Telegram Desktop",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\upgrades",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-OneDrive\\Documents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Auto-generated",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\00",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\01",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\03",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\04",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\05",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\06",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\07",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\08",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\09",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\0a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\0b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\0c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\0d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\0e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\0f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\10",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\11",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\12",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\13",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\14",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\15",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\18",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\19",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\1a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\1b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\1c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\1e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\1f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\21",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\22",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\23",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\24",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\25",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\26",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\27",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\28",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\2a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\2b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\2c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\2d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\2e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\2f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\30",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\31",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\32",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\33",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\34",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\35",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\36",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\37",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\39",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\3a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\3b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\3c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\3d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\3e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\3f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\40",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\41",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\42",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\43",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\44",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\45",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\46",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\47",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\48",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\4a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\4b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\4c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\4d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\4e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\4f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\50",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\52",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\54",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\55",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\56",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\57",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\58",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\59",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\5a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\5b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\5d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\5e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\5f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\60",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\61",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\62",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\63",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\64",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\65",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\66",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\67",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\68",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\69",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\6a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\6b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\6c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\6d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\6e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\6f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\70",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\71",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\72",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\73",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\74",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\75",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\76",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\77",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\78",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\79",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\7a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\7b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\7c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\7d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\7e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\7f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\81",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\82",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\83",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\84",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\85",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\86",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\87",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\88",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\89",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\8b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\8c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\8d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\8f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\90",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\91",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\92",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\93",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\97",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\98",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\99",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\9a",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\9b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\9c",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\9d",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\9e",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\9f",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\a1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\a2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\a4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\a5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\a6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\a8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\a9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\aa",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ab",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ad",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ae",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\af",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\b9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ba",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\bb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\bc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\bd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\be",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\bf",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\c9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ca",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\cb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\cc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\cd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ce",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\cf",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\d9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\da",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\db",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\dc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\dd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\df",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\e9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ea",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\eb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ec",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ed",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ee",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ef",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f0",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f1",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f2",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f3",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f4",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f5",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f6",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f7",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f8",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\f9",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\fa",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\fb",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\fd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\fe",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Exact-Duplicates-20261004\\ff",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Generated-Caches",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Generated-Caches\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Generated-Dependency-Trees",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Generated-Dependency-Trees\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\GOOGLE-NATIVE-SUPERSEDED",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Career-Binaries-20261004",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Career-Binaries-20261004\\Applications",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Career-Binaries-20261004\\CV & Positioning",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Career-Binaries-20261004\\Linkedin Complete Export",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Career-Binaries-20261004\\Skills",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Personal-Retired-20261004",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Interrupted-Installer-Copies",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Interrupted-Installer-Copies\\ableton_live_trial_12.3.8_64",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Media-Noise-20261004",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Media-Noise-20261004\\CONTENT-EXTRA",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\01-Identity",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\01-Identity (1)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\02-Financial",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\02-Financial (1)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\03-Property",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\03-Property (1)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\04-Medical",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\05-Education",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\family-final",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\Legal-and-Finance-binaries",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\loose-root",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\migrated-personal\\Music",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Temporary-Families-20261004",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Temporary-Families-20261004\\agent-briefs-complete-master-reference",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\Temporary-Families-20261004\\handover",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\Dipti",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\Downloads-Loose",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\E-ContentLibrary-Recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\E-Drive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\E-Drive-Recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\Headshots",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\L-Downloads-2026-10-04",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\L-OneDrive-ChatGPT",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\L-Pictures",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\Mems",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\Mindmake-Video-Studio",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\Mindmake-Video-Studio-L",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\PHOTOS\\OneDrive-Pictures",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\AI-Circle",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\Dipti",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\Downloads-Loose",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\E-ContentLibrary-Recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\E-Drive-Recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\G-Debugging-Recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\L-Downloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\L-Videos",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\Mindmake-Video-Studio",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\Mindmake-Video-Studio-L",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\OneDrive-Pictures",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\OneDrive-Videos",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA\\VIDEO\\Phone-Movies",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\_Archive\\Inbox-2026-10",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Immigration",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Job-Search",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Job-Search\\Hunter",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Job-Search\\Sweep-Logs",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Legal-and-Finance",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Legal-and-Finance\\Personal Finance",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Property",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Tax",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Loz",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Loz\\L-OneDrive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Loz\\Lozatron Briefings",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Loz\\Lozatron Briefings\\Archive (pre one-doc-per-day)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Maa",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\_audit-trail",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\_audit-trail\\arc-progress",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\content production & podcasts (may be duplicates)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-boogles",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-boogles\\Krish - Phone Backup - Jun to Sep 2025",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-boogles\\Krish Videos2026 Content Produced",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-dji-2026 (cannes and wedding)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-gopro-2024",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-lorimer",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-personal-google-drive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-wd6400",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-wd6400\\N360-recovered",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\from-wd6400\\Users",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\in",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\Big files",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\Download",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\GoPro-Exports",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\HypnosisDownloads",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\img20240119_13411013",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\img20250611_16341948",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\inshot",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\Krishan Raja Results",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\log",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\Movies",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\Music",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\Notifications",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\phone pics sep 25",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\Krish - Phone Backup - Jun to Sep 2025\\Pictures",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\_photo-consolidation\\out",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Archive\\Communal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Archive\\Communal\\01-Identity",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Archive\\Personal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Archive\\Personal\\01-Identity",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentArchives record",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction\\2026",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction\\from-machine-b",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction\\FromH",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction\\FromH\\from-boogles",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction\\FromH\\from-dji-2026 (cannes and wedding)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction\\FromH\\Krish - Phone Backup - Jun to Sep 2025",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\ContentProduction\\interviews",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Krish Headshots",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Krish Headshots\\MORE",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2003",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2008",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2010",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2011",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2012",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2013",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2014",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2015",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2016",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2017",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2018",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2019",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2020",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2021",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2022",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2023",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2024",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2025",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\2026",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Communal\\NoDate",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\NoDate",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\1995",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\1996",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\1997",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\1998",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2004",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2005",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2006",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2007",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2008",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2009",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2010",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2011",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2012",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2013",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2014",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2015",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2016",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2017",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2018",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2019",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2020",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2021",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2022",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2023",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2024",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2025",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\2026",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\FamilyContentLibrary\\Media\\Personal\\NoDate",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\KeePass",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\AdFixus",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\AdFixus\\01_Strategy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\AdFixus\\02_Decks",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\AdFixus\\03_Sales-Outreach",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\AdFixus\\04_Content",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\AdFixus\\06_Admin",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\AdFixus\\Operations",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Conclusiv",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Conclusiv\\readmes",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Empowerd",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Legacy-Life-Coaching",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Legacy-Life-Coaching\\steph site",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Meliora",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Meliora\\02_Decks",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Meliora\\03_Sales-Outreach",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Meliora\\Operations",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Merciless",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Misc",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Misc\\Unclassified-2026-10",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Okkular",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Remindful",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Rinoa",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Subconscious",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\The-Publish-Press",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\Ticket-Fairy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\_Archive\\WellWell",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Control Center",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Control Center\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Control Center\\Agents",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Control Center\\architecture",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\CTRL",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\CTRL\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\CTRL\\ctrl-evolution",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\CTRL\\Knowledge",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Fractionl",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Fractionl\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Fractionl\\00_Brand-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Fractionl\\01_Strategy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Fractionl\\02_Decks",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Fractionl\\03_Sales-Outreach",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Fractionl\\06_Admin",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Full Time",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Full Time\\00_Brand-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Full Time\\Non API Data inputs",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Heartside",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Heartside\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Heartside\\00_Brand-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Legibility",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Legibility\\00_Brand-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\00_Brand-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\1 Brand kit (permanent)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\2 Channel art (permanent)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\3 Posts",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\4 Growth",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\PREVIOUS VERSIONS - archive, not current, do not use",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\Video Engine",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\Video Engine brief and architecture (reference only)",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\_Archive",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\00_Brand-Assets",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\01_Strategy",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\02_Canon",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\04_Content",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\06_Admin",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\BusinessInsider",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\Clients",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\Knowledge",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Bugs & Issues",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Content Inspo",
+      "status": "known",
+      "since": "2026-10-23T16:29:18.3652567+01:00"
+    }
+  ],
   "consents": []
 }
