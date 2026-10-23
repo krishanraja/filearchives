@@ -4,11 +4,30 @@ Status: Current
 Owner: Krish Raja
 Last verified: 2026-10-18
 
-> By 18 November 2026, every document Krish owns, across every drive, laptop and cloud, lives in one verified library he can search in seconds, and nothing he cannot replace is ever lost.
+> Like Control Center, filearchives' job never ends: as every other repository sprawls and becomes more ambitious, it keeps Krish's files clean and where he wants them, which gets harder every month.
 >
-> From then on, the engine checks in on a regular schedule to keep it clean and stop new sprawl building up.
+> It never moves or removes a folder Krish made without asking first. It asks what goes in a new folder, then keeps it clean every week.
 
-Set by Krish on 18 October 2026. It is not reached yet. It is what every session in this repository works toward.
+Set by Krish on 18 October 2026 and rewritten by him on 23 October 2026. It is not reached yet. It is what every session in this repository works toward.
+
+## The number
+
+**Folders moved or removed without Krish's OK, per week**: 0 by 26 October 2026, on a countdown weekly ladder. Zero every week from 26 October 2026, and a cleanliness check completed every 7 days. Its job never ends: as every other repository sprawls, it keeps Krish's files clean and where he wants them.
+
+```yaml north-star-metric
+metric: "Folders moved or removed without Krish's OK, per week"
+unit: count
+direction: down
+target: 0
+deadline: 2026-10-26
+ladder_shape: countdown
+source: "The engine's own run log"
+status: active
+ladder:
+  - [2026-10-26, 0]
+```
+
+Urgency (U1 to U5) is worked out every week from where the number stands against that week's target, by [the harness contract](https://github.com/krishanraja/ai-harness/blob/main/contract/north-star-metric.md). Set by Krish on 23 October 2026.
 
 ## How to use it
 
