@@ -18,7 +18,14 @@ $workspace = Import-FaWorkspace -ConfigPath $ConfigPath
 $policy = Get-Content -LiteralPath $PolicyPath -Raw | ConvertFrom-Json -Depth 64
 $created = [Collections.Generic.List[string]]::new()
 $existing = [Collections.Generic.List[string]]::new()
+$retired = [Collections.Generic.List[string]]::new()
 foreach ($destinationKey in @('business_current', 'business_archive', 'content_extra', 'personal')) {
+    # A retired destination is never recreated: that is how a dissolved tree
+    # would come back after Krish reorganised it.
+    if (([string]$policy.destinations.$destinationKey).StartsWith('RETIRED-')) {
+        $retired.Add($destinationKey)
+        continue
+    }
     $root = ConvertTo-FaCanonicalPath ([string]$policy.destinations.$destinationKey)
     Assert-FaNotProtected -Path $root -Workspace $workspace -Operation 'canonical structure creation'
     foreach ($folder in @($policy.structure.$destinationKey)) {
@@ -44,6 +51,7 @@ $receipt = [ordered]@{
     PolicySha256 = Get-FaSha256 -Path $PolicyPath
     Created = @($created)
     AlreadyExisted = @($existing)
+    RetiredSkipped = @($retired)
     ProtectedRoots = @($workspace.ProtectedRoots)
     CompletedAt = [DateTimeOffset]::Now.ToString('o')
 }

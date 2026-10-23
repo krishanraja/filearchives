@@ -43,6 +43,14 @@ without asking first. D-030 and learning 36 hold the detail.
   questions per new folder, counts recorded folders gone without his OK (the
   North Star number), and writes `docs/folder-checkin/LATEST.md` and
   `LOG.jsonl`. It never moves anything.
+- Current layout, as Krish recorded it on 2026-10-23 (D-032):
+  H holds `--ARCHIVE` (the old ARCHIVE categories plus `CONTENT-EXTRA`),
+  `Family Admin` (`Krish`, `Loz`, `Maa`), `FamilyContentLibrary` (never
+  entered), `KeePass` and `Ventures` (`Active Ventures`, `_Archive`,
+  `Bugs & Issues`, `Content Inspo`). G holds `App Issues`, `Family`,
+  `Immigration`, `Legal`, `Music Production`, `Tax Return History` and others;
+  the old `G:\My Drive\Personal` categories no longer exist. The record, not
+  the estate policy's category lists, is the authority.
 - Krish can answer in writing in `docs/folder-checkin/answers.json`. A consent
   to move or remove a folder is a row in `consents` with
   `approved_by: "Krish"`, the exact path, the action, the destination for a
@@ -156,10 +164,10 @@ across every drive.
 Krish, 2026-09-20: *"sort all of my old non-content documents, dedupe them, and
 create the same folder structure in every drive that I have as fresh."*
 
-`H:\My Drive\ContentLibrary` stays completely outside this engine. Useful
-photographs and videos discovered elsewhere are classified for
-`H:\My Drive\CONTENT-EXTRA`; the engines must never traverse the same protected
-tree.
+`H:\My Drive\FamilyContentLibrary` (renamed from `ContentLibrary`) stays
+completely outside this engine. Useful photographs and videos discovered
+elsewhere are classified for `H:\My Drive\--ARCHIVE\CONTENT-EXTRA`; the engines
+must never traverse the same protected tree.
 
 ---
 

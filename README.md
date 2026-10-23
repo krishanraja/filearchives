@@ -124,6 +124,10 @@ as new, waiting on him, and left exactly where he put it. Double-click
 `RECORD-MY-FOLDERS.cmd` once to record the drives as they are now as his
 preference and start the weekly check-in; `CHECK-MY-NEW-FOLDERS.cmd` runs the
 check-in on demand. The latest check-in is `docs/folder-checkin/LATEST.md`.
+Recorded 2026-10-23: 864 folders, and `H:\My Drive\FamilyContentLibrary`
+(renamed from `ContentLibrary`) is never entered. The layout the 2026-10-04
+run built has since been reorganised by Krish (D-031, D-032); the record is
+now the authority for where things live.
 
 Start at `RESUME.md`.
 The completed-run evidence and backup handoff are in

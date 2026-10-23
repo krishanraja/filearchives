@@ -54,7 +54,7 @@ $cases = @(
     @{ Source='c-downloads'; Path='screenshots\Screenshot 1.png'; Ext='.png'; Category='media-noise'; Disposition='delete-candidate'; Folder=$null },
     @{ Source='c-downloads'; Path='setup.msi'; Ext='.msi'; Category='installer-package'; Disposition='delete-candidate'; Folder=$null },
     @{ Source='c-downloads'; Path='~$draft.docx'; Ext='.docx'; Category='office-lock-file'; Disposition='delete-candidate'; Folder=$null },
-    @{ Source='h-my-drive'; Path='FAMILY-ADMIN\Maa\record.gdoc'; Ext='.gdoc'; Category='family-admin'; Disposition='preserve-in-place'; Folder=$null },
+    @{ Source='h-my-drive'; Path='Family Admin\Maa\record.gdoc'; Ext='.gdoc'; Category='family-admin'; Disposition='preserve-in-place'; Folder=$null },
     @{ Source='c-onedrive'; Path='Documents\supabase token.txt'; Ext='.txt'; Category='credentials-secrets'; Disposition='secure-quarantine-review'; Folder=$null },
     @{ Source='c-dev'; Path='krishanraja\mm-ctrl\worktree.txt'; Ext='.txt'; Category='critical-local-work'; Disposition='preserve-in-place'; Folder=$null }
 )
@@ -102,6 +102,16 @@ try {
     $blocked = $_.Exception.Message -match 'excluded boundary leaked'
 }
 if (-not $blocked) { throw 'H ContentLibrary leakage was not refused' }
+
+$blocked = $false
+try {
+    Get-FaLayoutClassification `
+        -Item (New-TestItem -Path 'FamilyContentLibrary\anything.jpg' -Extension '.jpg') `
+        -ItemSourceId 'h-my-drive' -Policy $policy -AnalysisDate $asOf | Out-Null
+} catch {
+    $blocked = $_.Exception.Message -match 'excluded boundary leaked'
+}
+if (-not $blocked) { throw 'H FamilyContentLibrary leakage was not refused' }
 
 $scratch = Join-Path ([IO.Path]::GetTempPath()) ('filearchives-layout-time-' + [guid]::NewGuid().ToString('n'))
 try {

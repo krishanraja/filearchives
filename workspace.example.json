@@ -21,7 +21,7 @@
 
   "audit": "C:\\Users\\<you>\\.scratch\\filearchives-audit",
   "current": "H:\\My Drive\\Current",
-  "archive": "H:\\My Drive\\Archive",
+  "archive": "H:\\My Drive\\--ARCHIVE",
 
   "sources": [
     {
@@ -51,7 +51,7 @@
   ],
 
   "protected_roots": [
-    "H:\\My Drive\\ContentLibrary"
+    "H:\\My Drive\\FamilyContentLibrary"
   ],
 
   "protected_names": []

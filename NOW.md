@@ -30,12 +30,13 @@ Lifecycle: live. The detail is in `README.md`.
 
 ## What changed recently
 
+- 2026-10-23 **Krish's folder record landed (864 folders on H, G and C dev) and is now the authority for where things live.** `FamilyContentLibrary`, the renamed ContentLibrary, is never entered by any run, whatever the machine config says. The policy, the canonical audit and the docs now match the drive as it is (D-032).
 - 2026-10-23 **filearchives no longer moves or removes a folder Krish made without his yes.** Every folder move, rename, merge or removal inside H:\My Drive, G:\My Drive and C:\Users\krish\dev now needs his consent for that folder; a new folder is recorded as waiting on him and left where he put it; a weekly check-in asks what goes in it and counts any folder gone without his OK. Proven by `tests/test_new_folder_survives.ps1`. Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without asking first.
 - 2026-10-23 **The North Star now has a number, a weekly ladder and an urgency rating.** Ruling (Krish, 2026-10-23): every repository chases one aggressive number on a weekly ladder, and urgency U1 to U5 sets how hard it pushes. The number is in `docs/NORTH_STAR.md`; contract: ai-harness `contract/north-star-metric.md`.
 
 ## What is next and what is waiting on Krish
 
-- **Waiting on Krish:** double-click `RECORD-MY-FOLDERS.cmd` in `C:\Users\krish\dev\krishanraja\filearchives` (or download it from GitHub and double-click it) and say Yes. It brings the fix onto his PC, records his folders as they are now, pauses any other filearchives job, starts the Monday check-in and saves the record here.
+- Done 2026-10-23: Krish pressed `RECORD-MY-FOLDERS.cmd`; the record and the Monday check-in are in place. Nothing is waiting on him until the first check-in asks about new folders.
 - The North Star number is measured from the first weekly check-in after that (`docs/folder-checkin/LOG.jsonl`), which also writes it into the line above. Until then it is unmeasured.
 - North Star check (2026-10-23): holds.
 

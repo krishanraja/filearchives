@@ -4,9 +4,9 @@
   "visibility_days": 31,
   "destinations": {
     "business_current": "RETIRED-2026-10-22 (see docs/DECISIONS.md D-031; business work now lives in H:\\My Drive\\Ventures)",
-    "business_archive": "H:\\My Drive\\ARCHIVE",
-    "content_extra": "H:\\My Drive\\CONTENT-EXTRA",
-    "personal": "G:\\My Drive\\Personal"
+    "business_archive": "H:\\My Drive\\--ARCHIVE",
+    "content_extra": "H:\\My Drive\\--ARCHIVE\\CONTENT-EXTRA",
+    "personal": "RETIRED-2026-10-23 (see docs/DECISIONS.md D-032; G:\\My Drive\\Personal no longer exists, personal records live where Krish recorded them in policy/folder-preferences.json)"
   },
   "structure": {
     "business_current": [
@@ -49,13 +49,18 @@
   "excluded_boundaries": [
     {
       "source_id": "h-my-drive",
+      "relative_prefix": "FamilyContentLibrary",
+      "reason": "Total session exclusion: do not enumerate, classify, hash, move, or delete. Renamed from ContentLibrary (Krish, 2026-10-23)."
+    },
+    {
+      "source_id": "h-my-drive",
       "relative_prefix": "ContentLibrary",
-      "reason": "Total session exclusion: do not enumerate, classify, hash, move, or delete."
+      "reason": "Former name of FamilyContentLibrary; kept excluded in case the name returns."
     }
   ],
   "preserve_families": [
-    { "source_id": "h-my-drive", "relative_prefix": "FAMILY-ADMIN\\Maa", "rule_id": "preserve-maa" },
-    { "source_id": "h-my-drive", "relative_prefix": "FAMILY-ADMIN\\Loz", "rule_id": "preserve-loz" }
+    { "source_id": "h-my-drive", "relative_prefix": "Family Admin\\Maa", "rule_id": "preserve-maa" },
+    { "source_id": "h-my-drive", "relative_prefix": "Family Admin\\Loz", "rule_id": "preserve-loz" }
   ],
   "critical_paths": [
     {

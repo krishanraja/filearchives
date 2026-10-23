@@ -110,6 +110,20 @@ function Import-FaWorkspace {
     $protectedRoots = @($data.protected_roots | ForEach-Object {
         ConvertTo-FaCanonicalPath ([string]$_)
     })
+    # Krish's folder record names trees no run may enter, whatever an older
+    # machine config says: ContentLibrary became FamilyContentLibrary on
+    # 2026-10-23 and the workspace on his PC still names the old one.
+    $recordPath = if ($env:FILEARCHIVES_FOLDER_PREFERENCES) { $env:FILEARCHIVES_FOLDER_PREFERENCES }
+        else { Join-Path (Split-Path -Parent $PSScriptRoot) 'policy' 'folder-preferences.json' }
+    if (Test-Path -LiteralPath $recordPath -PathType Leaf) {
+        $record = Get-Content -LiteralPath $recordPath -Raw | ConvertFrom-Json -Depth 32
+        foreach ($boundary in @($record.never_enter)) {
+            $canonical = ConvertTo-FaCanonicalPath ([string]$boundary)
+            if (@($protectedRoots | Where-Object { $_.Equals($canonical, [StringComparison]::OrdinalIgnoreCase) }).Count -eq 0) {
+                $protectedRoots += $canonical
+            }
+        }
+    }
     if ($protectedRoots.Count -eq 0) {
         throw 'workspace must declare at least one protected root'
     }

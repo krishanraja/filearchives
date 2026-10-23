@@ -40,6 +40,7 @@ import collections
 import csv
 import datetime as dt
 import io
+import json
 import os
 import string
 import sys
@@ -87,6 +88,23 @@ BANDS = [(0, "0-10 KB", 10 * 1024), (1, "10-100 KB", 100 * 1024),
          (4, "10-100 MB", 100 << 20), (5, "over 100 MB", 1 << 62)]
 
 
+def never_enter() -> set:
+    """Trees Krish's folder record says no run may enter (FamilyContentLibrary).
+    An unreadable record stops the survey rather than walking into them."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    record = os.environ.get("FILEARCHIVES_FOLDER_PREFERENCES") or os.path.join(
+        here, "..", "..", "policy", "folder-preferences.json")
+    if not os.path.exists(record):
+        raise MissingInput("folder record is absent: {} - refusing to survey "
+                           "without its never-enter list".format(record))
+    with io.open(record, encoding="utf-8") as fh:
+        data = json.load(fh)
+    return {os.path.normcase(os.path.normpath(p)) for p in data.get("never_enter", [])}
+
+
+NEVER_ENTER = None
+
+
 def band(size: int) -> str:
     for _, name, ceiling in BANDS:
         if size < ceiling:
@@ -109,6 +127,9 @@ def survey(root: str) -> dict:
             "root is absent or not mounted: {} - refusing to report it as "
             "empty".format(root))
 
+    global NEVER_ENTER
+    if NEVER_ENTER is None:
+        NEVER_ENTER = never_enter()
     errors: list = []
     docs = collections.Counter()
     doc_bytes = collections.Counter()
@@ -120,7 +141,9 @@ def survey(root: str) -> dict:
     bands = collections.Counter()
 
     for dp, dns, fns in os.walk(root, onerror=errors.append):
-        dns[:] = [d for d in dns if d.lower() not in SKIP_DIRS]
+        dns[:] = [d for d in dns if d.lower() not in SKIP_DIRS and
+                  os.path.normcase(os.path.normpath(os.path.join(dp, d)))
+                  not in NEVER_ENTER]
         top = os.path.relpath(dp, root).split(os.sep)[0]
         for fn in fns:
             ext = os.path.splitext(fn)[1].lower()

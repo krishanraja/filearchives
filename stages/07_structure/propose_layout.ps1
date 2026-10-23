@@ -127,7 +127,7 @@ function Get-FaLayoutClassification {
             return New-FaLayoutResult -Category 'family-admin' `
                 -Disposition 'preserve-in-place' -Confidence 'high' `
                 -RuleId ([string]$family.rule_id) `
-                -DestinationRoot 'H:\My Drive\FAMILY-ADMIN' `
+                -DestinationRoot 'H:\My Drive\Family Admin' `
                 -DestinationFolder $null `
                 -Reasons @('Google-native family records remain with their owning account; canonical G pointers are separate.')
         }

@@ -48,7 +48,7 @@ try {
     [IO.File]::WriteAllText($config, (@{
         schema_version = 2; audit = $audit
         sources = @(@{ id = 'fixture-drive'; path = $drive; kind = 'test'; follow_reparse_points = $false })
-        protected_roots = @((Join-Path $drive 'ContentLibrary')); protected_names = @()
+        protected_roots = @((Join-Path $scratch 'unrelated-protected')); protected_names = @()
     } | ConvertTo-Json -Depth 8))
     $seed = Get-Content -LiteralPath (Join-Path $repo 'policy' 'folder-preferences.json') -Raw | ConvertFrom-Json -Depth 16
     $seed.watch_roots = @(@{ path = $drive; max_depth = 4 })
@@ -78,15 +78,9 @@ try {
     $before = Get-TreeSeal $drive
 
     # 4. The canonical audit reports them as waiting on Krish, not as issues.
-    $policy = Get-Content -LiteralPath (Join-Path $repo 'policy' 'estate-policy-v1.json') -Raw | ConvertFrom-Json -Depth 64
-    $policy.destinations.business_current = Join-Path $drive 'CURRENT'
-    $policy.destinations.personal = Join-Path $scratch 'G' 'Personal'
-    foreach ($p in @($policy.structure.personal)) { New-Item -ItemType Directory -Path (Join-Path $scratch 'G' 'Personal' $p) -Force | Out-Null }
     New-Item -ItemType Directory -Path (Join-Path $scratch 'dev' 'krishanraja' 'mm-ctrl') -Force | Out-Null
-    $policyPath = Join-Path $scratch 'policy.json'
-    [IO.File]::WriteAllText($policyPath, ($policy | ConvertTo-Json -Depth 64))
     $canonical = Join-Path $audit 'canonical.json'
-    & (Join-Path $repo 'stages' '09_mirror' 'test_canonical_state.ps1') -ConfigPath $config -PolicyPath $policyPath `
+    & (Join-Path $repo 'stages' '09_mirror' 'test_canonical_state.ps1') -ConfigPath $config `
         -CDevRoot (Join-Path $scratch 'dev') -ReportPath $canonical
     $report = Get-Content -LiteralPath $canonical -Raw | ConvertFrom-Json
     if ($report.Status -ne 'pass') { throw "canonical audit called Krish's new folders issues: $($report.Issues | ConvertTo-Json -Compress)" }
@@ -96,6 +90,11 @@ try {
     # stays put, one in a new folder waits on Krish, a loose one still routes.
     . (Join-Path $structure 'propose_layout.ps1')
     $folderPrefs = Import-FaFolderPreferences
+    # The machine config does not name the boundary; the record does, and wins.
+    $protectedNow = @((Import-FaWorkspace -ConfigPath $config).ProtectedRoots)
+    if ($protectedNow -notcontains (ConvertTo-FaCanonicalPath (Join-Path $drive 'ContentLibrary'))) {
+        throw 'the never-enter folder in Krish''s record is not protected when the machine config omits it'
+    }
     foreach ($case in @(
         @{ Rel = 'CURRENT/01_MIND-MAKE/passport.pdf'; Expect = 'preference-keep-in-place' },
         @{ Rel = 'Side Project/passport.pdf'; Expect = 'ask-krish-first' }

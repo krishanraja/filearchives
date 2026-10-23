@@ -8,7 +8,7 @@ it does not mirror cloud content onto intermittently connected machines.
 
 | file | role |
 |---|---|
-| `stages/09_mirror/test_canonical_state.ps1` | inspect only the top-level navigation surfaces, verify every required category and critical worktree, and report unexpected roots without traversing protected boundaries |
+| `stages/09_mirror/test_canonical_state.ps1` | check the top of every watched drive against Krish's folder record: recorded folders and never-enter boundaries present, no loose root files, the critical worktree present, and unknown folders reported as waiting on him, without traversing protected boundaries |
 
 ## Inputs
 - workspace configuration

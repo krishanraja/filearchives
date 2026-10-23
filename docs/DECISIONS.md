@@ -400,3 +400,26 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   receipts.jsonl, ventures_pre.tsv, verify.txt).
 - Revisit trigger: the next engine run that needs a business current
   destination; remap `business_current` to venture paths first.
+
+## D-032: the folder record is the authority; FamilyContentLibrary is never entered
+
+- Date: 2026-10-23
+- Status: locked
+- Decision: `H:\My Drive\ContentLibrary` was renamed `FamilyContentLibrary`.
+  It replaces ContentLibrary everywhere D-001 applied: no run enumerates,
+  hashes, compares, moves or deletes inside it. The old name stays excluded in
+  case it returns. The never-enter list in `policy/folder-preferences.json` is
+  added to every workspace's protected roots, so a machine config that still
+  names the old folder cannot let a run in. The 99 folder names the first
+  snapshot recorded inside it were removed from the record.
+- Decision: Krish's recorded folder tree is the authority for where things
+  live. The canonical audit checks the drives against it instead of the
+  2026-10-04 category lists. In the estate policy, `business_archive` is
+  `H:\My Drive\--ARCHIVE`, `content_extra` is `--ARCHIVE\CONTENT-EXTRA`, the
+  preserved family folders are `Family Admin\Maa` and `Family Admin\Loz`,
+  and `personal` is retired like `business_current` (D-031): `G:\My Drive\Personal`
+  no longer exists. Retired destinations are never recreated.
+- Reason: Krish, 2026-10-23: "it's the renamed ContentLibrary, exclude it, and
+  update everything to match current status."
+- Revisit trigger: Krish reorganises a drive again; record it with
+  RECORD-MY-FOLDERS.cmd.
