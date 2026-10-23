@@ -64,6 +64,8 @@ without asking first. D-030 and learning 36 hold the detail.
   the completed engine is pushed to `origin/main`
 - sealed run `estate-20261003-v1` covers all 20 configured roots on C, E, G, H
   and mounted L: 1,308,625 files, 149,768 directories and 199,161,374,424 bytes
+- 2026-10-22 (D-031): H `CURRENT` and `PERSONAL-SYSTEMS` were dissolved into
+  `Ventures` and `Family Admin\Krish`; `business_current` is retired in policy
 - H business current/archive, CONTENT-EXTRA and FAMILY-ADMIN exist in the
   accepted shallow taxonomy; G contains the accepted ten personal categories
 - final canonical-state audit passes with zero issues; C/L Windows known-folder
