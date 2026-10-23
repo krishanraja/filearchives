@@ -11,8 +11,9 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-. (Join-Path $repo 'guards\workspace.ps1')
-. (Join-Path $repo 'guards\atomic.ps1')
+. (Join-Path $repo 'guards' 'workspace.ps1')
+. (Join-Path $repo 'guards' 'atomic.ps1')
+. (Join-Path $repo 'guards' 'folder_consent.ps1')
 $workspace = Import-FaWorkspace -ConfigPath $ConfigPath
 $root = ConvertTo-FaCanonicalPath $SourceRoot
 Assert-FaNotProtected -Path $root -Workspace $workspace -Operation 'empty-directory scan root'
@@ -20,6 +21,11 @@ if (-not (Test-Path -LiteralPath $root -PathType Container)) {
     throw "empty-directory source is absent: $root"
 }
 $preserved = @($PreservePath | ForEach-Object { ConvertTo-FaCanonicalPath $_ })
+# A folder Krish made is empty the day he makes it. Inside a watched root an
+# empty folder is removed only with his yes for that folder; every other one
+# is preserved, and so is every folder above it.
+$folderPreferences = Import-FaFolderPreferences
+$preservedForKrish = [Collections.Generic.List[string]]::new()
 
 $directories = [Collections.Generic.List[object]]::new()
 $queue = [Collections.Generic.Queue[string]]::new()
@@ -43,6 +49,14 @@ while ($queue.Count -gt 0) {
         try {
             Assert-FaNotProtected -Path $candidate -Workspace $workspace -Operation 'empty-directory traversal'
         } catch {
+            continue
+        }
+        try {
+            Assert-FaFolderConsent -Path $candidate -Action 'delete' -Preferences $folderPreferences `
+                -Operation 'empty-directory manifest'
+        } catch {
+            $preservedForKrish.Add($candidate)
+            $preserved += $candidate
             continue
         }
         $queue.Enqueue($candidate)
@@ -85,6 +99,7 @@ $manifest = [ordered]@{
     SourceRoot = $root
     IncludeRoot = [bool]$IncludeRoot
     PreservedRoots = $preserved
+    PreservedForKrish = @($preservedForKrish)
     Targets = $targets
     TargetCount = [long]$targets.Count
     Approved = $true
@@ -92,4 +107,5 @@ $manifest = [ordered]@{
     CreatedAt = [DateTimeOffset]::Now.ToString('o')
 }
 Write-FaAtomicJson -Path $ManifestPath -Value $manifest -Depth 12
-Write-Host ("empty-directory manifest: targets={0} path={1}" -f $targets.Count, $ManifestPath)
+Write-Host ("empty-directory manifest: targets={0} kept-for-krish={1} path={2}" -f
+    $targets.Count, $preservedForKrish.Count, $ManifestPath)

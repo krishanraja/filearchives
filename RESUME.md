@@ -20,11 +20,33 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_sensitive_name_quarantine.ps1
 .\tests\test_temporary_family_consolidation.ps1
 .\tests\test_path_regex_quarantine.ps1
+.\tests\test_new_folder_survives.ps1
 node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
   --root . --manifest pipeline\stage-conveyor.json
 ```
 
 ---
+
+## LIVE: Krish's folders stay where he puts them (from 2026-10-23)
+
+Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made
+without asking first. D-030 and learning 36 hold the detail.
+
+- `policy/folder-preferences.json` is the record of where Krish wants things.
+  `RECORD-MY-FOLDERS.cmd` (double-click, on his PC) fills it from the drives as
+  they stand, starts the weekly check-in and saves the record to GitHub.
+- `guards/folder_consent.ps1` refuses every folder move, rename, merge or
+  removal inside a watched root without his per-folder consent row, and
+  refuses to empty a folder that is waiting on him.
+- The weekly check-in (Monday 09:00, scheduled task
+  `filearchives-weekly-folder-checkin`, or `CHECK-MY-NEW-FOLDERS.cmd`) asks two
+  questions per new folder, counts recorded folders gone without his OK (the
+  North Star number), and writes `docs/folder-checkin/LATEST.md` and
+  `LOG.jsonl`. It never moves anything.
+- Krish can answer in writing in `docs/folder-checkin/answers.json`. A consent
+  to move or remove a folder is a row in `consents` with
+  `approved_by: "Krish"`, the exact path, the action, the destination for a
+  move, and his words; only he gives one.
 
 ## CLOSED MISSION: whole-estate consolidation (2026-10-04 to 2026-10-11)
 

@@ -94,11 +94,11 @@
     {
       "id": "structure",
       "owner": "accepted taxonomy, per-file routing proposals and verified folder moves",
-      "owned_paths": ["stages/07_structure/*.ps1"],
+      "owned_paths": ["stages/07_structure/*.ps1", "chains/install_folder_checkin.ps1", "chains/chain_weekly_folder_checkin.ps1"],
       "inputs": ["inventory-segments", "duplicate-evidence", "user-policy", "source-filesystems"],
       "outputs": ["layout-proposal", "folder-move-receipt"],
-      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
-      "side_effects": ["proposal is read-only; approved folder-move entrypoint may move exactly one sealed folder"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts", "krish-folder-consent"],
+      "side_effects": ["proposal is read-only; approved folder-move entrypoint may move exactly one sealed folder, and only with Krish's per-folder consent inside a watched root; the weekly check-in writes only its record and report"],
       "retry": {
         "mode": "idempotent",
         "total_attempt_cap": 3,
@@ -154,7 +154,7 @@
       "owned_paths": ["stages/09_mirror/*.ps1"],
       "inputs": ["workspace-config", "user-policy", "folder-move-receipt"],
       "outputs": ["canonical-state"],
-      "consumed_guards": ["workspace-safety", "atomic-artifacts"],
+      "consumed_guards": ["workspace-safety", "atomic-artifacts", "krish-folder-consent"],
       "side_effects": ["writes a read-only top-level canonical-state report without traversing protected boundaries"],
       "retry": {
         "mode": "idempotent",
@@ -164,7 +164,7 @@
       },
       "completion": {
         "source": "independent_rederivation",
-        "evidence": "required canonical roots and the critical worktree exist, with no unexpected navigation roots"
+        "evidence": "required canonical roots and the critical worktree exist; unexpected navigation folders are reported as waiting on Krish, never as issues"
       }
     },
     {
@@ -222,6 +222,13 @@
       "owned_paths": ["guards/workspace.ps1", "guards/paths.py"],
       "required_for": ["source-survey", "inventory", "classification", "duplicate-analysis", "structure", "canonical-audit"],
       "enforced_by": ["tests/test_powershell_guards.ps1"]
+    },
+    {
+      "id": "krish-folder-consent",
+      "owner": "Krish's folder record and per-folder consent",
+      "owned_paths": ["guards/folder_consent.ps1"],
+      "required_for": ["structure", "canonical-audit"],
+      "enforced_by": ["tests/test_new_folder_survives.ps1"]
     },
     {
       "id": "atomic-artifacts",
@@ -286,6 +293,7 @@
     {"id": "learning-32-reserve-quarantine-destinations", "owner_stage": "structure", "enforced_by": ["tests/test_ingress_duplicate_quarantine.ps1"]},
     {"id": "learning-33-locked-empty-shells", "owner_stage": "structure", "enforced_by": ["stages/07_structure/invoke_empty_directory_manifest.ps1"]},
     {"id": "learning-34-final-repository-reconciliation", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_repository_snapshot.ps1"]},
-    {"id": "learning-35-semantic-git-index-proof", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_repository_snapshot.ps1"]}
+    {"id": "learning-35-semantic-git-index-proof", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_repository_snapshot.ps1"]},
+    {"id": "learning-36-krish-folders-need-his-yes", "owner_stage": "structure", "enforced_by": ["tests/test_new_folder_survives.ps1"]}
   ]
 }

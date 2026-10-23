@@ -117,6 +117,14 @@ explained in `docs/estate-strategy-2026-10-04.md`. Executed folder moves and
 cross-volume copies have frozen manifests and readback receipts in the audit
 tree outside this repository.
 
+**Krish's folders stay where he puts them (2026-10-23).** No folder inside
+`H:\My Drive`, `G:\My Drive` or `C:\Users\krish\dev` is moved, renamed, merged
+or removed without Krish's yes for that folder; a folder he makes is recorded
+as new, waiting on him, and left exactly where he put it. Double-click
+`RECORD-MY-FOLDERS.cmd` once to record the drives as they are now as his
+preference and start the weekly check-in; `CHECK-MY-NEW-FOLDERS.cmd` runs the
+check-in on demand. The latest check-in is `docs/folder-checkin/LATEST.md`.
+
 Start at `RESUME.md`.
 The completed-run evidence and backup handoff are in
 `docs/RUN-2026-10-04.md`. The verified deletion results, retained exceptions

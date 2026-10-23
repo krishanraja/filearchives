@@ -21,6 +21,7 @@ it does not mirror cloud content onto intermittently connected machines.
 ## Invariants
 - protected roots are checked only at their boundary
 - expected and unexpected top-level navigation roots are explicit
+- a top-level folder outside the layout is Krish's, reported as waiting on him, never an issue to fix
 - a missing or disconnected source is unavailable, never empty
 
 ## Tests

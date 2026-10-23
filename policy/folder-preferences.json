@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "krish-folder-preferences-v1",
+  "ruling": "Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without asking first.",
+  "recorded_at": null,
+  "recorded_on": null,
+  "last_checkin_at": null,
+  "watch_roots": [
+    { "path": "H:\\My Drive", "max_depth": 4 },
+    { "path": "G:\\My Drive", "max_depth": 4 },
+    { "path": "C:\\Users\\krish\\dev", "max_depth": 1 }
+  ],
+  "never_enter": [
+    "H:\\My Drive\\ContentLibrary"
+  ],
+  "skip_names": [
+    ".git",
+    "node_modules",
+    "__pycache__",
+    ".venv",
+    "$RECYCLE.BIN",
+    "System Volume Information"
+  ],
+  "root_files_allowed": [
+    "00-START-HERE.md",
+    "README-CANONICAL.md",
+    "AGENTS.md",
+    "desktop.ini"
+  ],
+  "folders": [],
+  "consents": []
+}

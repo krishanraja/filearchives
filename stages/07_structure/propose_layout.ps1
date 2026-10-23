@@ -14,8 +14,9 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-. (Join-Path $repo 'guards\workspace.ps1')
-. (Join-Path $repo 'guards\atomic.ps1')
+. (Join-Path $repo 'guards' 'workspace.ps1')
+. (Join-Path $repo 'guards' 'atomic.ps1')
+. (Join-Path $repo 'guards' 'folder_consent.ps1')
 
 function Test-FaRelativePrefix {
     param([string] $Path, [string] $Prefix)
@@ -262,6 +263,31 @@ function Get-FaLayoutClassification {
         -Reasons @("age-days=$ageDays", 'Old does not mean deletable; preserve until content classification resolves it.')
 }
 
+function Get-FaFolderPreferenceLayout {
+    # Krish's record outranks the older rules: a file in a folder he has
+    # recorded stays there, and a file in a folder he has not answered for
+    # waits on him. Loose files at the top of a watched root still route.
+    param([Parameter(Mandatory)] $Item, [Parameter(Mandatory)][string] $SourceRoot,
+        [Parameter(Mandatory)] $Preferences)
+    $relative = ([string]$Item.RelativePath) -replace '[\\/]+', [IO.Path]::DirectorySeparatorChar
+    $folder = Split-Path -Parent (Join-Path $SourceRoot $relative)
+    switch (Get-FaFolderStatus -Path $folder -Preferences $Preferences) {
+        'known' {
+            return New-FaLayoutResult -Category 'krish-folder-preference' `
+                -Disposition 'preference-keep-in-place' -Confidence 'high' `
+                -RuleId 'krish-folder-preference' -DestinationRoot $null -DestinationFolder $null `
+                -Reasons @('Krish recorded this folder as where he wants it; older routing rules do not apply.')
+        }
+        'new-waiting-on-krish' {
+            return New-FaLayoutResult -Category 'new-folder-waiting-on-krish' `
+                -Disposition 'ask-krish-first' -Confidence 'high' `
+                -RuleId 'new-folder-waiting-on-krish' -DestinationRoot $null -DestinationFolder $null `
+                -Reasons @('Krish made this folder and has not said what goes in it; nothing inside it moves.')
+        }
+    }
+    return $null
+}
+
 function Invoke-FaLayoutProposal {
     [CmdletBinding()]
     param(
@@ -278,6 +304,7 @@ function Invoke-FaLayoutProposal {
     $policy = Get-Content -LiteralPath $RulesPath -Raw | ConvertFrom-Json -Depth 64
     if ($policy.schema_version -ne 1) { throw 'estate policy schema_version must be 1' }
     $dupes = Get-FaDuplicateIndex -Path $DedupePath
+    $folderPreferences = Import-FaFolderPreferences
     $selected = @($workspace.Sources | Where-Object {
         -not $OnlySourceId -or $OnlySourceId.Count -eq 0 -or $OnlySourceId -contains $_.Id
     })
@@ -309,6 +336,9 @@ function Invoke-FaLayoutProposal {
                     if ($item.Kind -ne 'file') { continue }
                     $classification = Get-FaLayoutClassification -Item $item `
                         -ItemSourceId $source.Id -Policy $policy -AnalysisDate $AnalysisDate
+                    $preferred = Get-FaFolderPreferenceLayout -Item $item -SourceRoot $source.Path `
+                        -Preferences $folderPreferences
+                    if ($preferred) { $classification = $preferred }
                     $length = [long]$item.Length
                     $key = ('{0}|{1}' -f $source.Id.ToLowerInvariant(),
                         ([string]$item.RelativePath).Replace('/', '\').ToLowerInvariant())
@@ -346,7 +376,7 @@ function Invoke-FaLayoutProposal {
                     } else { '[none]' }
                     Add-FaAggregate -Map $byDestination -Key $destinationName -Bytes $length
                     if ($manualExamples.Count -lt 100 -and
-                        $classification.Disposition -in @('manual-review', 'temporary-family-review', 'secure-quarantine-review')) {
+                        $classification.Disposition -in @('manual-review', 'temporary-family-review', 'secure-quarantine-review', 'ask-krish-first')) {
                         $manualExamples.Add([pscustomobject]@{
                             SourceId = $source.Id
                             RelativePath = [string]$item.RelativePath

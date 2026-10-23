@@ -10,8 +10,9 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-. (Join-Path $repo 'guards\workspace.ps1')
-. (Join-Path $repo 'guards\atomic.ps1')
+. (Join-Path $repo 'guards' 'workspace.ps1')
+. (Join-Path $repo 'guards' 'atomic.ps1')
+. (Join-Path $repo 'guards' 'folder_consent.ps1')
 
 function Get-FaShallowTreeSeal {
     param([Parameter(Mandatory)][string] $Path)
@@ -36,6 +37,8 @@ $sourcePath = ConvertTo-FaCanonicalPath $Source
 $destinationPath = ConvertTo-FaCanonicalPath $Destination
 Assert-FaNotProtected -Path $sourcePath -Workspace $workspace -Operation 'atomic tree relocation source'
 Assert-FaNotProtected -Path $destinationPath -Workspace $workspace -Operation 'atomic tree relocation destination'
+Assert-FaFolderConsent -Path $sourcePath -Action 'move' -Destination $destinationPath `
+    -Preferences (Import-FaFolderPreferences) -Operation 'atomic tree relocation manifest'
 if (-not ([IO.Path]::GetPathRoot($sourcePath)).Equals([IO.Path]::GetPathRoot($destinationPath), [StringComparison]::OrdinalIgnoreCase)) {
     throw 'atomic tree relocation must remain on one volume'
 }

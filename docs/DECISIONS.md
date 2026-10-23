@@ -361,3 +361,22 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   has already moved to quarantine is impossible and unnecessary when the exact
   destination objective is independently re-derived.
 - Revisit trigger: a unified receipt graph that records the same relationship.
+
+## D-030: Krish's folders move only with his yes, folder by folder
+
+- Date: 2026-10-23
+- Status: locked
+- Decision: inside a watched root (`H:\My Drive`, `G:\My Drive`,
+  `C:\Users\krish\dev`) no folder is moved, renamed, merged or removed
+  without a consent row in `policy/folder-preferences.json` naming that folder
+  and action, approved by Krish. A folder the record does not know is new,
+  waiting on Krish, and nothing inside it moves. The folder tree as Krish
+  recorded it is his preference and outranks the older routing rules in
+  `policy/estate-policy-v1.json`. A weekly check-in asks him about every new
+  folder and counts any recorded folder gone without his OK.
+- Reason: Krish, 2026-10-23: a folder he made on H was gone the next day. The
+  engine called every unexpected top-level folder an issue and removed any
+  empty folder under the root it was pointed at.
+- Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made
+  without asking first.
+- Revisit trigger: only Krish.

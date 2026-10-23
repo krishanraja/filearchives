@@ -9,8 +9,9 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-. (Join-Path $repo 'guards\workspace.ps1')
-. (Join-Path $repo 'guards\atomic.ps1')
+. (Join-Path $repo 'guards' 'workspace.ps1')
+. (Join-Path $repo 'guards' 'atomic.ps1')
+. (Join-Path $repo 'guards' 'folder_consent.ps1')
 if (-not $Execute) { throw 'execution requires the explicit -Execute switch' }
 $manifest = Get-Content -LiteralPath $ManifestPath -Raw | ConvertFrom-Json -Depth 24 -DateKind String
 if ($manifest.SchemaVersion -ne 1 -or $manifest.Kind -ne 'empty-directory-removal-v1') {
@@ -22,6 +23,7 @@ if ($manifest.Approved -ne $true -or [string]::IsNullOrWhiteSpace([string]$manif
 $workspace = Import-FaWorkspace -ConfigPath $ConfigPath
 $root = ConvertTo-FaCanonicalPath ([string]$manifest.SourceRoot)
 Assert-FaNotProtected -Path $root -Workspace $workspace -Operation 'empty-directory execution root'
+$folderPreferences = Import-FaFolderPreferences
 $removed = [Collections.Generic.List[string]]::new()
 $changed = [Collections.Generic.List[object]]::new()
 foreach ($target in @($manifest.Targets | Sort-Object Depth -Descending)) {
@@ -33,6 +35,13 @@ foreach ($target in @($manifest.Targets | Sort-Object Depth -Descending)) {
         throw "empty-directory target escapes root: $path"
     }
     if (-not (Test-Path -LiteralPath $path -PathType Container)) { continue }
+    try {
+        Assert-FaFolderConsent -Path $path -Action 'delete' -Preferences $folderPreferences `
+            -Operation 'empty-directory removal'
+    } catch {
+        $changed.Add([pscustomobject]@{ Path = $path; Reason = 'krish-folder-consent-missing'; Error = $_.Exception.Message })
+        continue
+    }
     $child = Get-ChildItem -LiteralPath $path -Force -ErrorAction Stop | Select-Object -First 1
     if ($null -ne $child) {
         $changed.Add([pscustomobject]@{ Path = $path; Reason = 'not-empty-at-action-time' })

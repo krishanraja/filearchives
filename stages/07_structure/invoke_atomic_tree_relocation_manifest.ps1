@@ -9,8 +9,9 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-. (Join-Path $repo 'guards\workspace.ps1')
-. (Join-Path $repo 'guards\atomic.ps1')
+. (Join-Path $repo 'guards' 'workspace.ps1')
+. (Join-Path $repo 'guards' 'atomic.ps1')
+. (Join-Path $repo 'guards' 'folder_consent.ps1')
 if (-not $Execute) { throw 'execution requires the explicit -Execute switch' }
 
 function Get-FaShallowTreeSeal {
@@ -40,6 +41,8 @@ $source = ConvertTo-FaCanonicalPath ([string]$manifest.Source)
 $destination = ConvertTo-FaCanonicalPath ([string]$manifest.Destination)
 Assert-FaNotProtected -Path $source -Workspace $workspace -Operation 'atomic tree relocation source'
 Assert-FaNotProtected -Path $destination -Workspace $workspace -Operation 'atomic tree relocation destination'
+Assert-FaFolderConsent -Path $source -Action 'move' -Destination $destination `
+    -Preferences (Import-FaFolderPreferences) -Operation 'atomic tree relocation'
 if (Test-Path -LiteralPath $destination) { throw "destination appeared after manifest freeze: $destination" }
 $before = Get-FaShallowTreeSeal -Path $source
 if ($before.TopLevelItems -ne [long]$manifest.TopLevelItems -or $before.ShallowSeal -ne [string]$manifest.ShallowSeal) {

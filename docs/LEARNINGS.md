@@ -285,3 +285,17 @@ Git may rewrite `.git/index` stat-cache fields during an otherwise read-only
 identical. Verify the raw index copy immediately, then make the final durable
 assertion against the ordered `ls-files --stage` entries and record that
 semantic equivalence in the receipt.
+
+## 36. A folder Krish made is his until he says otherwise
+
+Krish, 2026-10-23: a folder he made on H was gone the next day. The engine
+treated every top-level folder outside the accepted layout as an
+`unexpected-h-root` issue to fix, and its empty-folder cleanup removed any
+empty folder under the root it was given, and a folder made yesterday is empty.
+Nothing in the engine asked whose folder it was. Now Krish's folder tree is
+recorded as his preference; a folder the record does not know is new,
+waiting on Krish, and is left exactly where he put it; every folder move,
+rename, merge or removal inside a watched root needs a consent row naming that
+folder, approved by him; and the weekly check-in counts any recorded folder
+that disappears without one. Ruling (Krish, 2026-10-23): filearchives never
+moves a folder Krish made without asking first.

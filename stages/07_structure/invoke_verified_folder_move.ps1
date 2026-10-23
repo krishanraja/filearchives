@@ -10,8 +10,9 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-. (Join-Path $repo 'guards\workspace.ps1')
-. (Join-Path $repo 'guards\atomic.ps1')
+. (Join-Path $repo 'guards' 'workspace.ps1')
+. (Join-Path $repo 'guards' 'atomic.ps1')
+. (Join-Path $repo 'guards' 'folder_consent.ps1')
 
 function Get-FaFolderSnapshot {
     [CmdletBinding()]
@@ -79,6 +80,8 @@ $sourcePath = ConvertTo-FaCanonicalPath ([string]$manifest.Source)
 $destinationPath = ConvertTo-FaCanonicalPath ([string]$manifest.Destination)
 Assert-FaNotProtected -Path $sourcePath -Workspace $workspace -Operation 'folder move source access'
 Assert-FaNotProtected -Path $destinationPath -Workspace $workspace -Operation 'folder move destination access'
+Assert-FaFolderConsent -Path $sourcePath -Action 'move' -Destination $destinationPath `
+    -Preferences (Import-FaFolderPreferences) -Operation 'verified folder move'
 if (Test-Path -LiteralPath $destinationPath) {
     throw "destination appeared after manifest freeze: $destinationPath"
 }

@@ -10,8 +10,9 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-. (Join-Path $repo 'guards\workspace.ps1')
-. (Join-Path $repo 'guards\atomic.ps1')
+. (Join-Path $repo 'guards' 'workspace.ps1')
+. (Join-Path $repo 'guards' 'atomic.ps1')
+. (Join-Path $repo 'guards' 'folder_consent.ps1')
 if (-not $Execute) { throw 'execution requires the explicit -Execute switch' }
 $manifest = Get-Content -LiteralPath $ManifestPath -Raw | ConvertFrom-Json -Depth 32 -DateKind String
 if ($manifest.SchemaVersion -ne 1 -or $manifest.Kind -ne 'live-file-move-v1') {
@@ -19,6 +20,14 @@ if ($manifest.SchemaVersion -ne 1 -or $manifest.Kind -ne 'live-file-move-v1') {
 }
 if ($manifest.Approved -ne $true) { throw 'live file move manifest is not approved' }
 $workspace = Import-FaWorkspace -ConfigPath $ConfigPath
+# Every row is checked before the first file moves: emptying a folder Krish
+# has not answered for is moving his folder by another name.
+$folderPreferences = Import-FaFolderPreferences
+foreach ($move in @($manifest.Moves)) {
+    if ($SkipRuleId -contains [string]$move.RuleId) { continue }
+    Assert-FaFolderConsent -Path ([string]$move.Source) -Action 'move-file' `
+        -Preferences $folderPreferences -Operation 'live file move'
+}
 $completed = [Collections.Generic.List[object]]::new()
 foreach ($move in @($manifest.Moves)) {
     if ($SkipRuleId -contains [string]$move.RuleId) { continue }
