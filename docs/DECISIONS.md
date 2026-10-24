@@ -423,3 +423,31 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   update everything to match current status."
 - Revisit trigger: Krish reorganises a drive again; record it with
   RECORD-MY-FOLDERS.cmd.
+
+## D-033: the top of his Drive, and where an AI files what it cannot place
+
+- Date: 2026-10-24
+- Status: locked
+- Decision: the top of `H:\My Drive` is `Ventures`, `--ARCHIVE`,
+  `Family Admin`, `FamilyContentLibrary`, `KeePass` and `Inbox from My AI`.
+  `Ventures` is where everything now lives, in four parts: `Active Ventures`
+  (every venture being worked on, one folder each, which mind/make OS, Control
+  Center and the AI harness use and keep up to date alongside this record),
+  `Inspiration` (things that inspire him: `Content Inspo`, `Production Inspo`),
+  `Bugs & Issues` (bugs and issues he notices on his phone) and `_Archive`.
+  `Inbox from My AI` replaces `CURRENT\00_INBOX` (gone with CURRENT, D-031) as
+  the one place an AI session files something it cannot place; Krish files it
+  from there. `FamilyContentLibrary` and `KeePass` never move.
+- Reason: Krish, 2026-10-24: "just reinstate that in the root folder then",
+  "Ventures is where everything now lives (their subfolders. If I notice bugs
+  or issues while on my phone, I put them in Bugs and Issues, i put things that
+  inspire me in Inspiration, and Active Ventures contains all the main ventures
+  we are working on, and that the entire OS/control center/AI harness is
+  expected to use and keep up to date alongside the filearchives repository)",
+  and "KeePass and FamilyContentLibrary are immovable."
+- Elsewhere: the Drive map other systems read (`system_config
+  drive_destinations`, krishanraja/hunter `drivemap.py`) names these areas and
+  `Inbox from My AI` by folder ID; Claude sessions' Drive guard
+  (control-center `.claude/hooks/drive_guard.py`) points at it.
+- Revisit trigger: Krish reorganises the top of his Drive again; record it with
+  RECORD-MY-FOLDERS.cmd and update the Drive map.

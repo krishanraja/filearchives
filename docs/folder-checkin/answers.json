@@ -1,4 +1,15 @@
 {
-  "folders": [],
+  "folders": [
+    {
+      "path": "H:\\My Drive\\Inbox from My AI",
+      "important": true,
+      "purpose": "Where any AI session files something when it is unsure where it belongs; Krish files it from there. Krish, 2026-10-24: \"just reinstate that in the root folder then\"."
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Inspiration",
+      "important": true,
+      "purpose": "Things that inspire Krish (Content Inspo, Production Inspo inside). Krish, 2026-10-24: \"i put things that inspire me in Inspiration\"."
+    }
+  ],
   "removed_by_krish": []
 }
