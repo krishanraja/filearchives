@@ -484,12 +484,15 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   named Facebook is empty and sits inside FamilyContentLibrary, which is never
   entered. The Meta export Control Center imported on 2026-10-04 was not kept
   here; when he finds it, it goes in as `Facebook Export - <Mon YYYY>`.
+- The Apify-enriched follower lists built from the Instagram export
+  (`instagram_followers_full.csv`, `instagram_followers_enriched.json`) were
+  loose in `90_UNCLASSIFIED-UNIQUE\L-Downloads-Unclassified`; they sit in
+  `Instagram Export - Jul 2026` beside the export since 2026-10-26 (Krish:
+  "yes follower lists moved in").
 - Left in place on purpose: `My Contacts` (now empty; removing it needs his
-  yes), the Apify-enriched follower lists (`instagram_followers_full.csv`,
-  `instagram_followers_enriched.json`, derived from the export, not an export),
-  the copy the engine already quarantined in `Exact-Duplicates-20261004\7e`,
-  his `Career\Network\NYC Networking Tracker - 2026`, and the Instagram-named
-  phone video folders.
+  yes), the copy of the enriched list the engine already quarantined in
+  `Exact-Duplicates-20261004\7e`, his `Career\Network\NYC Networking Tracker
+  - 2026`, and the Instagram-named phone video folders.
 - Consent: five rows in `policy/folder-preferences.json` `consents`, one per
   moved folder, recorded before the move. The one recorded folder that left
   (`H-Career-Binaries-20261004\Linkedin Complete Export`, depth 4) counts as
