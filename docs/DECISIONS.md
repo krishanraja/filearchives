@@ -451,3 +451,60 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   (control-center `.claude/hooks/drive_guard.py`) points at it.
 - Revisit trigger: Krish reorganises the top of his Drive again; record it with
   RECORD-MY-FOLDERS.cmd and update the Drive map.
+
+## D-034: his network exports live in Ventures\Network & Contacts, one dated folder each
+
+- Date: 2026-10-26
+- Status: locked
+- Decision: every network export (LinkedIn, Instagram, Facebook) lives in
+  `H:\My Drive\Ventures\Network & Contacts` (Drive folder
+  `1715WkXXj--sqDmOJL0K15F_6N1EHFeuh`), one folder per export, named
+  `<Network> Export - <Mon YYYY>` for the month the export was taken. The date
+  is read from the export itself (its newest connection, message or follow),
+  not from when it reached the Drive. On 2026-10-26 they were moved out of
+  `--ARCHIVE` by Drive API, which keeps every file and folder ID:
+  - `LinkedIn Export - Feb 2026` (newest connection 16 Feb 2026) was
+    `99_DELETE-QUARANTINE\H-Career-Binaries-20261004\Linkedin Complete Export`.
+    Two copies of the same export sit inside it: `Google Sheets copies` (was
+    `04_DEVICE-AND-SERVICE-EXPORTS\Google-Native-Ownership\Career\Linkedin Complete Export`)
+    and `Connections copy from OneDrive` (was
+    `90_UNCLASSIFIED-UNIQUE\L-OneDrive\Documents\Linkedin Profile Export`,
+    the same Connections.csv: same size, same rows).
+  - `LinkedIn Export - Aug 2026` (newest message 6 Aug 2026) was
+    `90_UNCLASSIFIED-UNIQUE\L-Downloads-Unclassified\My Contacts\LinkedIn Connections - August 2026`.
+  - `Instagram Export - Jul 2026` (newest follow 23 Jul 2026) was
+    `...\My Contacts\Instagram`.
+  - `LinkedIn Export - Mar 2025` (newest connection 4 Mar 2025, newest
+    invitation 2 Mar 2025) is a new folder holding the six export files that
+    were loose in
+    `04_DEVICE-AND-SERVICE-EXPORTS\E-Drive\Surface Laptop Backup July 2025\AdFixus`
+    (Connections, messages, Invitations, Positions, Email Addresses, Company
+    Follows). The AdFixus outreach sheets built from it stayed where they were.
+- No Facebook export is in his Drive (krish@mindmake.co). The only folder
+  named Facebook is empty and sits inside FamilyContentLibrary, which is never
+  entered. The Meta export Control Center imported on 2026-10-04 was not kept
+  here; when he finds it, it goes in as `Facebook Export - <Mon YYYY>`.
+- Left in place on purpose: `My Contacts` (now empty; removing it needs his
+  yes), the Apify-enriched follower lists (`instagram_followers_full.csv`,
+  `instagram_followers_enriched.json`, derived from the export, not an export),
+  the copy the engine already quarantined in `Exact-Duplicates-20261004\7e`,
+  his `Career\Network\NYC Networking Tracker - 2026`, and the Instagram-named
+  phone video folders.
+- Consent: five rows in `policy/folder-preferences.json` `consents`, one per
+  moved folder, recorded before the move. The one recorded folder that left
+  (`H-Career-Binaries-20261004\Linkedin Complete Export`, depth 4) counts as
+  moved with his OK at the next check-in, not as gone. `Network & Contacts`
+  is answered in `docs/folder-checkin/answers.json`.
+- Elsewhere: nothing else needed a change, checked 2026-10-26. Control
+  Center's LinkedIn importers (`api/_driveFile.ts`) read Drive by file ID,
+  which a move keeps. hunter's `bridges <dir>` and Control Center's
+  `scripts/network/import-instagram.ts --dir` take a local folder each run and
+  store no path. The Drive map (`system_config drive_destinations`) names the
+  roots by ID, and Ventures is one. No repository, Supabase table or
+  system_config row held the old paths or IDs.
+- Reason: Krish, 2026-10-26: "can you move all my network exports (instagram,
+  facebook, linkedin) from Archive in to [Network & Contacts] and update
+  everywhere that relies on knowing where it currently is? Mark each folder
+  with the date of the export (eg Linkedin is Feb 2026)".
+- Revisit trigger: a new network export lands in his Drive, or the Facebook
+  export is found.
