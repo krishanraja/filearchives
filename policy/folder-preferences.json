@@ -4424,5 +4424,51 @@
       "answered_by": "answers.json"
     }
   ],
-  "consents": []
+  "consents": [
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Career-Binaries-20261004\\Linkedin Complete Export",
+      "action": "move",
+      "destination": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026",
+      "approved_by": "Krish",
+      "approved_at": "2026-10-26T17:10:21Z",
+      "words": "can you move all my network exports (instagram, facebook, linkedin) from Archive in to https://drive.google.com/drive/folders/1715WkXXj--sqDmOJL0K15F_6N1EHFeuh?usp=drive_link and update everywhere that relies on knowing where it currently is? Mark each folder with the date of the export (eg Linkedin is Feb 2026)",
+      "what": "LinkedIn export, February 2026 (newest connection 16 Feb 2026): the full set of CSVs."
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\04_DEVICE-AND-SERVICE-EXPORTS\\Google-Native-Ownership\\Career\\Linkedin Complete Export",
+      "action": "move",
+      "destination": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Google Sheets copies",
+      "approved_by": "Krish",
+      "approved_at": "2026-10-26T17:10:21Z",
+      "words": "can you move all my network exports (instagram, facebook, linkedin) from Archive in to https://drive.google.com/drive/folders/1715WkXXj--sqDmOJL0K15F_6N1EHFeuh?usp=drive_link and update everywhere that relies on knowing where it currently is? Mark each folder with the date of the export (eg Linkedin is Feb 2026)",
+      "what": "The Google Sheets versions of the same February 2026 export (Connections, Recommendations_Received)."
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-OneDrive\\Documents\\Linkedin Profile Export",
+      "action": "move",
+      "destination": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Connections copy from OneDrive",
+      "approved_by": "Krish",
+      "approved_at": "2026-10-26T17:10:21Z",
+      "words": "can you move all my network exports (instagram, facebook, linkedin) from Archive in to https://drive.google.com/drive/folders/1715WkXXj--sqDmOJL0K15F_6N1EHFeuh?usp=drive_link and update everywhere that relies on knowing where it currently is? Mark each folder with the date of the export (eg Linkedin is Feb 2026)",
+      "what": "A copy of the February 2026 Connections.csv (same size, same rows) that came in with OneDrive."
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\My Contacts\\LinkedIn Connections - August 2026",
+      "action": "move",
+      "destination": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Aug 2026",
+      "approved_by": "Krish",
+      "approved_at": "2026-10-26T17:10:21Z",
+      "words": "can you move all my network exports (instagram, facebook, linkedin) from Archive in to https://drive.google.com/drive/folders/1715WkXXj--sqDmOJL0K15F_6N1EHFeuh?usp=drive_link and update everywhere that relies on knowing where it currently is? Mark each folder with the date of the export (eg Linkedin is Feb 2026)",
+      "what": "LinkedIn export, August 2026 (newest message 6 Aug 2026)."
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\My Contacts\\Instagram",
+      "action": "move",
+      "destination": "H:\\My Drive\\Ventures\\Network & Contacts\\Instagram Export - Jul 2026",
+      "approved_by": "Krish",
+      "approved_at": "2026-10-26T17:10:21Z",
+      "words": "can you move all my network exports (instagram, facebook, linkedin) from Archive in to https://drive.google.com/drive/folders/1715WkXXj--sqDmOJL0K15F_6N1EHFeuh?usp=drive_link and update everywhere that relies on knowing where it currently is? Mark each folder with the date of the export (eg Linkedin is Feb 2026)",
+      "what": "Instagram download (followers, following, synced contacts), July 2026 (newest follow 23 Jul 2026)."
+    }
+  ]
 }
