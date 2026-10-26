@@ -489,8 +489,11 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   loose in `90_UNCLASSIFIED-UNIQUE\L-Downloads-Unclassified`; they sit in
   `Instagram Export - Jul 2026` beside the export since 2026-10-26 (Krish:
   "yes follower lists moved in").
-- Left in place on purpose: `My Contacts` (now empty; removing it needs his
-  yes), the copy of the enriched list the engine already quarantined in
+- `My Contacts`, empty once its two exports left, went to Drive Trash on
+  2026-10-26 with a delete consent row recorded first (Krish: "delete My
+  Contacts too"). Drive keeps it in Trash for 30 days.
+- Left in place on purpose: the copy of the enriched list the engine already
+  quarantined in
   `Exact-Duplicates-20261004\7e`, his `Career\Network\NYC Networking Tracker
   - 2026`, and the Instagram-named phone video folders.
 - Consent: five rows in `policy/folder-preferences.json` `consents`, one per
