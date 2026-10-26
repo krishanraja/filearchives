@@ -4469,6 +4469,14 @@
       "approved_at": "2026-10-26T17:10:21Z",
       "words": "can you move all my network exports (instagram, facebook, linkedin) from Archive in to https://drive.google.com/drive/folders/1715WkXXj--sqDmOJL0K15F_6N1EHFeuh?usp=drive_link and update everywhere that relies on knowing where it currently is? Mark each folder with the date of the export (eg Linkedin is Feb 2026)",
       "what": "Instagram download (followers, following, synced contacts), July 2026 (newest follow 23 Jul 2026)."
+    },
+    {
+      "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\My Contacts",
+      "action": "delete",
+      "approved_by": "Krish",
+      "approved_at": "2026-10-26T18:05:00Z",
+      "words": "delete My Contacts too",
+      "what": "Empty once its Instagram and LinkedIn exports moved to Ventures\\Network & Contacts (D-034). Sent to Drive Trash, which keeps it for 30 days."
     }
   ]
 }
