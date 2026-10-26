@@ -4,7 +4,7 @@
   "ruling": "Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without asking first.",
   "recorded_at": "2026-10-23T16:31:56.2782043+01:00",
   "recorded_on": "LORIMER",
-  "last_checkin_at": null,
+  "last_checkin_at": "2026-10-26T09:00:04.2230757+00:00",
   "watch_roots": [
     {
       "path": "H:\\My Drive",
@@ -132,6 +132,15 @@
       "path": "G:\\My Drive\\Family",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Family\\Dipti",
+      "status": "answered",
+      "first_seen": "2026-10-26T09:00:04.2230757+00:00",
+      "important": true,
+      "purpose": "my sisters health records",
+      "answered_at": "2026-10-26T09:00:04.2230757+00:00",
+      "answered_by": "pop-up"
     },
     {
       "path": "G:\\My Drive\\Family\\Health Records",
@@ -3984,6 +3993,15 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "H:\\My Drive\\Inbox from My AI",
+      "status": "answered",
+      "first_seen": "2026-10-26T09:00:04.2230757+00:00",
+      "important": true,
+      "purpose": "Where any AI session files something when it is unsure where it belongs; Krish files it from there. Krish, 2026-10-24: \"just reinstate that in the root folder then\".",
+      "answered_at": "2026-10-26T09:00:04.2230757+00:00",
+      "answered_by": "answers.json"
+    },
+    {
       "path": "H:\\My Drive\\KeePass",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
@@ -4354,9 +4372,56 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "H:\\My Drive\\Ventures\\Bugs & Issues\\mindmake",
+      "status": "answered",
+      "first_seen": "2026-10-26T09:00:04.2230757+00:00",
+      "important": true,
+      "purpose": "bugs identified with my tools",
+      "answered_at": "2026-10-26T09:00:04.2230757+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Bugs & Issues\\mindmake\\mindmake-visual-feedback",
+      "status": "answered",
+      "first_seen": "2026-10-26T09:00:04.2230757+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Bugs & Issues\\mindmake",
+      "answered_at": "2026-10-26T09:00:04.2230757+00:00",
+      "answered_by": "pop-up"
+    },
+    {
       "path": "H:\\My Drive\\Ventures\\Content Inspo",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-10-26T09:00:04.2230757+00:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Inspiration",
+      "status": "answered",
+      "first_seen": "2026-10-26T09:00:04.2230757+00:00",
+      "important": true,
+      "purpose": "Things that inspire Krish (Content Inspo, Production Inspo inside). Krish, 2026-10-24: \"i put things that inspire me in Inspiration\".",
+      "answered_at": "2026-10-26T09:00:04.2230757+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Inspiration\\Content Inspo",
+      "status": "answered",
+      "first_seen": "2026-10-26T09:00:04.2230757+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Inspiration",
+      "answered_at": "2026-10-26T09:00:04.2230757+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Inspiration\\Production Inspo",
+      "status": "answered",
+      "first_seen": "2026-10-26T09:00:04.2230757+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Inspiration",
+      "answered_at": "2026-10-26T09:00:04.2230757+00:00",
+      "answered_by": "answers.json"
     }
   ],
   "consents": []

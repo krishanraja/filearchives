@@ -24,7 +24,7 @@ Krish himself.
 
 ## Where it is right now (as of 2026-10-24)
 
-<!-- north-star-state {"week_of": "2026-10-26", "week_target": 0, "current": null, "current_as_of": null, "current_source": null, "urgency": 4, "urgency_reason": "Krish saw a folder he made disappear this week; the fix session is running"} --> **North Star number: U4, far behind.** Folders moved or removed without Krish's OK, per week: Krish saw a folder he made disappear this week; the fix session is running. A bold swing every day; work that does not move the number waits.
+<!-- north-star-state {"week_of":"2026-10-26","week_target":0,"current":0,"current_as_of":"2026-10-26","current_source":"docs/folder-checkin/LOG.jsonl","urgency":4,"urgency_reason":"Krish saw a folder he made disappear this week; the fix session is running"} --> **North Star number: U4, far behind.** Folders moved or removed without Krish's OK, per week: Krish saw a folder he made disappear this week; the fix session is running. A bold swing every day; work that does not move the number waits.
 
 Lifecycle: live. The detail is in `README.md`.
 
