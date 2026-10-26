@@ -40,7 +40,7 @@ Lifecycle: live. The detail is in `README.md`.
 
 - Done 2026-10-23: Krish pressed `RECORD-MY-FOLDERS.cmd`; the record and the Monday check-in are in place. Nothing is waiting on him until the first check-in asks about new folders.
 - The North Star number is measured from the first weekly check-in after that (`docs/folder-checkin/LOG.jsonl`), which also writes it into the line above. Until then it is unmeasured.
-- Before the check-in on Monday 2 November: this branch (`claude/funny-gauss-eumgfb`) must be in main. The check-in reads the consent rows from main; without them the LinkedIn export that left `H-Career-Binaries-20261004` counts as a folder gone without his OK.
+- Done 2026-10-26: the consent rows for the network export moves are in main (krishanraja/filearchives#2), so Monday's check-in counts them as moved with his OK. The Instagram follower lists built from the export now sit in its folder too.
 - When the Facebook export turns up, it goes in `Network & Contacts` as `Facebook Export - <Mon YYYY>`.
 - North Star check (2026-10-26): holds. Five folder moves and six loose export files filed this week, all with his yes recorded first.
 
