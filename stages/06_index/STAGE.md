@@ -13,9 +13,9 @@ Make the archive searchable by its own contents.
 - a rebuild reads the disk, not another derived record
 
 ## Code
-| file | role |
-|---|---|
-| `stages/06_index/build_index.py` | full-text search over extracted document text |
+- none yet. This stage is planned, not built. The 2026-09-20 scaffold
+  (`tools/scaffold_stages.py`) named a script `build_index.py` for full-text
+  search over extracted document text; it was never written.
 
 ## Tests
 - none yet

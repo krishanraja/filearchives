@@ -14,9 +14,10 @@ Give every document a date, from the best signal available.
 - an undated file stays undated rather than receiving an invented date
 
 ## Code
-| file | role |
-|---|---|
-| `stages/03_dating/date_from_signals.py` | filename patterns, then the folder name, then the document's own text |
+- none yet. This stage is planned, not built. The 2026-09-20 scaffold
+  (`tools/scaffold_stages.py`) named a script `date_from_signals.py` that would
+  date by filename pattern, then folder name, then the document's own text; it
+  was never written.
 
 ## Tests
 - none yet

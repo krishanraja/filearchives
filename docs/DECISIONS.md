@@ -3,6 +3,11 @@
 Append-only record of consequential decisions for the filearchives engine and
 the current consolidation. Operational progress stays in `RESUME.md`.
 
+Entries are never deleted. Where a later decision changed a folder name or
+replaced an entry, the older entry carries an `Amended by` line or a changed
+Status, and its original words stand. Where things live now: D-031 to D-034
+and `policy/folder-preferences.json`.
+
 ## D-001: ContentLibrary is outside the session
 
 - Date: 2026-10-03
@@ -13,6 +18,8 @@ the current consolidation. Operational progress stays in `RESUME.md`.
 - Reason: Krish explicitly excluded it from the entire session.
 - Revisit trigger: only a new explicit instruction from Krish naming the exact
   root and newly authorised operation.
+- Amended by D-032 (2026-10-23): the folder is now named
+  `H:\My Drive\FamilyContentLibrary`; the old name stays excluded.
 
 ## D-002: destructive work is manifest-gated
 
@@ -63,6 +70,8 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   authorised its inventory. The H tree was explicitly excluded from the full
   session.
 - Revisit trigger: none for H without a new exact instruction from Krish.
+- Amended by D-032 (2026-10-23): the H folder is now named
+  `H:\My Drive\FamilyContentLibrary`; the old name stays excluded.
 
 ## D-006: classify before designing the destination structure
 
@@ -87,6 +96,8 @@ the current consolidation. Operational progress stays in `RESUME.md`.
 - Reason: Krish explicitly named the destination and excluded low-value media.
 - Revisit trigger: evidence that an item belongs to a current-work project or
   another user-owned category where moving it would break that work.
+- Amended by D-032 (2026-10-23): the destination is now
+  `H:\My Drive\--ARCHIVE\CONTENT-EXTRA`.
 
 ## D-008: autonomous analysis, manifest-gated mutation
 
@@ -111,7 +122,9 @@ the current consolidation. Operational progress stays in `RESUME.md`.
 ## D-010: proposed canonical roots
 
 - Date: 2026-10-04
-- Status: proposed until the first move manifest is frozen
+- Status: superseded by D-031 (CURRENT dissolved into `Ventures`) and D-032
+  (the archive is `--ARCHIVE`, CONTENT-EXTRA sits inside it, `G:\My Drive\Personal`
+  retired); was proposed until the first move manifest is frozen
 - Decision: use `H:\My Drive\CURRENT`, `H:\My Drive\ARCHIVE` and
   `H:\My Drive\CONTENT-EXTRA`, while leaving the protected ContentLibrary
   unchanged and retaining personal material under `G:\My Drive\Personal`.
@@ -146,7 +159,8 @@ the current consolidation. Operational progress stays in `RESUME.md`.
 ## D-013: recommend H CURRENT as business authority
 
 - Date: 2026-10-04
-- Status: proposed until routing policy is reconciled
+- Status: superseded by D-031 (CURRENT no longer exists); was proposed until
+  routing policy is reconciled
 - Decision: recommend revising the machine routing rule for single-venture
   deliverables from `G:\My Drive\Ventures\Active` to
   `H:\My Drive\CURRENT\10_VENTURES`, making G personal-only and H the one
@@ -181,6 +195,9 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   and confirmed that historical Mindmaker names normalize to Mind/make while
   Mindmake-OS/mm-ctrl/control-center normalize to mindmakeOS.
 - Revisit trigger: an explicit change to a venture or customer lifecycle.
+- Amended by D-031 and D-032: the business-current categories and
+  `G:\My Drive\Personal` it names no longer exist (D-031 dissolved CURRENT into
+  `Ventures`; D-032 retired `Personal`).
 
 ## D-016: 31 days controls line of sight, not preservation
 
@@ -194,6 +211,9 @@ the current consolidation. Operational progress stays in `RESUME.md`.
 - Reason: Krish wants a two-second current view without losing scarce records
   or foundational theory.
 - Revisit trigger: explicit retention-policy change.
+- Amended by D-031: CURRENT no longer exists. In the `Ventures` layout each
+  venture's `_Archive` takes anything older than 30 days, while
+  `policy/estate-policy-v1.json` still has `visibility_days: 31`.
 
 ## D-017: permanent deletion waits for verified external backup
 
@@ -205,6 +225,9 @@ the current consolidation. Operational progress stays in `RESUME.md`.
 - Reason: Krish accepted the recommended deletion defaults and intends to back
   up the single archive externally.
 - Revisit trigger: verified external-backup receipt plus expiry of quarantine.
+- Applied 2026-10-11: an explicit action-time instruction waived the 30-day
+  wait for one backed-up, revalidated manifest only (`docs/RUN-2026-10-11.md`).
+  The rule above is unchanged for any later quarantine.
 
 ## D-018: family admin preserves Google ownership
 
@@ -218,6 +241,9 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   Drive metadata moves then preserved both folder IDs and verified their new
   parent.
 - Revisit trigger: a verified ownership transfer to the personal account.
+- Amended by D-031 and D-032: the folder is now `H:\My Drive\Family Admin`
+  (`Krish`, `Loz`, `Maa`), and the policy preserves `Family Admin\Maa` and
+  `Family Admin\Loz`.
 
 ## D-019: G business-native ownership is an explicit noncanonical exception
 
@@ -231,6 +257,11 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   ownership, while leaving the files loose in G creates a second apparent
   business authority.
 - Revisit trigger: a verified native ownership transfer to the H account.
+- Amended by the 2026-10-23 folder record: `G:\My Drive\_BUSINESS-NATIVE-OWNERSHIP`
+  is not among the folders recorded on G, and a folder of that name is recorded
+  under
+  `H:\My Drive\--ARCHIVE\04_DEVICE-AND-SERVICE-EXPORTS\G-Business-Retirement-20261011`.
+  The repository does not say whether the Google-native originals moved with it.
 
 ## D-020: source cleanup means recoverable retirement before backup
 
@@ -448,7 +479,7 @@ the current consolidation. Operational progress stays in `RESUME.md`.
 - Elsewhere: the Drive map other systems read (`system_config
   drive_destinations`, krishanraja/hunter `drivemap.py`) names these areas and
   `Inbox from My AI` by folder ID; Claude sessions' Drive guard
-  (control-center `.claude/hooks/drive_guard.py`) points at it.
+  (krishanraja/control-center `.claude/hooks/drive_guard.py`) points at it.
 - Revisit trigger: Krish reorganises the top of his Drive again; record it with
   RECORD-MY-FOLDERS.cmd and update the Drive map.
 
@@ -496,13 +527,15 @@ the current consolidation. Operational progress stays in `RESUME.md`.
   quarantined in
   `Exact-Duplicates-20261004\7e`, his `Career\Network\NYC Networking Tracker
   - 2026`, and the Instagram-named phone video folders.
-- Consent: five rows in `policy/folder-preferences.json` `consents`, one per
-  moved folder, recorded before the move. The one recorded folder that left
-  (`H-Career-Binaries-20261004\Linkedin Complete Export`, depth 4) counts as
-  moved with his OK at the next check-in, not as gone. `Network & Contacts`
-  is answered in `docs/folder-checkin/answers.json`.
+- Consent: five move rows in `policy/folder-preferences.json` `consents`, one
+  per moved folder, recorded before the move, and a sixth, a delete row for
+  `My Contacts`, recorded before it went to Trash. Two folders the record
+  already held left: `H-Career-Binaries-20261004\Linkedin Complete Export` and
+  `My Contacts` (both depth 4). Each counts as moved or removed with his OK at
+  the next check-in, not as gone. `Network & Contacts` is answered in
+  `docs/folder-checkin/answers.json`.
 - Elsewhere: nothing else needed a change, checked 2026-10-26. Control
-  Center's LinkedIn importers (`api/_driveFile.ts`) read Drive by file ID,
+  Center's LinkedIn importers (krishanraja/control-center `api/_driveFile.ts`) read Drive by file ID,
   which a move keeps. hunter's `bridges <dir>` and Control Center's
   `scripts/network/import-instagram.ts --dir` take a local folder each run and
   store no path. The Drive map (`system_config drive_destinations`) names the

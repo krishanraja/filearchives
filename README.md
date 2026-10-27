@@ -27,6 +27,11 @@ Three jobs, in this order, because each depends on the one before it:
    machine-local repo convention that remains usable while another machine or
    the network is offline.
 
+That was the brief of 2026-09-20, and the consolidation run delivered it by
+2026-10-11 (see Status). Since 2026-10-23 the engine no longer decides where
+Krish's own folders go: it moves, renames, merges or removes one only with his
+yes for that folder.
+
 ---
 
 ## What is inherited, and why none of it is rewritten
@@ -84,20 +89,20 @@ resumes from committed segments; it does not make the following stage guess.
 Filesystem mutation is downstream of analysis and requires a frozen manifest,
 action-time revalidation and a durable journal.
 
-| Stage | Does |
-|---|---|
-| `01_sources` | Find the drives and trees that hold documents; record what was seen, never act on it |
-| `02_ingest` | Bring files in once, content-deduplicated, hardlinked where the volume allows |
-| `03_dating` | Date from filename, folder, and document text - in that order of trust |
-| `04_inventory` | One row per file with every signal about it |
-| `05_classify` | What KIND of document: statement, contract, scan, export, receipt |
-| `06_index` | Full-text search over the documents themselves |
-| `07_structure` | The canonical folder tree, and the proposal that maps files into it |
-| `08_reclaim` | Free space - the only stage that destroys, and the most guarded |
-| `09_mirror` | The same structure, identically, on every drive |
+| Stage | Does | Built? |
+|---|---|---|
+| `01_sources` | Find the drives and trees that hold documents; record what was seen, never act on it | Yes |
+| `02_ingest` | Prove content identity (size, signature, whole-file hash) and copy files in once, verified | Yes |
+| `03_dating` | Date from filename, folder, and document text - in that order of trust | No, `STAGE.md` only |
+| `04_inventory` | One row per file or folder with every signal about it | Yes |
+| `05_classify` | Estate and repository analysis; the per-document KIND (statement, contract, scan, export, receipt) is planned | Partly: no document-kind classifier |
+| `06_index` | Full-text search over the documents themselves | No, `STAGE.md` only |
+| `07_structure` | The folder layout proposal, verified moves and quarantines, and Krish's folder record with its weekly check-in | Yes |
+| `08_reclaim` | Free space - the only stage that destroys, and the most guarded | Yes |
+| `09_mirror` | A canonical-state audit: the top of every watched drive against Krish's folder record (it does not mirror content) | Yes |
 
 `guards/` sits beside them: the runners, the deletion guard, the atomic writes,
-the verifier contract.
+the verifier contract and the folder-consent guard.
 
 ---
 
@@ -107,15 +112,18 @@ the verifier contract.
 closed 2026-10-11.**
 
 The sealed `estate-20261003-v1` run inventories 1,308,625 files (199.16 GB)
-across all 20 configured roots. `H:\My Drive\ContentLibrary`
-is an absolute exclusion and has not been traversed. L is reachable in the
-current pass; every dirty L repository is preserved onto C before local
-cleanup. Duplicate proofing uses the three content-identity tiers above. The
-accepted shallow taxonomy, 31-day visibility rule, personal/business split and
-quarantine policy are machine-readable in `policy/estate-policy-v1.json` and
-explained in `docs/estate-strategy-2026-10-04.md`. Executed folder moves and
-cross-volume copies have frozen manifests and readback receipts in the audit
-tree outside this repository.
+across all 20 configured roots. `H:\My Drive\ContentLibrary` (renamed
+`FamilyContentLibrary` on 2026-10-23, D-032) was an absolute exclusion and was
+never traversed. L was reachable in that run; every dirty L repository was
+preserved onto C before local cleanup. Duplicate proofing uses the three
+content-identity tiers above. The 2026-10-04 taxonomy, 31-day visibility rule,
+personal/business split and quarantine policy are machine-readable in
+`policy/estate-policy-v1.json` and explained in
+`docs/estate-strategy-2026-10-04.md`, which is now a historical analysis: the
+policy's `business_current` and `personal` destinations are retired (D-031,
+D-032) and Krish's folder record outranks its category lists. Executed folder
+moves and cross-volume copies have frozen manifests and readback receipts in
+the audit tree outside this repository.
 
 **Krish's folders stay where he puts them (2026-10-23).** No folder inside
 `H:\My Drive`, `G:\My Drive` or `C:\Users\krish\dev` is moved, renamed, merged
@@ -126,10 +134,12 @@ preference and start the weekly check-in; `CHECK-MY-NEW-FOLDERS.cmd` runs the
 check-in on demand. The latest check-in is `docs/folder-checkin/LATEST.md`.
 Recorded 2026-10-23: 864 folders, and `H:\My Drive\FamilyContentLibrary`
 (renamed from `ContentLibrary`) is never entered. The layout the 2026-10-04
-run built has since been reorganised by Krish (D-031, D-032); the record is
-now the authority for where things live.
+run built has since been reorganised by Krish (D-031 to D-034: `CURRENT`
+dissolved into `Ventures`, the archive is `--ARCHIVE`, `Inbox from My AI` at the
+top, his network exports in `Ventures\Network & Contacts`); the record is now
+the authority for where things live.
 
-Start at `RESUME.md`.
+Where it is right now: `NOW.md`. Start at `RESUME.md` for what to run.
 The completed-run evidence and backup handoff are in
 `docs/RUN-2026-10-04.md`. The verified deletion results, retained exceptions
 and final closeout are in `docs/RUN-2026-10-11.md`.

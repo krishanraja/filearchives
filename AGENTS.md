@@ -19,3 +19,7 @@ Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without
 - Never move, rename, merge or delete a folder inside `H:\My Drive`, `G:\My Drive` or `C:\Users\krish\dev`, by the engine or by hand, without a consent row from Krish for that exact folder in `policy/folder-preferences.json`. Only Krish gives one; record his words with it.
 - A folder the record does not know is new, waiting on Krish. Leave it where it is and let the weekly check-in ask him.
 - `tests/test_new_folder_survives.ps1` must pass before any change to a mover, planner or the consent guard is committed.
+
+## Where to start
+
+Read `NOW.md` first (where the repository is right now), then `RESUME.md` (what to run and the live folder rules). `docs/DECISIONS.md` records why, `policy/folder-preferences.json` is the record of Krish's folders and consents, and `docs/LEARNINGS.md` holds the rules each stage enforces. The code is a conveyor of stages (`stages/01_sources` to `stages/09_mirror`, plus `guards/`): read a stage's `STAGE.md` before changing it, and run `python tests/test_stage_contracts.py` to check that every code file has a stage and every learning has an owner. The tests are PowerShell for Windows.

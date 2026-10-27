@@ -7,7 +7,7 @@ Bring a document into the archive once, deduplicated by content.
 - the archive and its hash index
 
 ## Outputs
-- files placed in the archive, hardlinked where the volume allows
+- files placed in the archive by verified copy (hardlinking where the volume allows was in the original scaffold and no stage does it)
 - a journal of what was added and what was refused as a duplicate
 - cross-volume folder copies whose every destination file has been read back and SHA-256 verified
 

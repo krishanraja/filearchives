@@ -1,5 +1,10 @@
 # Run report 2026-10-15: Drive "Personal" (tax pass and empty-folder cleanup, browser-driven)
 
+> Status: historical, accurate for 2026-10-15. Its "Next step" is closed:
+> `G:\My Drive\Personal` no longer exists (`docs/DECISIONS.md` D-032), and since
+> 2026-10-23 no folder is moved, binned or merged without Krish's consent for
+> that folder (D-030).
+
 Scope: Google Drive folder Personal. Tax Return Histories only; immigration is out of scope. Executed by Claude through the browser, outside the engine. No manifests or hash journal were produced.
 
 ## Done

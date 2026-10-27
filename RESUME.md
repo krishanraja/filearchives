@@ -21,9 +21,17 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_temporary_family_consolidation.ps1
 .\tests\test_path_regex_quarantine.ps1
 .\tests\test_new_folder_survives.ps1
+.\tests\test_streaming_folder_copy.ps1
+.\tests\test_windows_profile_coverage.ps1
 node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
   --root . --manifest pipeline\stage-conveyor.json
 ```
+
+`python tests\test_stage_contracts.py` also checks the conveyor: every stage has
+a `STAGE.md`, every learning has an owner, every code file belongs to a stage.
+It needs Python, which D-004 recorded as absent on the active Windows machine.
+On 2026-10-27 it passed on Linux: 10 stages, 36 learnings, 63 code files, none
+unowned.
 
 ---
 
@@ -43,14 +51,15 @@ without asking first. D-030 and learning 36 hold the detail.
   questions per new folder, counts recorded folders gone without his OK (the
   North Star number), and writes `docs/folder-checkin/LATEST.md` and
   `LOG.jsonl`. It never moves anything.
-- Current layout, as Krish recorded it on 2026-10-23 (D-032):
-  H holds `--ARCHIVE` (the old ARCHIVE categories plus `CONTENT-EXTRA`),
-  `Family Admin` (`Krish`, `Loz`, `Maa`), `FamilyContentLibrary` (never
-  entered), `KeePass` and `Ventures` (`Active Ventures`, `_Archive`,
-  `Bugs & Issues`, `Content Inspo`). G holds `App Issues`, `Family`,
-  `Immigration`, `Legal`, `Music Production`, `Tax Return History` and others;
-  the old `G:\My Drive\Personal` categories no longer exist. The record, not
-  the estate policy's category lists, is the authority.
+- Current layout, as Krish recorded it on 2026-10-23 (D-032) and changed on
+  2026-10-24 and 2026-10-26 (D-033, D-034): H holds `--ARCHIVE` (the old
+  ARCHIVE categories plus `CONTENT-EXTRA`), `Family Admin` (`Krish`, `Loz`,
+  `Maa`), `FamilyContentLibrary` (never entered), `KeePass`, `Inbox from My AI`
+  (where an AI session files what it cannot place) and `Ventures` (`Active
+  Ventures`, `Inspiration`, `Bugs & Issues`, `Network & Contacts`, `_Archive`).
+  G holds `App Issues`, `Family`, `Immigration`, `Legal`, `Music Production`
+  and `Tax Return History`; the old `G:\My Drive\Personal` categories no longer
+  exist. The record, not the estate policy's category lists, is the authority.
 - Krish can answer in writing in `docs/folder-checkin/answers.json`. A consent
   to move or remove a folder is a row in `consents` with
   `approved_by: "Krish"`, the exact path, the action, the destination for a
@@ -58,7 +67,7 @@ without asking first. D-030 and learning 36 hold the detail.
 
 ## CLOSED MISSION: whole-estate consolidation (2026-10-04 to 2026-10-11)
 
-### Outcome
+### Outcome the mission aimed for
 
 - one canonical current-work tree in `H:\My Drive`
 - one canonical archive tree in `H:\My Drive`
@@ -66,7 +75,10 @@ without asking first. D-030 and learning 36 hold the detail.
 - a reusable engine that can survey, propose, verify and execute the same
   cleanup safely on a future machine
 
-### Current truth
+### State at closeout (2026-10-11)
+
+Folder names have changed since (D-031 to D-034); the layout in the LIVE
+section above is current.
 
 - canonical local clone: `C:\Users\krish\dev\krishanraja\filearchives`;
   the completed engine is pushed to `origin/main`
@@ -74,8 +86,9 @@ without asking first. D-030 and learning 36 hold the detail.
   and mounted L: 1,308,625 files, 149,768 directories and 199,161,374,424 bytes
 - 2026-10-22 (D-031): H `CURRENT` and `PERSONAL-SYSTEMS` were dissolved into
   `Ventures` and `Family Admin\Krish`; `business_current` is retired in policy
-- H business current/archive, CONTENT-EXTRA and FAMILY-ADMIN exist in the
-  accepted shallow taxonomy; G contains the accepted ten personal categories
+- at closeout, H business current/archive, CONTENT-EXTRA and FAMILY-ADMIN
+  existed in the accepted shallow taxonomy and G contained the accepted ten
+  personal categories; D-031 and D-032 have since dissolved or renamed them
 - final canonical-state audit passes with zero issues; C/L Windows known-folder
   coverage passes with zero uncovered paths
 - both `C:\Users\krish\Downloads` and `L:\Users\krish\Downloads` are empty;
@@ -121,9 +134,14 @@ without asking first. D-030 and learning 36 hold the detail.
 - credentials are reported only by category and location, never read into
   logs or copied into the archive without an approved secure destination
 
-### Authority
+### Authority during the mission (closed 2026-10-11)
 
-- authorised now: autonomous analysis, accepted high-confidence H/G filing,
+Since 2026-10-23 (D-030) any folder move, rename, merge or removal in a watched
+root, including the same-account Google metadata moves below, also needs
+Krish's yes for that folder. The list below is what the mission was given, not
+what an engine run may do today.
+
+- authorised during the mission: autonomous analysis, accepted high-confidence H/G filing,
   source-preserving verified copies, same-account Google metadata moves,
   pre-backup quarantine, repository preservation and engine development
 - not authorised by the accepted policy: permanent purge before backup,
@@ -171,10 +189,11 @@ must never traverse the same protected tree.
 
 ---
 
-## RIGHT NOW: sealed inventory and duplicate proofing (2026-10-04)
+## WHAT IS BUILT: the engine carried from contentarchives
 
-Built so far, carried from `contentarchives` because each piece was paid for
-there:
+The first pieces, carried from `contentarchives` on 2026-09-20 because each was
+paid for there (the PowerShell stages, the folder record and the weekly check-in
+came later; see the conveyor table in `README.md`):
 
 | Piece | What it is |
 |---|---|
@@ -183,20 +202,25 @@ there:
 | `filearchives/safety.py` | the deletion allowlist; garbage is a CLOSED list |
 | `guards/guarded_delete.py` | the only sanctioned delete: proven survivor, different inode, re-hashed at the unlink, journalled first |
 | `guards/files.py` | atomic writes, absent-input stops, whole lines only |
-| `docs/LEARNINGS.md` | 15 rules, each owned by a stage or the build fails |
+| `docs/LEARNINGS.md` | 36 learnings (14 when it was carried over), each owned by a stage or the build fails |
 
-The available estate has been surveyed, inventoried and classified. Verified
-filing is active; no permanent deletion has occurred.
+The estate was surveyed, inventoried and analysed in the 2026-10-04 run, verified
+filing and the approved guarded cleanup ran, and the run closed on 2026-10-11.
+Permanent deletion happened only under the approved manifests recorded in
+`docs/RUN-2026-10-11.md`; any further deletion needs a new dated run.
 
 ---
 
 ## It runs on any machine, and the machine says where things are
 
-**Nothing in this repo hardcodes a drive letter.** contentarchives opened its
-path file with `ROOT = r"D:\ContentLibrary"`, which was right for one machine
-and is impossible for a second - and quietly wrong on the first one the day a
-drive is re-lettered, because a path that no longer exists does not raise. It
-reads as empty, and empty reads as "nothing to do".
+**The engine's own paths are not hardcoded to a drive letter.** contentarchives
+opened its path file with `ROOT = r"D:\ContentLibrary"`, which was right for one
+machine and is impossible for a second - and quietly wrong on the first one the
+day a drive is re-lettered, because a path that no longer exists does not raise.
+It reads as empty, and empty reads as "nothing to do". (Krish's own Drive roots,
+`H:\My Drive`, `G:\My Drive` and `C:\Users\krish\dev`, are named in
+`policy/folder-preferences.json` and a few script defaults since the folder
+record of 2026-10-23; they are his folders, not the machine's.)
 
 So each machine carries its own config, and there is **no default**:
 
@@ -245,6 +269,11 @@ Do NOT start by writing an importer. The first job is to find out what is
 actually out there, because every estimate made without measuring in the other
 engine was wrong - often by a factor of ten, once by a factor of a hundred.
 
+Built so far: `01_sources`, `02_ingest`, `04_inventory`, `07_structure`,
+`08_reclaim`, `09_mirror`, and the analysis half of `05_classify`. Not built
+(a `STAGE.md` and no code): `03_dating`, `06_index`, and the document-kind
+classifier in `05_classify`. The list below is the order they were planned in.
+
 1. **`01_sources` - survey only.** Walk every drive, count documents by type,
    size and tree. Write it down. Delete nothing, move nothing, decide nothing.
    Expect the answer to surprise you: the photograph library's "OneDrive holds
@@ -260,8 +289,9 @@ engine was wrong - often by a factor of ten, once by a factor of a hundred.
 7. **`07_structure`** - the canonical tree, and a REVIEWABLE PROPOSAL mapping
    files into it. Never an automatic move.
 8. **`08_reclaim`** - free the space. The only stage that destroys.
-9. **`09_mirror`** - independently verify the external backup of the canonical
-   current/archive structure without turning every source drive into a peer.
+9. **`09_mirror`** - as built, a canonical-state audit: check the top of every
+   watched drive against Krish's folder record, without entering a protected
+   boundary. It does not verify a backup or mirror content.
 
 ---
 

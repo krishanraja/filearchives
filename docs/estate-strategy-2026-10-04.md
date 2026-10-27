@@ -1,8 +1,20 @@
 # Estate analysis and target structure
 
-Status: accepted policy under verified execution; no permanent deletion
+Status: historical analysis of 2026-10-04, not current guidance
 Inventory run: `estate-20261003-v1`
 Analysis date: 2026-10-04
+
+> Read this as the reasoning behind the first consolidation run, not as the
+> layout. Its target structure (H `CURRENT`, `ARCHIVE`, `CONTENT-EXTRA`,
+> `FAMILY-ADMIN`, G `Personal`) was replaced on 2026-10-22 to 2026-10-24:
+> `docs/DECISIONS.md` D-031 dissolved `CURRENT` into `Ventures`, D-032 made the
+> archive `--ARCHIVE`, retired `G:\My Drive\Personal` and renamed
+> `ContentLibrary` to `FamilyContentLibrary`, and D-033 and D-034 record the
+> top of the Drive since. Where things live now is `policy/folder-preferences.json`.
+> "No permanent deletion" was true only on 2026-10-04: the approved cleanup of
+> 2026-10-11 deleted files (`docs/RUN-2026-10-11.md`). The measured estate below
+> is the 2026-10-04 analysis snapshot (12 roots); the final sealed totals are in
+> `docs/RUN-2026-10-04.md`.
 
 ## Executive decision
 

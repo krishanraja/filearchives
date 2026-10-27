@@ -7,7 +7,8 @@ Find every tree that holds documents, and record what was seen.
 
 ## Outputs
 - a survey per root: counts and bytes by type, written down
-- `SOURCES.csv` - one row per tree, with what it appears to hold
+- `SOURCES.csv` - one row per tree, with what it appears to hold (written by `survey_roots.py`)
+- `source-surveys.jsonl` - one line per surveyed source, complete, partial or unavailable (written by `survey_roots.ps1`)
 
 ## Invariants
 - a survey acts on nothing: it counts, it does not move or delete

@@ -6,7 +6,8 @@ One row per document, carrying every signal about it.
 - the archive on disk
 
 ## Outputs
-- `INVENTORY.csv` - path, size, hash, dates, type, origin tree
+- a run directory under the workspace audit path holding immutable `segment-*.json` files and an `inventory-summary.json` (path, size, dates, extension, origin and classification hints per item; no hash, since identity is proved in `02_ingest`)
+- the `INVENTORY.csv` named in the original scaffold is not written by any stage
 
 ## Invariants
 - the disk is the truth; the inventory is a claim about it
@@ -16,7 +17,6 @@ One row per document, carrying every signal about it.
 ## Code
 | file | role |
 |---|---|
-| `stages/04_inventory/build_inventory.py` | one row per file with every signal, written incrementally |
 | `stages/04_inventory/build_inventory.ps1` | Windows-first item inventory in immutable atomic segments; resumes by replaying committed segments and records media, generated-tree and sensitive-name hints without reading content |
 | `stages/04_inventory/verify_inventory.ps1` | independently verifies segment seals, unique and bounded paths, protected-root exclusion, and optionally reconciles every identity against the live source |
 
