@@ -25,3 +25,6 @@ workspace.json
 survey.out
 survey.err
 *.log
+
+# The chat backstop keeps flagged lines here; never committed.
+.scratch/
