@@ -557,10 +557,16 @@ and `policy/folder-preferences.json`.
     names where a venture's clones live. Make Your Mind Up's home is
     `C:\Users\krish\dev\makeyourmindup`, with worktrees in its `.worktrees`,
     as the Wave 2 W2.11 layout set. Its repositories: makeyourmindup,
-    growth-makeyourmindup, content-engine, content-watcher and
-    inspirationhouse. inspirationhouse is placed there by assumption (W3.2
-    makes it the chain's inspiration source; W2.11 does not name it), for
-    Krish to confirm. A repository not in the map is `unplaced`, never guessed.
+    growth-makeyourmindup, content-engine and content-watcher.
+    inspirationhouse is `shared` and does not move (Krish, 2026-10-29: it "has
+    a ledger for every venture, but in reality 99% of its work is for
+    makeyourmindup right now though that may change"). sendlinks sits with
+    Control Center (Krish: "a part of control center but standalone
+    machinery"). hunter, krish-raja, kimon, dipti-health, lozatron,
+    getaround.london, merciless, fractionl-homepage and conclusiv are
+    `out_of_scope` and the report leaves them out (Krish: "standalone/personal
+    projects you dont need to be across"). Any other repository not in the
+    map is `unplaced`, never guessed.
   - The `C:\Users\krish\dev` watch depth is 2, so the record and the weekly
     check-in see each folder inside `dev\krishanraja` and `dev\mindmake`.
     Folders already there one level down are not in his record, so the next
