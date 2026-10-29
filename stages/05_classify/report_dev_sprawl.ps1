@@ -56,6 +56,10 @@ if ($ventures.PSObject.Properties.Name -contains 'homes') {
     foreach ($p in $ventures.homes.PSObject.Properties) { $homes[$p.Name] = ConvertTo-FaCanonicalPath ([string]$p.Value.path) }
 }
 $preserve = @(if ($ventures.PSObject.Properties.Name -contains 'preserve') { $ventures.preserve })
+# Krish, 2026-10-29: "standalone/personal projects you dont need to be across". Left out entirely.
+$outOfScope = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+if ($ventures.PSObject.Properties.Name -contains 'out_of_scope') { foreach ($r in @($ventures.out_of_scope)) { $null = $outOfScope.Add([string]$r) } }
+$skippedOutOfScope = 0
 $skipNames = @('.git', 'node_modules', '.venv', 'venv', '__pycache__', '$RECYCLE.BIN', 'System Volume Information')
 
 function Invoke-FaGitRead {
@@ -134,6 +138,7 @@ foreach ($path in @($trees.Keys | Sort-Object)) {
     $kind = $trees[$path]
     $remote = @(Invoke-FaGitRead $path @('remote', 'get-url', 'origin')) | Select-Object -First 1
     $identity = Get-FaRepoIdentity $remote
+    if ($identity -and $outOfScope.Contains($identity)) { $skippedOutOfScope++; continue }
     $venture = if (-not $identity) { 'no-remote' } elseif ($ventureByRepo.ContainsKey($identity)) { $ventureByRepo[$identity] } else { 'unplaced' }
     $branch = @(Invoke-FaGitRead $path @('branch', '--show-current')) | Select-Object -First 1
     $status = @(Invoke-FaGitRead $path @('status', '--porcelain=v1', '--untracked-files=normal'))
@@ -221,6 +226,7 @@ $result = [ordered]@{
     Bytes = [long](($rows | Measure-Object Bytes -Sum).Sum)
     MakeYourMindUpClonesOutsideHome = $mymuOutside.Count
     ClonesOutsideTheirVentureHome = $outsideClones.Count
+    OutOfScopeLeftOut = $skippedOutOfScope
     UnreadableFolders = @($unreadable)
     Duplicates = $duplicates
     Trees = @($rows)
@@ -252,6 +258,7 @@ if (-not $available) {
     [void]$md.AppendLine("- With uncommitted changes: $($result.Dirty)")
     [void]$md.AppendLine("- With commits or stashes on no remote: $($result.WithWorkNotOnAnyRemote) (as of each clone's last fetch)")
     [void]$md.AppendLine("- Repositories cloned more than once: $($duplicates.Count)")
+    [void]$md.AppendLine("- Personal projects left out, as Krish asked: $skippedOutOfScope")
     [void]$md.AppendLine()
     [void]$md.AppendLine("## Clones outside their venture's folder ($($outsideClones.Count))")
     [void]$md.AppendLine()

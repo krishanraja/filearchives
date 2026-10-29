@@ -2,7 +2,7 @@
   "schema_version": 1,
   "kind": "krish-repo-ventures-v1",
   "purpose": "Which venture each GitHub repository belongs to, and where a venture's clones live on Krish's PC. The dev sprawl report reads it; nothing moves because of it. A move still needs Krish's consent row for that exact folder in policy/folder-preferences.json.",
-  "venture_slugs": "Control Center's venture slugs (get_venture_state), plus makeyourmindup, personal and mindmake_os.",
+  "venture_slugs": "Control Center's venture slugs (get_venture_state), plus makeyourmindup, personal, mindmake_os and shared (serves several ventures, so it has no venture home).",
   "dev_root": "C:\\Users\\krish\\dev",
   "homes": {
     "makeyourmindup": {
@@ -23,7 +23,7 @@
     "krishanraja/growth-makeyourmindup": "makeyourmindup",
     "krishanraja/content-engine": "makeyourmindup",
     "krishanraja/content-watcher": "makeyourmindup",
-    "krishanraja/inspirationhouse": "makeyourmindup",
+    "krishanraja/inspirationhouse": "shared",
     "krishanraja/heartside": "heartside",
     "krishanraja/growth-heartside": "heartside",
     "krishanraja/full-time": "full_time",
@@ -44,9 +44,25 @@
     "krishanraja/control-center": "mindmake_os",
     "krishanraja/ai-harness": "mindmake_os",
     "krishanraja/claude-archive": "mindmake_os",
+    "krishanraja/sendlinks": "mindmake_os",
     "krishanraja/filearchives": "personal",
     "krishanraja/contentarchives": "personal",
     "krishanraja/compound-finances": "personal"
   },
-  "unplaced_note": "A repository not listed here shows as unplaced in the sprawl report until Krish says which venture it serves. Not yet placed: hunter, krish-raja, kimon, dipti-health, lozatron, getaround.london, sendlinks, merciless, fractionl-homepage, conclusiv."
+  "notes": {
+    "krishanraja/inspirationhouse": "Krish, 2026-10-29: it \"has a ledger for every venture, but in reality 99% of its work is for makeyourmindup right now though that may change\". Shared, so it does not move into dev\\makeyourmindup.",
+    "krishanraja/sendlinks": "Krish, 2026-10-29: \"sendlinks is a part of control center but standalone machinery\"."
+  },
+  "out_of_scope": [
+    "krishanraja/hunter",
+    "krishanraja/krish-raja",
+    "krishanraja/kimon",
+    "krishanraja/dipti-health",
+    "krishanraja/lozatron",
+    "krishanraja/getaround.london",
+    "krishanraja/merciless",
+    "krishanraja/fractionl-homepage",
+    "krishanraja/conclusiv"
+  ],
+  "out_of_scope_note": "Krish, 2026-10-29: \"the rest are standalone/personal projects you dont need to be across\". The sprawl report leaves their clones out entirely. Any other repository not listed shows as unplaced until Krish places it."
 }

@@ -90,6 +90,9 @@ try {
     foreach ($r in @('makeyourmindup', 'growth-makeyourmindup', 'content-engine', 'content-watcher')) {
         if ($real.repos."krishanraja/$r" -ne 'makeyourmindup') { throw "policy/repo-ventures.json does not place krishanraja/$r in makeyourmindup" }
     }
+    if ($real.repos.'krishanraja/inspirationhouse' -ne 'shared') { throw 'inspirationhouse is not shared across ventures' }
+    if ($real.repos.'krishanraja/sendlinks' -ne $real.repos.'krishanraja/control-center') { throw 'sendlinks is not with control-center' }
+    if (@($real.out_of_scope) -notcontains 'krishanraja/hunter') { throw 'hunter is not out of scope' }
     if ($real.homes.makeyourmindup.path -ne 'C:\Users\krish\dev\makeyourmindup') { throw 'the Make Your Mind Up home is not dev\makeyourmindup' }
     if (@($real.preserve | Where-Object { $_.repo -eq 'krishanraja/growth-makeyourmindup' -and $_.path -eq '.scratch' }).Count -ne 1) {
         throw "Growth's .scratch is not preserved in policy/repo-ventures.json"
@@ -123,6 +126,8 @@ try {
     $watcherWt = Join-Path $dev 'mindmake' 'content-watcher-wt'
     $heart = Join-Path $dev 'krishanraja' 'heartside'
     $hunter = Join-Path $dev 'krishanraja' 'hunter'
+    $inspo = Join-Path $dev 'krishanraja' 'inspirationhouse'
+    $newRepo = Join-Path $dev 'mindmake' 'brand-new-thing'
     New-FixtureRepo $inHome 'krishanraja/makeyourmindup' '2026-10-25T10:00:00Z'
     New-FixtureRepo $ceNew 'krishanraja/content-engine' '2026-10-20T10:00:00Z' -Dirty
     New-FixtureRepo $ceOld 'krishanraja/content-engine' '2026-09-01T10:00:00Z'
@@ -134,6 +139,8 @@ try {
     Invoke-Git $watcher @('worktree', 'add', '--quiet', '-b', 'try-it', $watcherWt)
     New-FixtureRepo $heart 'krishanraja/heartside' '2026-10-10T10:00:00Z'
     New-FixtureRepo $hunter 'krishanraja/hunter' '2026-10-11T10:00:00Z'
+    New-FixtureRepo $inspo 'krishanraja/inspirationhouse' '2026-10-12T10:00:00Z'
+    New-FixtureRepo $newRepo 'krishanraja/brand-new-thing' '2026-10-13T10:00:00Z'
     $env:GIT_AUTHOR_DATE = $null; $env:GIT_COMMITTER_DATE = $null
 
     # 1. The report is read-only, down to every byte under .git.
@@ -141,10 +148,12 @@ try {
     & (Join-Path $repo 'stages' '05_classify' 'report_dev_sprawl.ps1') -DevRoot $dev -VenturesPath $venturesPath -ReportRoot $reportRoot | Out-Null
     if ((Get-TreeSeal $dev) -ne $before) { throw 'the sprawl report changed the dev folder' }
     $s = Read-Sprawl
-    $expect = @{ WorkingTrees = 8; Clones = 7; Worktrees = 1; Dirty = 1; WithWorkNotOnAnyRemote = 1; DuplicateRepositories = 1; MakeYourMindUpClonesOutsideHome = 4 }
+    $expect = @{ OutOfScopeLeftOut = 1; WorkingTrees = 9; Clones = 8; Worktrees = 1; Dirty = 1; WithWorkNotOnAnyRemote = 1; DuplicateRepositories = 1; MakeYourMindUpClonesOutsideHome = 4 }
     foreach ($k in $expect.Keys) { if ($s.$k -ne $expect[$k]) { throw "sprawl $k is $($s.$k), expected $($expect[$k])" } }
     $byPath = @{}; foreach ($t in $s.Trees) { $byPath[$t.Path] = $t }
-    if ($byPath[$hunter].Venture -ne 'unplaced') { throw 'an unmapped repository was given a venture' }
+    if ($byPath.ContainsKey($hunter)) { throw 'an out-of-scope personal project was reported' }
+    if ($byPath[$newRepo].Venture -ne 'unplaced') { throw 'an unmapped repository was given a venture' }
+    if ($byPath[$inspo].Venture -ne 'shared' -or $byPath[$inspo].OutsideHome -or $byPath[$inspo].ProposedDestination) { throw 'inspirationhouse was treated as a Make Your Mind Up clone' }
     if ($byPath[$growth].NotOnAnyRemote -ne 1) { throw 'the unpushed commit was not counted' }
     if (@($byPath[$growth].Preserved).Count -ne 1) { throw "Growth's .scratch was not reported as preserved" }
     if ($byPath[$ceNew].ProposedDestination -ne (Join-Path $home_ 'content-engine')) { throw 'the newest clone did not get the plain name' }
@@ -153,6 +162,7 @@ try {
     $md = Get-Content -LiteralPath (Join-Path $reportRoot 'SPRAWL.md') -Raw
     if ($md -notmatch 'Make Your Mind Up clones outside `dev\\makeyourmindup`: \*\*4\*\*') { throw 'SPRAWL.md does not carry the number' }
     if ($md -match 'README|draft\.txt|backstop\.jsonl') { throw 'SPRAWL.md leaked a file name from inside a repository' }
+    if ($md -match 'hunter') { throw 'SPRAWL.md names an out-of-scope personal project' }
     if ($md.Contains([string][char]0x2014)) { throw 'SPRAWL.md has an em dash' }
     Write-Host 'PASS: the sprawl report is read-only and counts what W3.4 asks for'
 
@@ -200,7 +210,7 @@ try {
     $null = Invoke-Chain -Execute
     $s = Read-Sprawl
     if ($s.MakeYourMindUpClonesOutsideHome -ne 0) { throw "after his consents the report shows $($s.MakeYourMindUpClonesOutsideHome) clones outside home, not 0" }
-    foreach ($p in @($inHome, $heart, $hunter)) { if (-not (Test-Path -LiteralPath (Join-Path $p '.git'))) { throw "a folder nobody asked about moved: $p" } }
+    foreach ($p in @($inHome, $heart, $hunter, $inspo, $newRepo)) { if (-not (Test-Path -LiteralPath (Join-Path $p '.git'))) { throw "a folder nobody asked about moved: $p" } }
     Write-Host 'PASS: after his consents the report shows 0 Make Your Mind Up clones outside dev\makeyourmindup'
 } finally {
     foreach ($k in $savedEnv.Keys) { [Environment]::SetEnvironmentVariable($k, $savedEnv[$k]) }
