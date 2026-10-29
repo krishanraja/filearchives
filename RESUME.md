@@ -21,6 +21,7 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_temporary_family_consolidation.ps1
 .\tests\test_path_regex_quarantine.ps1
 .\tests\test_new_folder_survives.ps1
+.\tests\test_dev_sprawl.ps1
 .\tests\test_streaming_folder_copy.ps1
 .\tests\test_windows_profile_coverage.ps1
 node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
@@ -64,6 +65,22 @@ without asking first. D-030 and learning 36 hold the detail.
   to move or remove a folder is a row in `consents` with
   `approved_by: "Krish"`, the exact path, the action, the destination for a
   move, and his words; only he gives one.
+
+## LIVE: dev sprawl and dev moves (Wave 3 W3.4, from 2026-10-29)
+
+D-035 holds the detail. Nothing here moves a folder without Krish's consent row.
+
+- `policy/repo-ventures.json` maps each repository to a venture and names a
+  venture's home; Make Your Mind Up's is `C:\Users\krish\dev\makeyourmindup`.
+- The dev watch depth is 2.
+- `stages\05_classify\report_dev_sprawl.ps1` (read-only) writes
+  `docs/folder-checkin/SPRAWL.md` and `sprawl.json`; the Monday check-in runs it
+  through `chains\chain_dev_consolidation.ps1` in plan mode, which also writes
+  `move-requests.json`, one consent row per proposed move.
+- `chains\chain_dev_consolidation.ps1 -Execute` snapshots every dirty
+  repository outside dev, moves only the folders with his consent row for that
+  exact destination, proves Growth's `.scratch` arrived byte for byte and
+  re-reads the report. Worktrees move with `git worktree move`, never as folders.
 
 ## CLOSED MISSION: whole-estate consolidation (2026-10-04 to 2026-10-11)
 

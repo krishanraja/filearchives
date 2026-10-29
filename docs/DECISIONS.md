@@ -547,3 +547,44 @@ and `policy/folder-preferences.json`.
   with the date of the export (eg Linkedin is Feb 2026)".
 - Revisit trigger: a new network export lands in his Drive, or the Facebook
   export is found.
+
+## D-035: dev clones live in their venture's folder, moved only with his yes
+
+- Date: 2026-10-29
+- Status: built; no move has run
+- Decision (Wave 3 W3.4, from the Make Your Mind Up brief of 28 October):
+  - `policy/repo-ventures.json` maps each GitHub repository to a venture and
+    names where a venture's clones live. Make Your Mind Up's home is
+    `C:\Users\krish\dev\makeyourmindup`, with worktrees in its `.worktrees`,
+    as the Wave 2 W2.11 layout set. Its repositories: makeyourmindup,
+    growth-makeyourmindup, content-engine, content-watcher and
+    inspirationhouse. inspirationhouse is placed there by assumption (W3.2
+    makes it the chain's inspiration source; W2.11 does not name it), for
+    Krish to confirm. A repository not in the map is `unplaced`, never guessed.
+  - The `C:\Users\krish\dev` watch depth is 2, so the record and the weekly
+    check-in see each folder inside `dev\krishanraja` and `dev\mindmake`.
+    Folders already there one level down are not in his record, so the next
+    check-in lists them as new, waiting on him; nothing moves because of that.
+  - `stages\05_classify\report_dev_sprawl.ps1` writes
+    `docs/folder-checkin/SPRAWL.md` and `sprawl.json` every Monday with the
+    check-in: clones and worktrees, dirty and unpushed work, stashes, sizes,
+    duplicates, and the number of Make Your Mind Up clones outside its home.
+    It only reads.
+  - `chains\chain_dev_consolidation.ps1` writes one consent row per proposed
+    move to `docs/folder-checkin/move-requests.json`. With `-Execute` it
+    snapshots every dirty repository outside dev, then moves only the folders
+    Krish said yes to, to the exact destination he named, through the guarded
+    folder-move pair, and proves Growth's `.scratch` arrives byte for byte. A
+    second clone of the same repository waits in `.duplicates` for his call;
+    removing it is a separate delete consent. Worktrees move with
+    `git worktree move`, never as folders.
+- Proof: `tests/test_dev_sprawl.ps1` on a synthetic dev folder (report
+  read-only to the byte, nothing moves without a yes, a yes for another
+  destination releases nothing, snapshot before move, `.scratch` intact, the
+  number reaches 0 after his consents); `tests/test_new_folder_survives.ps1`
+  passes with the change.
+- Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made
+  without asking first.
+- Revisit trigger: Krish places an unplaced repository, gives a venture a
+  home, or answers for the dev folders the deeper watch finds.
+

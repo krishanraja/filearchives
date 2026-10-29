@@ -1,0 +1,54 @@
+name: ci
+
+# The checks that run off Krish's Windows PC. The tests that need a C: drive
+# (see RESUME.md) still run on his machine only. Synthetic fixtures only;
+# nothing here reads his drives.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: PowerShell 7.5 (the folder record needs ConvertFrom-Json -DateKind)
+        run: |
+          curl -sSfL -o "$RUNNER_TEMP/pwsh.tgz" https://github.com/PowerShell/PowerShell/releases/download/v7.5.2/powershell-7.5.2-linux-x64.tar.gz
+          mkdir -p "$RUNNER_TEMP/pwsh"
+          tar xzf "$RUNNER_TEMP/pwsh.tgz" -C "$RUNNER_TEMP/pwsh"
+          chmod +x "$RUNNER_TEMP/pwsh/pwsh"
+          echo "$RUNNER_TEMP/pwsh" >> "$GITHUB_PATH"
+
+      - name: Stage contracts
+        run: python3 tests/test_stage_contracts.py
+
+      - name: Stage conveyor
+        run: |
+          base=https://raw.githubusercontent.com/krishanraja/ai-harness/main/skills/krish-build
+          mkdir -p "$RUNNER_TEMP/conveyor/scripts" "$RUNNER_TEMP/conveyor/references"
+          curl -sSf -o "$RUNNER_TEMP/conveyor/scripts/check-stage-conveyor.mjs" "$base/scripts/check-stage-conveyor.mjs"
+          curl -sSf -o "$RUNNER_TEMP/conveyor/references/stage-conveyor-manifest.schema.json" "$base/references/stage-conveyor-manifest.schema.json"
+          node "$RUNNER_TEMP/conveyor/scripts/check-stage-conveyor.mjs" --root . --manifest pipeline/stage-conveyor.json
+
+      - name: Krish's folders need his yes (must pass before any mover, planner or consent change)
+        run: pwsh -NoLogo -NoProfile -File tests/test_new_folder_survives.ps1
+
+      - name: Dev sprawl report and consent-row moves
+        run: pwsh -NoLogo -NoProfile -File tests/test_dev_sprawl.ps1
+
+      - name: Other portable engine tests
+        run: |
+          for t in test_repository_snapshot test_atomic_tree_relocation test_extension_move \
+                   test_filtered_copy_manifest test_layout_classifier test_path_regex_quarantine \
+                   test_sensitive_name_quarantine test_streaming_folder_copy \
+                   test_temporary_family_consolidation test_verified_copy_sharding; do
+            echo "== $t"
+            pwsh -NoLogo -NoProfile -File "tests/$t.ps1"
+          done

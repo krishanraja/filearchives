@@ -299,3 +299,23 @@ rename, merge or removal inside a watched root needs a consent row naming that
 folder, approved by him; and the weekly check-in counts any recorded folder
 that disappears without one. Ruling (Krish, 2026-10-23): filearchives never
 moves a folder Krish made without asking first.
+
+## 37. A dev folder move is a repository move
+
+A clone is not a plain folder. It can hold uncommitted work, commits that are
+on no remote, and git-ignored local state such as Growth's `.scratch`, which a
+fresh clone would never bring back; and a linked worktree, or a clone that has
+one, breaks when its folder moves because Git records the other's path.
+Wave 3 W3.4: before the first dev move every dirty repository is snapshotted
+outside dev, the folder itself moves (never re-cloned), each preserved path is
+sealed before and proven byte for byte after, and worktrees are left for
+`git worktree move`. Only Krish's consent row for that exact folder and
+destination releases a move.
+
+## 38. Reading Git is not read-only unless you say so
+
+`git status` refreshes the index stat cache and can rewrite `.git/index` even
+when nothing changed (see 35). A report that promises to only look runs every
+Git command with `--no-optional-locks` and never fetches, and its test seals
+every byte under each `.git` before and after.
+
