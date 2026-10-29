@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "krish-repo-ventures-v1",
+  "purpose": "Which venture each GitHub repository belongs to, and where a venture's clones live on Krish's PC. The dev sprawl report reads it; nothing moves because of it. A move still needs Krish's consent row for that exact folder in policy/folder-preferences.json.",
+  "venture_slugs": "Control Center's venture slugs (get_venture_state), plus makeyourmindup, personal and mindmake_os.",
+  "dev_root": "C:\\Users\\krish\\dev",
+  "homes": {
+    "makeyourmindup": {
+      "path": "C:\\Users\\krish\\dev\\makeyourmindup",
+      "worktrees": "C:\\Users\\krish\\dev\\makeyourmindup\\.worktrees",
+      "source": "Wave 2 W2.11 local layout: repos in dev\\makeyourmindup\\<repo>, worktrees in .worktrees\\<repo>\\<branch>"
+    }
+  },
+  "preserve": [
+    {
+      "repo": "krishanraja/growth-makeyourmindup",
+      "path": ".scratch",
+      "why": "Growth's .scratch holds its local, git-ignored working state; a move keeps it byte for byte and nothing re-clones over it (Wave 3 W3.4)."
+    }
+  ],
+  "repos": {
+    "krishanraja/makeyourmindup": "makeyourmindup",
+    "krishanraja/growth-makeyourmindup": "makeyourmindup",
+    "krishanraja/content-engine": "makeyourmindup",
+    "krishanraja/content-watcher": "makeyourmindup",
+    "krishanraja/inspirationhouse": "makeyourmindup",
+    "krishanraja/heartside": "heartside",
+    "krishanraja/growth-heartside": "heartside",
+    "krishanraja/full-time": "full_time",
+    "krishanraja/growth-fulltime": "full_time",
+    "krishanraja/legibility": "legibility",
+    "krishanraja/growth-legibility": "legibility",
+    "krishanraja/legibility-worker": "legibility",
+    "krishanraja/mindmake-ctrl": "mm_ctrl",
+    "krishanraja/mm-ctrl": "mm_ctrl",
+    "krishanraja/mm-ctrl-relaunch-private": "mm_ctrl",
+    "krishanraja/fractionl-pulse": "fractionl_pulse",
+    "krishanraja/fractionl-circle": "circle",
+    "krishanraja/mindmake": "mindmake",
+    "krishanraja/growth-mindmake": "mindmake",
+    "krishanraja/aeo-engine": "mindmake",
+    "krishanraja/dothinkdo": "mindmake",
+    "krishanraja/dothinkdo-skills": "mindmake",
+    "krishanraja/control-center": "mindmake_os",
+    "krishanraja/ai-harness": "mindmake_os",
+    "krishanraja/claude-archive": "mindmake_os",
+    "krishanraja/filearchives": "personal",
+    "krishanraja/contentarchives": "personal",
+    "krishanraja/compound-finances": "personal"
+  },
+  "unplaced_note": "A repository not listed here shows as unplaced in the sprawl report until Krish says which venture it serves. Not yet placed: hunter, krish-raja, kimon, dipti-health, lozatron, getaround.london, sendlinks, merciless, fractionl-homepage, conclusiv."
+}

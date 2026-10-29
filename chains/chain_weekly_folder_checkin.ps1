@@ -24,10 +24,20 @@ if ($LASTEXITCODE -eq 3) {
     exit 1
 }
 
+# The dev sprawl report and its move requests ride along (W3.4). Plan only:
+# without -Execute nothing moves. If it cannot run, the check-in still stands.
+$sprawlNote = ''
+try {
+    & (Join-Path $repo 'chains' 'chain_dev_consolidation.ps1') | Out-Host
+    $sprawlNote = "`nThe dev sprawl report is $(Join-Path $repo 'docs' 'folder-checkin' 'SPRAWL.md')"
+} catch {
+    $sprawlNote = "`nThe dev sprawl report could not run this week: $($_.Exception.Message)"
+}
+
 $latest = Join-Path $repo 'docs' 'folder-checkin' 'LATEST.md'
 $save = [Windows.Forms.MessageBox]::Show(
     "This week's check-in is done. Nothing was moved, renamed or deleted.`n`n" +
-    "Save it to the filearchives repository on GitHub?`n(The report is $latest)",
+    "Save it to the filearchives repository on GitHub?`n(The report is $latest)$sprawlNote",
     $title, 'YesNo', 'Question')
 if ($save -eq 'Yes') {
     $saved = Save-FaFolderRecordToGitHub -Repo $repo `

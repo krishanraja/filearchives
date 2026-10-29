@@ -22,6 +22,7 @@ The canonical folder tree, and the proposal that maps files into it.
 - inside a watched root no folder is moved, renamed, merged or removed without Krish's yes for that folder, and nothing inside a folder waiting on him moves
 - Krish's recorded folders outrank the older routing rules: a file in one stays where it is
 - the weekly check-in looks and asks; it never mutates the drive
+- a dev consolidation moves nothing without -Execute and a consent row for that exact folder and destination, and snapshots every dirty repository before the first move
 
 ## Code
 | file | role |
@@ -47,7 +48,8 @@ The canonical folder tree, and the proposal that maps files into it.
 | `stages/07_structure/record_folder_preferences.ps1` | record the folder tree as it stands as Krish's preference, folder names only, keeping his answers and the record of any unmounted drive |
 | `stages/07_structure/weekly_folder_checkin.ps1` | find folders made since the record, ask Krish the two questions, count recorded folders gone without his OK, check answered folders against what he said goes in them, and keep the North Star value in NOW.md honest |
 | `chains/install_folder_checkin.ps1` | the one button behind RECORD-MY-FOLDERS.cmd: pause other filearchives jobs, record, schedule the weekly check-in, save to GitHub, all after one on-screen yes |
-| `chains/chain_weekly_folder_checkin.ps1` | what the weekly scheduled task and CHECK-MY-NEW-FOLDERS.cmd run: pull, check in with pop-ups, save only on Krish's yes |
+| `chains/chain_weekly_folder_checkin.ps1` | what the weekly scheduled task and CHECK-MY-NEW-FOLDERS.cmd run: pull, check in with pop-ups, refresh the dev sprawl report and its move requests, save only on Krish's yes |
+| `chains/chain_dev_consolidation.ps1` | turn the dev sprawl report into one consent row per proposed move; with -Execute, snapshot every dirty repository, then move only the folders Krish said yes to through the guarded folder-move pair, proving preserved paths arrive byte for byte |
 | `stages/07_structure/new_path_regex_quarantine_manifest.ps1` | quarantine explicitly matched files from selected safe roots while preserving root-relative provenance and never broadening the scan to a protected sibling |
 
 ## Tests
@@ -58,6 +60,7 @@ The canonical folder tree, and the proposal that maps files into it.
 - `tests/test_temporary_family_consolidation.ps1`
 - `tests/test_path_regex_quarantine.ps1`
 - `tests/test_new_folder_survives.ps1`
+- `tests/test_dev_sprawl.ps1`
 
 ## Lessons
 | # | what this stage does about it | enforced by |
@@ -73,3 +76,4 @@ The canonical folder tree, and the proposal that maps files into it.
 | 32 | duplicate quarantine reserves every planned destination and resolves same-name collisions before execution | `test:tests/test_ingress_duplicate_quarantine.ps1:produced colliding quarantine destinations` |
 | 33 | empty-directory execution records locked shells and continues the independently safe remainder | `code:stages/07_structure/invoke_empty_directory_manifest.ps1:remove-failed` |
 | 36 | a folder Krish made is never moved or removed without his yes for that folder; new ones wait on him | `test:tests/test_new_folder_survives.ps1:an unknown new folder survives a run untouched` |
+| 37 | a dev folder move is a repository move: dirty work is snapshotted first, ignored local state arrives byte for byte, a worktree is never moved as a folder | `test:tests/test_dev_sprawl.ps1:Growth's .scratch did not survive the move byte for byte` |
