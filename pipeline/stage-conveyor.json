@@ -4,7 +4,7 @@
   "inventory": {
     "roots": ["."],
     "extensions": [".ps1", ".py"],
-    "exclude": [".git/**", "**/__pycache__/**", "**/.venv/**"]
+    "exclude": [".git/**", "**/__pycache__/**", "**/.venv/**", ".claude/**"]
   },
   "external_inputs": [
     "workspace-config",

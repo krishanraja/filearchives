@@ -29,6 +29,9 @@ jobs:
       - name: Stage contracts
         run: python3 tests/test_stage_contracts.py
 
+      - name: Chat backstop hook (W3.3)
+        run: python3 tests/test_taste_backstop.py
+
       - name: Stage conveyor
         run: |
           base=https://raw.githubusercontent.com/krishanraja/ai-harness/main/skills/krish-build
