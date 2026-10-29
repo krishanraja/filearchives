@@ -1,7 +1,7 @@
 ---
 repo: krishanraja/filearchives
 product: filearchives
-as_of: 2026-10-27
+as_of: 2026-10-29
 head: 85ac535
 lifecycle: live
 production_url: none
@@ -22,7 +22,7 @@ The engine that keeps Krish's documents in one verified library without losing a
 
 Krish himself.
 
-## Where it is right now (as of 2026-10-27)
+## Where it is right now (as of 2026-10-29)
 
 <!-- north-star-state {"week_of":"2026-10-26","week_target":0,"current":0,"current_as_of":"2026-10-26","current_source":"docs/folder-checkin/LOG.jsonl","urgency":1,"urgency_reason":"at 100% of this week's target"} --> **North Star number: U1, on pace.** Folders moved or removed without Krish's OK, per week: 0, against 0 this week, on the way to 0 by 26 October 2026. Steady, and one proposal a week that would raise the ceiling.
 
@@ -50,9 +50,10 @@ Lifecycle: live. The status is in `README.md`; the commands to run and the live 
 ## What is next and what is waiting on Krish
 
 - Nothing is waiting on Krish. The 2026-10-26 check-in listed no new folder waiting, and his answers for `Inbox from My AI`, `Ventures\Inspiration` and `Ventures\Network & Contacts` are in `docs/folder-checkin/answers.json`.
-- Next step: the Monday 2026-11-02 09:00 check-in (scheduled task `filearchives-weekly-folder-checkin` on his PC, or `CHECK-MY-NEW-FOLDERS.cmd`). It should count the moved export folders and the trashed `My Contacts` folder as moved or removed with his OK (consent rows in `policy/folder-preferences.json`), and write the new reading to `docs/folder-checkin/LOG.jsonl` and the line above.
+- Next step: Wave 3 item W3.4, local sprawl and consents (content-engine `docs/plans/2026-11-14-wave-3.md`, due 14 November): `policy/repo-ventures.json` mapping owner/repo to a venture; the dev watch depth raised to 2, so it sees sessions' folders under `C:\Users\krish\dev\mindmake`; a read-only dev sprawl report (worktrees, dirty and unpushed work, sizes and duplicates) that feeds his Monday check-in; moves only with his consent row for that exact folder, after a snapshot of every dirty repo, with Growth's `.scratch` kept. `tests/test_new_folder_survives.ps1` must pass before any change to a mover, planner or the consent guard. Done when, after his consents, the report shows 0 Make Your Mind Up clones outside `dev\makeyourmindup`.
+- Meanwhile: the Monday 2026-11-02 09:00 check-in (scheduled task `filearchives-weekly-folder-checkin` on his PC, or `CHECK-MY-NEW-FOLDERS.cmd`). It should count the moved export folders and the trashed `My Contacts` folder as moved or removed with his OK (consent rows in `policy/folder-preferences.json`), and write the new reading to `docs/folder-checkin/LOG.jsonl` and the line above.
 - When the Facebook export turns up, it goes in `Network & Contacts` as `Facebook Export - <Mon YYYY>`.
-- North Star check (2026-10-27): holds.
+- North Star check (2026-10-29): holds.
 
 ## Read next
 
