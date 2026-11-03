@@ -24,7 +24,7 @@ Krish himself.
 
 ## Where it is right now (as of 2026-10-29)
 
-<!-- north-star-state {"week_of":"2026-10-26","week_target":0,"current":0,"current_as_of":"2026-10-26","current_source":"docs/folder-checkin/LOG.jsonl","urgency":1,"urgency_reason":"at 100% of this week's target"} --> **North Star number: U1, on pace.** Folders moved or removed without Krish's OK, per week: 0, against 0 this week, on the way to 0 by 26 October 2026. Steady, and one proposal a week that would raise the ceiling.
+<!-- north-star-state {"week_of":"2026-10-26","week_target":0,"current":0,"current_as_of":"2026-11-02","current_source":"docs/folder-checkin/LOG.jsonl","urgency":1,"urgency_reason":"at 100% of this week's target"} --> **North Star number: U1, on pace.** Folders moved or removed without Krish's OK, per week: 0, against 0 this week, on the way to 0 by 26 October 2026. Steady, and one proposal a week that would raise the ceiling.
 
 Lifecycle: live. The status is in `README.md`; the commands to run and the live folder rules are in `RESUME.md`.
 

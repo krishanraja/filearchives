@@ -4,7 +4,7 @@
   "ruling": "Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without asking first.",
   "recorded_at": "2026-10-23T16:31:56.2782043+01:00",
   "recorded_on": "LORIMER",
-  "last_checkin_at": "2026-10-26T09:00:04.2230757+00:00",
+  "last_checkin_at": "2026-11-02T09:00:03.2704181+00:00",
   "watch_roots": [
     {
       "path": "H:\\My Drive",
@@ -44,9 +44,105 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "C:\\Users\\krish\\dev\\content-engine\\.claude",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "C:\\Users\\krish\\dev\\contentarchives",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\.github",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\.pytest_cache",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\contentarchives",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\docs",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\guards",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\profiles",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\stages",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\state",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\tests",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\tools",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\contentarchives\\web",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "C:\\Users\\krish\\dev\\fractionl",
@@ -59,9 +155,108 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "C:\\Users\\krish\\dev\\heartside\\growth-heartside",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\heartside",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\heartside-catalog-hygiene",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\heartside-checkout-image-prep",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\heartside-personalization-audit",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "C:\\Users\\krish\\dev\\krishanraja",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\krishanraja\\compound",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\krishanraja\\compound-oauth-bridge",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\krishanraja\\filearchives",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\krishanraja\\lozatron",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\makeyourmindup",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Codex and Claude code builds for one of my ventures",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\makeyourmindup\\.worktrees",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of C:\\Users\\krish\\dev\\makeyourmindup",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\makeyourmindup\\krish-clone",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of C:\\Users\\krish\\dev\\makeyourmindup",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
     },
     {
       "path": "C:\\Users\\krish\\dev\\mindmake",
@@ -69,9 +264,450 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\ce-cards",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-approve",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-bed289",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-board-web",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-codex-ledger",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-friday-23oct",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-friday-log",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-matfill",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-monday-video",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-monday26",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-steward",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-ve",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-vorcpt",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-wednesday-scripts",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\full-time",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\growth-fulltime",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\growth-legibility",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\growth-makeyourmindup",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\growth-mindmake",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\growth-mindmake-multipliers",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\legibility-worker",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\mindmake",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\mm-ctrl",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\toolchain",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "C:\\Users\\krish\\dev\\mindmaker-os",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\ai-harness",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\ai-harness-sync-guard",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\ai-harness-tool-economics",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\ai-harness-tool-router",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\cc-growth-mindmake",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\cc-rebase-390",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\control-center",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\control-center-apify-gateway",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\control-center-board-web",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\control-center-mindmake-growth",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmaker-os\\control-center-service-economics",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "I have actually deleted the contents and moved it to a subfolder inside Immigration ",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\00_UPLOAD_PACK_Green_and_Spiegel",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\01_visa_and_petition",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\02_travel_history",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\03_case_notes_and_strategy",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\04_entity_and_employment",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\05_supporting_letters",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\06_court_record",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\07_police_checks",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\08_certified_LCA_2024",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\09_ds160_2024",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\10_passports_and_identity",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\11_degrees_and_transcripts",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\12_waivers_and_offence_statements",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\13_prior_au_visas",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\14_spouse_e3_details",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\1 Home & Personal",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
     },
     {
       "path": "G:\\My Drive\\App Issues",
@@ -164,58 +800,116 @@
     },
     {
       "path": "G:\\My Drive\\Immigration\\Debugging-Visa-Recovered",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\Family Documents",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Family passports",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\Family Documents\\Family Passports",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\Immigration\\Family Documents",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
     },
     {
       "path": "G:\\My Drive\\Immigration\\H-01-Identity",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\H-01-Identity-1",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\L-Downloads",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\L-Downloads\\_IMM_TMP2",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\L-OneDrive",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\L-OneDrive-Recovered",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\L-OneDrive-Recovered\\11_degrees_and_transcripts",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\L-OneDrive\\Documents",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\L-OneDrive\\Documents\\1 Home & Personal",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\Loose-Legacy",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\Visa & E3",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Current immigration filings",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\Visa & E3\\_IMM_TMP2",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of G:\\My Drive\\Immigration\\Visa & E3",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
     },
     {
       "path": "G:\\My Drive\\Legal",
@@ -281,6 +975,33 @@
       "path": "G:\\My Drive\\Tax Return History\\Krishan Raja - Accountant pack — AU FY2024-25 & FY2025-26 — DRAFT\\ANZ Mortgage",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Tax Return History\\Krishan Raja - Accountant pack — AU FY2024-25 & FY2025-26 — DRAFT\\Deductions",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Historical tax returns",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Tax Return History\\Krishan Raja - Accountant pack — AU FY2024-25 & FY2025-26 — DRAFT\\Final Tax Return signed forms",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Historical tax returns ",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Tax Return History\\USA",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Tax returns for this year",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
     },
     {
       "path": "H:\\My Drive\\--ARCHIVE",
@@ -2409,7 +3130,7 @@
     },
     {
       "path": "H:\\My Drive\\--ARCHIVE\\90_UNCLASSIFIED-UNIQUE\\L-Downloads-Unclassified\\My Contacts",
-      "status": "known",
+      "status": "moved-with-ok",
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
@@ -3639,7 +4360,7 @@
     },
     {
       "path": "H:\\My Drive\\--ARCHIVE\\99_DELETE-QUARANTINE\\H-Career-Binaries-20261004\\Linkedin Complete Export",
-      "status": "known",
+      "status": "moved-with-ok",
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
@@ -3926,6 +4647,14 @@
       "path": "H:\\My Drive\\Family Admin\\Krish\\Immigration",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Krish\\Immigration\\DS160 - Final - Nov 2026",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\Family Admin\\Krish\\Job-Search",
@@ -4237,9 +4966,25 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Full Time\\Growth Build",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\Full Time\\Non API Data inputs",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Full Time\\Product Build",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\Heartside",
@@ -4265,6 +5010,14 @@
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\Legibility\\00_Brand-Assets",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Legibility\\01_Growth",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup",
@@ -4302,9 +5055,19 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\Builds and briefs",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\PREVIOUS VERSIONS - archive, not current, do not use",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\Video Engine",
@@ -4313,8 +5076,10 @@
     },
     {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\Video Engine brief and architecture (reference only)",
-      "status": "known",
-      "since": "2026-10-23T16:29:18.3652567+01:00"
+      "status": "removed-by-krish",
+      "since": "2026-10-23T16:29:18.3652567+01:00",
+      "previous_status": "known",
+      "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make",
@@ -4340,6 +5105,14 @@
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\02_Canon",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\03_Growth",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\mind make\\04_Content",
@@ -4370,6 +5143,15 @@
       "path": "H:\\My Drive\\Ventures\\Bugs & Issues",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Bugs & Issues\\Heartside",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Issues I encounter in my ventures' repositories ",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
     },
     {
       "path": "H:\\My Drive\\Ventures\\Bugs & Issues\\mindmake",
@@ -4415,6 +5197,14 @@
       "answered_by": "answers.json"
     },
     {
+      "path": "H:\\My Drive\\Ventures\\Inspiration\\Content Inspo\\Ai generated music - 31 Oct 2026",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "H:\\My Drive\\Ventures\\Inspiration\\Production Inspo",
       "status": "answered",
       "first_seen": "2026-10-26T09:00:04.2230757+00:00",
@@ -4422,6 +5212,258 @@
       "purpose": "part of H:\\My Drive\\Ventures\\Inspiration",
       "answered_at": "2026-10-26T09:00:04.2230757+00:00",
       "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "His network exports (Instagram, Facebook, LinkedIn), one folder per export, each named with the date of the export. Krish, 2026-10-26: \"move all my network exports (instagram, facebook, linkedin) from Archive in to [this folder] ... Mark each folder with the date of the export (eg Linkedin is Feb 2026)\".",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\Instagram Export - Jul 2026",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Aug 2026",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Aug 2026\\Articles",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Aug 2026\\Jobs",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Aug 2026\\Services Marketplace",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Aug 2026\\Verifications",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Articles",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Connections copy from OneDrive",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Google Sheets copies",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Jobs",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Services Marketplace",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Feb 2026\\Verifications",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Mar 2025",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Oct 2026",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Oct 2026\\linkedin pt 1",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\LinkedIn Export - Oct 2026\\linkedin pt 2",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Network & Contacts",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "All my current side hustles and tools",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects\\GetAround.London",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects\\Krish Clone - Assets",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects\\Krish Clone - Assets\\Video",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects\\Krish Clone - Assets\\voice",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Temp",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "Where I put things to dump temporarily",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Temp\\Heartside",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Temp",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Temp\\Heartside\\Labelled stills",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Temp",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Temp\\Heartside\\Vids",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Temp",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Temp\\Social growth",
+      "status": "answered",
+      "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": true,
+      "purpose": "part of H:\\My Drive\\Ventures\\Temp",
+      "answered_at": "2026-11-02T09:00:03.2704181+00:00",
+      "answered_by": "pop-up"
     }
   ],
   "consents": [
