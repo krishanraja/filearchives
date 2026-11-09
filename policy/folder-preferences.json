@@ -4,7 +4,7 @@
   "ruling": "Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without asking first.",
   "recorded_at": "2026-10-23T16:31:56.2782043+01:00",
   "recorded_on": "LORIMER",
-  "last_checkin_at": "2026-11-02T09:00:03.2704181+00:00",
+  "last_checkin_at": "2026-11-09T09:00:03.8302941+00:00",
   "watch_roots": [
     {
       "path": "H:\\My Drive",
@@ -47,6 +47,14 @@
       "path": "C:\\Users\\krish\\dev\\content-engine\\.claude",
       "status": "new-waiting-on-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\content-engine\\.codex-remote-attachments",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
       "important": null,
       "purpose": null,
       "answered_at": null
@@ -158,6 +166,38 @@
       "path": "C:\\Users\\krish\\dev\\heartside\\growth-heartside",
       "status": "new-waiting-on-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\growth-heartside-audience-comments",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\growth-heartside-launch-20261103",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\growth-heartside-review-drop",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\heartside\\growth-heartside-rotation-20261103",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
       "important": null,
       "purpose": null,
       "answered_at": null
@@ -352,6 +392,22 @@
       "answered_at": null
     },
     {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-proactive-proof",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-source-evidence",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "C:\\Users\\krish\\dev\\mindmake\\content-engine-steward",
       "status": "new-waiting-on-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
@@ -411,6 +467,14 @@
       "path": "C:\\Users\\krish\\dev\\mindmake\\growth-makeyourmindup",
       "status": "new-waiting-on-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "C:\\Users\\krish\\dev\\mindmake\\growth-makeyourmindup-proactive",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
       "important": null,
       "purpose": null,
       "answered_at": null
@@ -558,156 +622,190 @@
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "I have actually deleted the contents and moved it to a subfolder inside Immigration ",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\00_UPLOAD_PACK_Green_and_Spiegel",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\01_visa_and_petition",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\02_travel_history",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\03_case_notes_and_strategy",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\04_entity_and_employment",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\05_supporting_letters",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\06_court_record",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\07_police_checks",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\08_certified_LCA_2024",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\09_ds160_2024",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\10_passports_and_identity",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\11_degrees_and_transcripts",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\12_waivers_and_offence_statements",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\13_prior_au_visas",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\1 Home & Personal\\Immigration\\14_spouse_e3_details",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\1 Home & Personal",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\App Issues",
@@ -797,6 +895,136 @@
       "path": "G:\\My Drive\\Immigration",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\00_UPLOAD_PACK_Green_and_Spiegel",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\01_visa_and_petition",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\02_travel_history",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\03_case_notes_and_strategy",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\04_entity_and_employment",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\05_supporting_letters",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\06_court_record",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\07_police_checks",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\08_certified_LCA_2024",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "Current immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\09_ds160_2024",
+      "status": "answered",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": true,
+      "purpose": "old immigration documentation ",
+      "answered_at": "2026-11-09T09:00:03.8302941+00:00",
+      "answered_by": "pop-up"
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\10_passports_and_identity",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\11_degrees_and_transcripts",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\12_waivers_and_offence_statements",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\13_prior_au_visas",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\14_spouse_e3_details",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "G:\\My Drive\\Immigration\\Debugging-Visa-Recovered",
@@ -894,22 +1122,42 @@
       "missing_since": "2026-11-02T09:00:03.2704181+00:00"
     },
     {
+      "path": "G:\\My Drive\\Immigration\\Old E3",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "G:\\My Drive\\Immigration\\Old E3\\_IMM_TMP2",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "G:\\My Drive\\Immigration\\Visa & E3",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "Current immigration filings",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\Immigration\\Visa & E3\\_IMM_TMP2",
-      "status": "answered",
+      "status": "removed-by-krish",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
       "important": true,
       "purpose": "part of G:\\My Drive\\Immigration\\Visa & E3",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
-      "answered_by": "pop-up"
+      "answered_by": "pop-up",
+      "previous_status": "answered",
+      "missing_since": "2026-11-09T09:00:03.8302941+00:00"
     },
     {
       "path": "G:\\My Drive\\Legal",
@@ -960,6 +1208,14 @@
       "path": "G:\\My Drive\\Music Production",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "G:\\My Drive\\Music Production\\Archive",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "G:\\My Drive\\Tax Return History",
@@ -4629,6 +4885,70 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "H:\\My Drive\\Family Admin\\Amil",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Amil\\00_ROUTING",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Amil\\01_CONTEXT",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Amil\\02_DOMAINS",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Amil\\03_DATA",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Amil\\04_GOVERNANCE",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Amil\\04_GOVERNANCE\\archive",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Family Admin\\Amil\\05_PRIVATE_FACTS_TEMPLATE",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "H:\\My Drive\\Family Admin\\Krish",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
@@ -4729,6 +5049,14 @@
       "purpose": "Where any AI session files something when it is unsure where it belongs; Krish files it from there. Krish, 2026-10-24: \"just reinstate that in the root folder then\".",
       "answered_at": "2026-10-26T09:00:04.2230757+00:00",
       "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Inbox from My AI\\ZZ Amil kit connector test (safe to delete)",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\KeePass",
@@ -5002,6 +5330,14 @@
       "since": "2026-10-23T16:29:18.3652567+01:00"
     },
     {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\Heartside\\05_Social-Library",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\Legibility",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
@@ -5053,6 +5389,14 @@
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\4 Growth",
       "status": "known",
       "since": "2026-10-23T16:29:18.3652567+01:00"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\5 Podcasts",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\Ventures\\Active Ventures\\makeyourmindup\\Builds and briefs",
@@ -5154,6 +5498,14 @@
       "answered_by": "pop-up"
     },
     {
+      "path": "H:\\My Drive\\Ventures\\Bugs & Issues\\makeyourmindup",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "H:\\My Drive\\Ventures\\Bugs & Issues\\mindmake",
       "status": "answered",
       "first_seen": "2026-10-26T09:00:04.2230757+00:00",
@@ -5214,6 +5566,22 @@
       "answered_by": "answers.json"
     },
     {
+      "path": "H:\\My Drive\\Ventures\\Inspiration\\Production Inspo\\VEED Studio - Instagram Thumbnail Study - 2026-11-06",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Inspiration\\Voice inspo",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
+    },
+    {
       "path": "H:\\My Drive\\Ventures\\Network & Contacts",
       "status": "answered",
       "first_seen": "2026-11-02T09:00:03.2704181+00:00",
@@ -5221,6 +5589,14 @@
       "purpose": "His network exports (Instagram, Facebook, LinkedIn), one folder per export, each named with the date of the export. Krish, 2026-10-26: \"move all my network exports (instagram, facebook, linkedin) from Archive in to [this folder] ... Mark each folder with the date of the export (eg Linkedin is Feb 2026)\".",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
       "answered_by": "answers.json"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Network & Contacts\\AI Circle",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\Ventures\\Network & Contacts\\Instagram Export - Jul 2026",
@@ -5401,6 +5777,14 @@
       "purpose": "part of H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects",
       "answered_at": "2026-11-02T09:00:03.2704181+00:00",
       "answered_by": "pop-up"
+    },
+    {
+      "path": "H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects\\Krish Clone - Assets\\Photos",
+      "status": "new-waiting-on-krish",
+      "first_seen": "2026-11-09T09:00:03.8302941+00:00",
+      "important": null,
+      "purpose": null,
+      "answered_at": null
     },
     {
       "path": "H:\\My Drive\\Ventures\\Side Hustles, Tools & Projects\\Krish Clone - Assets\\Video",

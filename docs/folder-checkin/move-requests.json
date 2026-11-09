@@ -1,0 +1,7 @@
+{
+  "SchemaVersion": 1,
+  "Kind": "dev-move-requests-v1",
+  "ObservedAt": "2026-11-09T09:03:52.0610723+00:00",
+  "Note": "Each consent_row is unapproved until Krish copies it into policy/folder-preferences.json consents with approved_by \"Krish\", approved_at and his words.",
+  "Requests": []
+}
