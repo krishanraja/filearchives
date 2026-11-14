@@ -594,3 +594,12 @@ and `policy/folder-preferences.json`.
 - Revisit trigger: Krish places an unplaced repository, gives a venture a
   home, or answers for the dev folders the deeper watch finds.
 
+
+## D-036: an engine's declared folders are known without asking, and his press on a folder question is his answer
+
+- Date: 2026-11-14
+- Status: the first part built (this change); the second part is built in Control Center and here, each in its own pull request
+- Decision (fleet integration I-25; Ruling, Krish, 2026-11-14, his words: "happy with your recommendations for 3 and 4"):
+  - A folder inside a folder a growth engine declares in its Drive map (drive-map/1, in the map each engine already keeps; where to read each is `policy/declared-maps.json`) is known without asking. The weekly check-in reads each map live, keeps no copy, and matches a declared path only to a folder already in his record, so a name holding a slash (`mind/make`, `mind make` on the PC) is matched and never guessed into a new folder. Such a folder is recorded as answered by `declared`, with the engine named. A map that cannot be read declares nothing, so its folders are asked about as before. Nothing moves.
+  - When a folder question reaches his one list in Control Center, his press there is his answer: it is written to `docs/folder-checkin/answers.json` with where it came from, and the next check-in applies it as it applies any written answer.
+  - Left open by him the same day: whether this repository stays public (fleet audit fd-1).

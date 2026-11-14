@@ -226,9 +226,9 @@
     {
       "id": "krish-folder-consent",
       "owner": "Krish's folder record and per-folder consent",
-      "owned_paths": ["guards/folder_consent.ps1"],
+      "owned_paths": ["guards/folder_consent.ps1", "guards/declared_folders.ps1"],
       "required_for": ["structure", "canonical-audit"],
-      "enforced_by": ["tests/test_new_folder_survives.ps1"]
+      "enforced_by": ["tests/test_new_folder_survives.ps1", "tests/test_declared_folders.ps1"]
     },
     {
       "id": "atomic-artifacts",
