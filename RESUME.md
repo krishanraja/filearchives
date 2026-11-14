@@ -31,8 +31,8 @@ node C:\Users\krish\.codex\skills\krish-build\scripts\check-stage-conveyor.mjs `
 `python tests\test_stage_contracts.py` also checks the conveyor: every stage has
 a `STAGE.md`, every learning has an owner, every code file belongs to a stage.
 It needs Python, which D-004 recorded as absent on the active Windows machine.
-On 2026-10-27 it passed on Linux: 10 stages, 36 learnings, 63 code files, none
-unowned.
+On 2026-11-14 it passed on Linux: 10 stages, 38 learnings, 65 code files, none
+unowned. CI runs it, with the portable PowerShell tests, on every pull request.
 
 ---
 
@@ -81,6 +81,14 @@ D-035 holds the detail. Nothing here moves a folder without Krish's consent row.
   repository outside dev, moves only the folders with his consent row for that
   exact destination, proves Growth's `.scratch` arrived byte for byte and
   re-reads the report. Worktrees move with `git worktree move`, never as folders.
+
+## LIVE: the filtered chat backstop (Wave 3 W3.3, from 2026-10-29)
+
+- `.claude/settings.json` runs `.claude/hooks/taste_backstop.py` at the end of
+  each Claude Code session here. It keeps only Krish's typed corrections,
+  scrubbed of anything shaped like a secret, in the ignored
+  `.scratch/taste/backstop.jsonl`; it sends nothing and always exits 0.
+  Proof: `python tests/test_taste_backstop.py`.
 
 ## CLOSED MISSION: whole-estate consolidation (2026-10-04 to 2026-10-11)
 

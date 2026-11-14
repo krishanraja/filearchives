@@ -4,6 +4,10 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-14
+
+- reconciled at `719bb3e`: NOW.md still said as of 2026-10-29 at `85ac535` and named only the 2026-10-26 check-in. It now records the 2026-11-02 and 2026-11-09 check-ins and sprawl reports, the W3.3 chat backstop and the CI checks; RESUME.md gains the backstop and the current stage-contract counts.
+
 ## 2026-10-27
 
 - reconciled at `85ac535`: README, RESUME, NOW and the stage files still described the 2026-10-04 layout and plan as current. The folder names (H `CURRENT`, `ARCHIVE`, G `Personal`) were replaced by D-031 to D-034, "no permanent deletion" ended on 2026-10-11, and four stage files named scripts (`date_from_signals.py`, `build_inventory.py`, `classify_documents.py`, `build_index.py`) that were never written.
