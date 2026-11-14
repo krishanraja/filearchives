@@ -140,6 +140,9 @@ top, his network exports in `Ventures\Network & Contacts`); the record is now
 the authority for where things live.
 
 Where it is right now: `NOW.md`. Start at `RESUME.md` for what to run.
+A session that changes this repository closes out with a note in `now-notes/`
+(`Status:`, `Next:` and the North Star check line), never an edit to NOW.md;
+the `fold` job in `.github/workflows/ci.yml` writes it into NOW.md on main.
 The completed-run evidence and backup handoff are in
 `docs/RUN-2026-10-04.md`. The verified deletion results, retained exceptions
 and final closeout are in `docs/RUN-2026-10-11.md`.
