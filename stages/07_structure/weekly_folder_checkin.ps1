@@ -17,6 +17,17 @@
        Krish's OK. If he says he did it himself, it is not counted.
     4. Each folder he has answered for gets a cleanliness check against what he
        said goes in it: counts only, no file names leave his machine.
+
+    Only true losses are counted:
+    - A consent row for a folder also covers every recorded folder beneath it.
+    - A recorded folder whose Drive id now sits at another path (read from the
+      drive-paths.json that content-engine's sync writes on each home computer)
+      is recorded as moved, with where it went, and its new path is not a new
+      folder. A move without his OK still counts: the number is folders moved or
+      removed without his OK.
+    - A folder that comes back (from the Drive bin, say) is recorded as restored.
+    - A run that cannot ask him names, in LATEST.md, each folder it could not
+      decide; nothing is guessed.
 #>
 [CmdletBinding()]
 param(
@@ -24,6 +35,7 @@ param(
     [string] $ReportRoot,
     [string] $AnswersPath,
     [string] $NowPath,
+    [string] $DrivePathsPath,
     [switch] $Interactive,
     [int] $MaxQuestions = 10,
     [datetimeoffset] $AsOf = [DateTimeOffset]::Now
@@ -38,6 +50,9 @@ $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if (-not $ReportRoot) { $ReportRoot = Join-Path $repo 'docs' 'folder-checkin' }
 if (-not $AnswersPath) { $AnswersPath = Join-Path $ReportRoot 'answers.json' }
 if (-not $NowPath) { $NowPath = Join-Path $repo 'NOW.md' }
+if (-not $DrivePathsPath -and $env:LOCALAPPDATA) {
+    $DrivePathsPath = Join-Path $env:LOCALAPPDATA 'makeyourmindup' 'drive-paths.json'
+}
 
 $prefs = Import-FaFolderPreferences -Path $PreferencesPath
 if (-not $prefs.Recorded) {
@@ -50,22 +65,69 @@ $weekAgo = $AsOf.AddDays(-7)
 
 function Set-FaEntryValue {
     param($Entry, [string] $Name, $Value)
-    if ($Entry.PSObject.Properties.Name -contains $Name) { $Entry.$Name = $Value }
+    if ($null -ne $Entry.PSObject.Properties[$Name]) { $Entry.$Name = $Value }
     else { $Entry | Add-Member -NotePropertyName $Name -NotePropertyValue $Value }
 }
 
 function Get-FaEntryValue {
     param($Entry, [string] $Name)
-    if ($Entry.PSObject.Properties.Name -contains $Name) { return $Entry.$Name }
+    if ($null -ne $Entry.PSObject.Properties[$Name]) { return $Entry.$Name }
     return $null
 }
 
+function Get-FaDrivePathRow($Row) {
+    # Fields the contract may use: id or drive_id, path or local_path, state.
+    $get = { param($n) if ($null -ne $Row.PSObject.Properties[$n]) { $Row.$n } else { $null } }
+    return [pscustomobject]@{ drive_id = (& $get 'drive_id'); id = (& $get 'id'); local_path = (& $get 'local_path')
+        path = (& $get 'path'); state = (& $get 'state') }
+}
+
 # ---- 1. look ---------------------------------------------------------------
+# The machine-side Drive map: folder id -> where it is on this computer now.
+# Absent or unreadable means no ids this run; paths are then the only identity.
+$idAtPath = [Collections.Generic.Dictionary[string, string]]::new([StringComparer]::OrdinalIgnoreCase)
+$pathOfId = [Collections.Generic.Dictionary[string, string]]::new([StringComparer]::Ordinal)
+$drivePathsRead = $false
+if ($DrivePathsPath -and (Test-Path -LiteralPath $DrivePathsPath -PathType Leaf)) {
+    try {
+        $dp = Get-Content -LiteralPath $DrivePathsPath -Raw | ConvertFrom-Json -Depth 8
+        $rows = if ($dp -is [array]) { $dp }
+            elseif ($null -ne $dp.PSObject.Properties['folders']) { $dp.folders }
+            elseif ($null -ne $dp.PSObject.Properties['entries']) { $dp.entries }
+            else { @() }
+        foreach ($row in @($rows)) {
+            if (-not $row) { continue }
+            $r = Get-FaDrivePathRow $row
+            $id = [string](@($r.drive_id, $r.id) | Where-Object { $_ } | Select-Object -First 1)
+            $local = [string](@($r.local_path, $r.path) | Where-Object { $_ } | Select-Object -First 1)
+            $state = if ($r.state) { [string]$r.state } else { 'found' }
+            if (-not $id -or -not $local -or $state -ne 'found') { continue }
+            $canon = ConvertTo-FaCanonicalPath $local
+            $idAtPath[$canon] = $id
+            $pathOfId[$id] = $canon
+        }
+        $drivePathsRead = $true
+    } catch {
+        Write-Host "drive-paths.json could not be read ($($_.Exception.Message)); folders are matched by path only this run."
+    }
+}
+
+function Test-FaReleasedByKrish {
+    # A consent row for this folder, or for a folder above it, releases it.
+    param([string] $Path)
+    return @($prefs.Data.consents | Where-Object {
+        [string]$_.approved_by -eq 'Krish' -and $_.approved_at -and [string]$_.action -in @('move', 'delete') -and
+        (Test-FaPathWithin -Path $Path -Root ([string]$_.path))
+    }).Count -gt 0
+}
+
 $entries = [Collections.Generic.List[object]]::new()
 foreach ($e in @($prefs.Data.folders)) { $entries.Add($e) }
 $unavailable = [Collections.Generic.List[string]]::new()
 $unreadable = [Collections.Generic.List[string]]::new()
 $goneThisRun = [Collections.Generic.List[object]]::new()
+$restoredThisRun = [Collections.Generic.List[object]]::new()
+$newThisRun = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 foreach ($root in $prefs.WatchRoots) {
     if (-not (Test-Path -LiteralPath $root.Path -PathType Container)) {
         $unavailable.Add($root.Path)
@@ -79,9 +141,16 @@ foreach ($root in $prefs.WatchRoots) {
         $null = $present.Add($folder)
         if ($prefs.ByPath.ContainsKey($folder)) {
             $entry = $prefs.ByPath[$folder]
-            if ([string]$entry.status -eq 'missing') {
+            if ($idAtPath.ContainsKey($folder) -and -not (Get-FaEntryValue $entry 'drive_id')) {
+                Set-FaEntryValue $entry 'drive_id' $idAtPath[$folder]
+            }
+            if ([string]$entry.status -in @('missing', 'removed-by-krish', 'moved-with-ok', 'moved')) {
+                # It was gone and is back (restored from the bin, or put back).
                 $back = Get-FaEntryValue $entry 'previous_status'
-                $entry.status = if ($back) { $back } else { 'known' }
+                Set-FaEntryValue $entry 'restored_from_status' ([string]$entry.status)
+                $entry.status = if ($back -and $back -notin @('missing', 'moved')) { $back } else { 'known' }
+                Set-FaEntryValue $entry 'restored_at' $stamp
+                $restoredThisRun.Add($entry)
             }
             continue
         }
@@ -89,24 +158,41 @@ foreach ($root in $prefs.WatchRoots) {
             path = $folder; status = 'new-waiting-on-krish'; first_seen = $stamp
             important = $null; purpose = $null; answered_at = $null
         }
+        if ($idAtPath.ContainsKey($folder)) { $entry | Add-Member -NotePropertyName 'drive_id' -NotePropertyValue $idAtPath[$folder] }
         $entries.Add($entry)
         $prefs.ByPath[$folder] = $entry
+        $null = $newThisRun.Add($folder)
     }
     foreach ($entry in @($entries | Where-Object { Test-FaPathWithin -Path ([string]$_.path) -Root $root.Path })) {
         $path = ConvertTo-FaCanonicalPath ([string]$entry.path)
         if ($present.Contains($path)) { continue }
         if ([string]$entry.status -notin @('known', 'answered', 'new-waiting-on-krish')) { continue }
         if (@($tree.Unreadable | Where-Object { Test-FaPathWithin -Path $path -Root $_ }).Count -gt 0) { continue }
-        $released = @($prefs.Data.consents | Where-Object {
-            [string]$_.approved_by -eq 'Krish' -and $_.approved_at -and [string]$_.action -in @('move', 'delete') -and
-            (ConvertTo-FaCanonicalPath ([string]$_.path)).Equals($path, [StringComparison]::OrdinalIgnoreCase)
-        }).Count -gt 0
-        if ($released) {
+        $id = [string](Get-FaEntryValue $entry 'drive_id')
+        $movedTo = $null
+        if ($id -and $pathOfId.ContainsKey($id) -and -not $pathOfId[$id].Equals($path, [StringComparison]::OrdinalIgnoreCase) -and
+                (Test-Path -LiteralPath $pathOfId[$id] -PathType Container)) {
+            $movedTo = $pathOfId[$id]
+        }
+        Set-FaEntryValue $entry 'previous_status' ([string]$entry.status)
+        if ($movedTo) {
+            # Same folder, new place: one move, not one folder gone plus one new.
+            Set-FaEntryValue $entry 'moved_to' $movedTo
+            Set-FaEntryValue $entry 'moved_seen_at' $stamp
+            if ($prefs.ByPath.ContainsKey($movedTo) -and $newThisRun.Contains($movedTo)) {
+                $arrived = $prefs.ByPath[$movedTo]
+                $arrived.status = [string]$entry.status
+                foreach ($k in @('important', 'purpose', 'answered_at')) { Set-FaEntryValue $arrived $k (Get-FaEntryValue $entry $k) }
+                Set-FaEntryValue $arrived 'moved_from' $path
+                if ([string]$arrived.status -eq 'new-waiting-on-krish') { $arrived.first_seen = Get-FaEntryValue $entry 'first_seen' }
+                $null = $newThisRun.Remove($movedTo)
+            }
+        }
+        if (Test-FaReleasedByKrish -Path $path) {
             $entry.status = 'moved-with-ok'
             continue
         }
-        Set-FaEntryValue $entry 'previous_status' ([string]$entry.status)
-        $entry.status = 'missing'
+        $entry.status = if ($movedTo) { 'moved' } else { 'missing' }
         Set-FaEntryValue $entry 'missing_since' $stamp
         $goneThisRun.Add($entry)
     }
@@ -142,8 +228,11 @@ if ($written) {
     foreach ($p in @(Get-FaEntryValue $written 'removed_by_krish')) {
         if (-not $p) { continue }
         $path = ConvertTo-FaCanonicalPath ([string]$p)
-        if ($prefs.ByPath.ContainsKey($path) -and [string]$prefs.ByPath[$path].status -eq 'missing') {
-            $prefs.ByPath[$path].status = 'removed-by-krish'
+        # His answer for a folder covers the recorded folders beneath it.
+        foreach ($e in @($entries | Where-Object {
+            [string]$_.status -in @('missing', 'moved') -and (Test-FaPathWithin -Path ([string]$_.path) -Root $path)
+        })) {
+            $e.status = 'removed-by-krish'
         }
     }
 }
@@ -168,16 +257,25 @@ if ($canAsk) {
             "What goes in this folder?`n`n$($entry.path)`n`n(One line is enough.)", $title, '')
         Set-FaAnswer -Entry $entry -Important ($q1 -eq 'Yes') -Purpose $purpose -How 'pop-up'
     }
-    foreach ($entry in @($entries | Where-Object { [string]$_.status -eq 'missing' })) {
+    foreach ($entry in @($entries | Where-Object { [string]$_.status -in @('missing', 'moved') })) {
+        if ([string]$entry.status -notin @('missing', 'moved')) { continue }
+        $what = if ([string]$entry.status -eq 'moved') { "has moved to:`n`n$($entry.moved_to)" } else { 'is gone now.' }
         $q = [Windows.Forms.MessageBox]::Show(
-            "This folder was here before and is gone now:`n`n$($entry.path)`n`nDid you move or remove it yourself?",
+            "This folder was here before:`n`n$($entry.path)`n`nIt $what`n`nDid you move or remove it yourself?",
             $title, 'YesNo', 'Warning')
-        if ($q -eq 'Yes') { $entry.status = 'removed-by-krish' }
+        if ($q -eq 'Yes') {
+            $parent = ConvertTo-FaCanonicalPath ([string]$entry.path)
+            foreach ($e in @($entries | Where-Object {
+                [string]$_.status -in @('missing', 'moved') -and (Test-FaPathWithin -Path ([string]$_.path) -Root $parent)
+            })) { $e.status = 'removed-by-krish' }
+        }
     }
 }
 
 # ---- 3. the number ---------------------------------------------------------
-$withoutOk = @($goneThisRun | Where-Object { [string]$_.status -eq 'missing' })
+$withoutOk = @($goneThisRun | Where-Object { [string]$_.status -in @('missing', 'moved') })
+# A run that could not ask him leaves these undecided: they count until he answers.
+$undecided = @(if (-not $canAsk) { $withoutOk | Sort-Object { [string]$_.path } })
 
 # ---- 4. keep it clean, by his answers --------------------------------------
 $clean = [Collections.Generic.List[object]]::new()
@@ -209,7 +307,7 @@ $prefs.Data.last_checkin_at = $stamp
 Write-FaFolderPreferences -Preferences $prefs
 
 $waitingNow = @($entries | Where-Object { [string]$_.status -eq 'new-waiting-on-krish' } | Sort-Object { [string]$_.path })
-$missingNow = @($entries | Where-Object { [string]$_.status -eq 'missing' } | Sort-Object { [string]$_.path })
+$missingNow = @($entries | Where-Object { [string]$_.status -in @('missing', 'moved') } | Sort-Object { [string]$_.path })
 function Format-FaCell([string] $Text) { return ($Text -replace '\|', '/' -replace '[\r\n]+', ' ').Trim() }
 
 $md = [Text.StringBuilder]::new()
@@ -240,7 +338,27 @@ if ($missingNow.Count -eq 0) { [void]$md.AppendLine('None.') } else {
     [void]$md.AppendLine('| Folder | Gone since |')
     [void]$md.AppendLine('|---|---|')
     foreach ($e in $missingNow) {
-        [void]$md.AppendLine(('| `{0}` | {1} |' -f (Format-FaCell $e.path), ([string]$e.missing_since).Substring(0, 10)))
+        $label = Format-FaCell $e.path
+        if ([string]$e.status -eq 'moved') { $label = '{0}` moved to `{1}' -f $label, (Format-FaCell ([string]$e.moved_to)) }
+        [void]$md.AppendLine(('| `{0}` | {1} |' -f $label, ([string]$e.missing_since).Substring(0, 10)))
+    }
+}
+if ($undecided.Count -gt 0) {
+    [void]$md.AppendLine()
+    [void]$md.AppendLine("## Could not decide without you ($($undecided.Count))")
+    [void]$md.AppendLine()
+    [void]$md.AppendLine('This run could not ask you, so these count until you say. If you moved or removed one yourself, add its path to `removed_by_krish` in `docs/folder-checkin/answers.json`; that covers the folders inside it too.')
+    [void]$md.AppendLine()
+    foreach ($e in $undecided) { [void]$md.AppendLine(('- `{0}` ({1})' -f (Format-FaCell $e.path), $e.status)) }
+}
+if ($restoredThisRun.Count -gt 0) {
+    [void]$md.AppendLine()
+    [void]$md.AppendLine("## Back where they were ($($restoredThisRun.Count))")
+    [void]$md.AppendLine()
+    [void]$md.AppendLine('These were recorded as gone and are back, restored from the Drive bin or put back by hand.')
+    [void]$md.AppendLine()
+    foreach ($e in @($restoredThisRun | Sort-Object { [string]$_.path })) {
+        [void]$md.AppendLine(('- `{0}` (was {1})' -f (Format-FaCell $e.path), $e.restored_from_status))
     }
 }
 [void]$md.AppendLine()
@@ -272,6 +390,10 @@ Write-FaAtomicUtf8 -Path (Join-Path $ReportRoot 'LATEST.md') -Content $md.ToStri
 $log = [ordered]@{
     checked_at = $stamp
     moved_or_removed_without_ok = $withoutOk.Count
+    moved_without_ok = @($withoutOk | Where-Object { [string]$_.status -eq 'moved' }).Count
+    undecided = $undecided.Count
+    restored = $restoredThisRun.Count
+    drive_ids_read = $drivePathsRead
     cleanliness_check_completed = $true
     new_folders_waiting = $waitingNow.Count
     answered_folders_checked = $clean.Count

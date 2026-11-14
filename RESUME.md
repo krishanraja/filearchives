@@ -21,6 +21,7 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_temporary_family_consolidation.ps1
 .\tests\test_path_regex_quarantine.ps1
 .\tests\test_new_folder_survives.ps1
+.\tests\test_checkin_true_losses.ps1
 .\tests\test_dev_sprawl.ps1
 .\tests\test_streaming_folder_copy.ps1
 .\tests\test_windows_profile_coverage.ps1
@@ -51,7 +52,13 @@ without asking first. D-030 and learning 36 hold the detail.
   `filearchives-weekly-folder-checkin`, or `CHECK-MY-NEW-FOLDERS.cmd`) asks two
   questions per new folder, counts recorded folders gone without his OK (the
   North Star number), and writes `docs/folder-checkin/LATEST.md` and
-  `LOG.jsonl`. It never moves anything.
+  `LOG.jsonl`. It never moves anything. It counts only true losses: a consent
+  row for a folder covers the recorded folders beneath it; a folder whose Drive
+  id (from content-engine's `%LOCALAPPDATA%\makeyourmindup\drive-paths.json`)
+  sits at a new path is recorded as moved, with where it went, and still counts
+  until he answers; a folder that comes back is recorded as restored; a run
+  that cannot ask him lists each folder it could not decide. Proof:
+  `tests/test_checkin_true_losses.ps1`.
 - Current layout, as Krish recorded it on 2026-10-23 (D-032) and changed on
   2026-10-24 and 2026-10-26 (D-033, D-034): H holds `--ARCHIVE` (the old
   ARCHIVE categories plus `CONTENT-EXTRA`), `Family Admin` (`Krish`, `Loz`,
