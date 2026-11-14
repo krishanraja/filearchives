@@ -36,6 +36,8 @@ param(
     [string] $AnswersPath,
     [string] $NowPath,
     [string] $DrivePathsPath,
+    [string] $DeclaredMapsPath,
+    [hashtable] $DeclaredMapTexts,
     [switch] $Interactive,
     [int] $MaxQuestions = 10,
     [datetimeoffset] $AsOf = [DateTimeOffset]::Now
@@ -47,9 +49,11 @@ $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 . (Join-Path $repo 'guards' 'workspace.ps1')
 . (Join-Path $repo 'guards' 'atomic.ps1')
 . (Join-Path $repo 'guards' 'folder_consent.ps1')
+. (Join-Path $repo 'guards' 'declared_folders.ps1')
 if (-not $ReportRoot) { $ReportRoot = Join-Path $repo 'docs' 'folder-checkin' }
 if (-not $AnswersPath) { $AnswersPath = Join-Path $ReportRoot 'answers.json' }
 if (-not $NowPath) { $NowPath = Join-Path $repo 'NOW.md' }
+if (-not $DeclaredMapsPath) { $DeclaredMapsPath = Join-Path $repo 'policy' 'declared-maps.json' }
 if (-not $DrivePathsPath -and $env:LOCALAPPDATA) {
     $DrivePathsPath = Join-Path $env:LOCALAPPDATA 'makeyourmindup' 'drive-paths.json'
 }
@@ -234,6 +238,21 @@ if ($written) {
         })) {
             $e.status = 'removed-by-krish'
         }
+    }
+}
+
+# A waiting folder inside a folder a growth engine declares is known without asking
+# (Ruling, Krish, 2026-11-14). Only a declared folder already in his record counts.
+$declared = Resolve-FaDeclaredFolders -Roots (Get-FaDeclaredRoots -MapsPath $DeclaredMapsPath -Texts $DeclaredMapTexts) -Preferences $prefs
+foreach ($d in $declared) {
+    foreach ($e in @($entries | Where-Object {
+        [string]$_.status -eq 'new-waiting-on-krish' -and (Test-FaPathWithin -Path ([string]$_.path) -Root $d.path)
+    })) {
+        $e.status = 'answered'
+        $e.important = $true
+        $e.purpose = "Declared by $($d.engine) in its Drive map ($($d.drive_path)); known without asking (Ruling, Krish, 2026-11-14)."
+        $e.answered_at = $stamp
+        Set-FaEntryValue $e 'answered_by' 'declared'
     }
 }
 

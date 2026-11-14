@@ -1,0 +1,9 @@
+{
+  "schema": "declared-maps/1",
+  "about": "Where each growth engine declares its Drive folders, in one drive-map/1 shape in the map it already keeps (fleet integration I-25). The weekly check-in reads each file live from main and keeps no copy. A waiting folder inside a declared folder is known without asking (Ruling, Krish, 2026-11-14).",
+  "maps": [
+    { "engine": "growth-mindmake", "url": "https://raw.githubusercontent.com/krishanraja/growth-mindmake/main/library/taxonomy.json" },
+    { "engine": "growth-heartside", "url": "https://raw.githubusercontent.com/krishanraja/growth-heartside/main/config/drive-map.json" },
+    { "engine": "growth-legibility", "url": "https://raw.githubusercontent.com/krishanraja/growth-legibility/main/librarian/drive-taxonomy.json" }
+  ]
+}
