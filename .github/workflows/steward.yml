@@ -1,0 +1,70 @@
+name: steward
+
+# The cloud half of filearchives (fleet integration I-25; Ruling, Krish, 2026-11-14:
+# Control Center reads folder names and file titles, never contents, under Ventures
+# once a day). Daily and by hand: fetch Control Center's Drive tree export (opaque
+# keys and counts, never a Drive id or a name) and reconcile it by key into
+# policy/drive-ids.json and docs/folder-checkin/DRIVE-LOG.jsonl. No Drive credential
+# lives here, and nothing in his Drive is moved, renamed, merged or deleted.
+# Until Krish sets the DRIVE_TREE_EXPORT_TOKEN secret, it says so and does nothing.
+on:
+  schedule:
+    - cron: '37 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: steward
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      TOKEN: ${{ secrets.DRIVE_TREE_EXPORT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Export secret set?
+        id: ready
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::notice::DRIVE_TREE_EXPORT_TOKEN is not set, so the Drive tree was not read. Nothing changed."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: PowerShell 7.5
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          curl -sSfL -o "$RUNNER_TEMP/pwsh.tgz" https://github.com/PowerShell/PowerShell/releases/download/v7.5.2/powershell-7.5.2-linux-x64.tar.gz
+          mkdir -p "$RUNNER_TEMP/pwsh"
+          tar xzf "$RUNNER_TEMP/pwsh.tgz" -C "$RUNNER_TEMP/pwsh"
+          chmod +x "$RUNNER_TEMP/pwsh/pwsh"
+          echo "$RUNNER_TEMP/pwsh" >> "$GITHUB_PATH"
+
+      - name: Fetch the export
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          code=$(curl -sS -o "$RUNNER_TEMP/export.json" -w '%{http_code}' -H "Authorization: Bearer $TOKEN" \
+            'https://controlcenter.krishraja.com/api/tools?tool=drive-tree')
+          if [ "$code" != "200" ]; then echo "::error::the export answered $code; nothing changed"; exit 1; fi
+
+      - name: Reconcile by key
+        if: steps.ready.outputs.ready == 'true'
+        run: pwsh -NoLogo -NoProfile -File stages/09_mirror/reconcile_drive_tree.ps1 -ExportPath "$RUNNER_TEMP/export.json"
+
+      - name: Commit the record and the log
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          git config user.name 'filearchives steward'
+          git config user.email 'steward@users.noreply.github.com'
+          git add policy/drive-ids.json docs/folder-checkin/DRIVE-LOG.jsonl
+          if git diff --cached --quiet; then echo 'nothing changed'; exit 0; fi
+          git commit -m 'steward: the daily Drive tree, reconciled by key (counts only)'
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((i * 5)); done
+          exit 1

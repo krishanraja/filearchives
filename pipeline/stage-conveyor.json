@@ -155,7 +155,7 @@
       "inputs": ["workspace-config", "user-policy", "folder-move-receipt"],
       "outputs": ["canonical-state"],
       "consumed_guards": ["workspace-safety", "atomic-artifacts", "krish-folder-consent"],
-      "side_effects": ["writes a read-only top-level canonical-state report without traversing protected boundaries"],
+      "side_effects": ["writes a read-only top-level canonical-state report without traversing protected boundaries", "writes the cloud Drive record by opaque key and appends one row of counts (reconcile_drive_tree.ps1)"],
       "retry": {
         "mode": "idempotent",
         "total_attempt_cap": 3,

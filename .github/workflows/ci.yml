@@ -49,6 +49,9 @@ jobs:
       - name: Dev sprawl report and consent-row moves
         run: pwsh -NoLogo -NoProfile -File tests/test_dev_sprawl.ps1
 
+      - name: The cloud steward reconciles the Drive tree by key (I-25)
+        run: pwsh -NoLogo -NoProfile -File tests/test_reconcile_drive_tree.ps1
+
       - name: Other portable engine tests
         run: |
           for t in test_repository_snapshot test_atomic_tree_relocation test_extension_move \
