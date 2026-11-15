@@ -28,6 +28,7 @@ Krish himself.
 
 Lifecycle: live. The status is in `README.md`; the commands to run and the live folder rules are in `RESUME.md`.
 
+- the branch sweep takes an approved list (branch@sha) on a hand run and deletes each named branch only at that exact commit, skipping and logging anything else; the weekly run is unchanged. Copied from ai-harness's canonical script and workflow. (2026-11-15)
 - A weekly branch sweep (`.github/workflows/branch-sweep.yml`, Sunday 03:17 UTC, and by hand) deletes every remote branch whose work is already on main and lists each branch it keeps with why: unmerged work, an open pull request, protected (Ruling, Krish, 2026-11-15). The script is `.github/scripts/branch_sweep.py`, copied unchanged from ai-harness, which holds the canonical copy. (2026-11-15)
 - NOW.md and RESUME.md describe main as it stands at `719bb3e`: three weekly check-ins (2026-10-26, 2026-11-02, 2026-11-09), each 0 folders gone without Krish's OK; two dev sprawl reports; the W3.3 chat backstop; the CI checks. No code changed. (2026-11-14)
 - closeout notes now fold into NOW.md by themselves: a fold job in .github/workflows/ci.yml runs ai-harness's closeout hook on each push to main (and by hand), where before nothing here read now-notes/ and four notes waited on main. (2026-11-14)
@@ -62,6 +63,6 @@ Lifecycle: live. The status is in `README.md`; the commands to run and the live 
 
 ## What is next and what is waiting on Krish
 
-- Next (2026-11-15): the Monday 2026-11-16 check-in. `makeyourmindup\00_Brand-Assets` (binned 2026-11-11 at Krish's request) has no consent row in `policy/folder-preferences.json`, so that run counts it unless a row with his words is recorded first.
+- Next (2026-11-15): run the sweep by hand with dry_run false and this repository's approved list, and read its log.
 - Known for that run: `H:\My Drive\Ventures\Active Ventures\makeyourmindup\00_Brand-Assets` is in the record as `known` and went to the Drive bin on 2026-11-11 at Krish's request (growth-makeyourmindup `docs/BRAND-KIT.md`). `policy/folder-preferences.json` holds no consent row for it, so the check-in will count it as removed without his OK unless a row with his words is recorded first.
 - North Star check (2026-11-15): holds.
