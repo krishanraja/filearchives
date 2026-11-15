@@ -1,3 +1,0 @@
-Status: A weekly branch sweep (`.github/workflows/branch-sweep.yml`, Sunday 03:17 UTC, and by hand) deletes every remote branch whose work is already on main and lists each branch it keeps with why: unmerged work, an open pull request, protected (Ruling, Krish, 2026-11-15). The script is `.github/scripts/branch_sweep.py`, copied unchanged from ai-harness, which holds the canonical copy.
-Next: the Monday 2026-11-16 check-in. `makeyourmindup\00_Brand-Assets` (binned 2026-11-11 at Krish's request) has no consent row in `policy/folder-preferences.json`, so that run counts it unless a row with his words is recorded first.
-North Star check (2026-11-15): holds.

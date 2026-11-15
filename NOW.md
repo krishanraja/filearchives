@@ -1,7 +1,7 @@
 ---
 repo: krishanraja/filearchives
 product: filearchives
-as_of: 2026-11-14
+as_of: 2026-11-15
 head: 719bb3e
 lifecycle: live
 production_url: none
@@ -22,12 +22,13 @@ The engine that keeps Krish's documents in one verified library without losing a
 
 Krish himself.
 
-## Where it is right now (as of 2026-11-14)
+## Where it is right now (as of 2026-11-15)
 
 <!-- north-star-state {"week_of":"2026-11-09","week_target":0,"current":0,"current_as_of":"2026-11-09","current_source":"docs/folder-checkin/LOG.jsonl","urgency":1,"urgency_reason":"at 100% of this week's target"} --> **North Star number: U1, on pace.** Folders moved or removed without Krish's OK, per week: 0, against 0 this week, on the way to 0 by 26 October 2026. Steady, and one proposal a week that would raise the ceiling.
 
 Lifecycle: live. The status is in `README.md`; the commands to run and the live folder rules are in `RESUME.md`.
 
+- A weekly branch sweep (`.github/workflows/branch-sweep.yml`, Sunday 03:17 UTC, and by hand) deletes every remote branch whose work is already on main and lists each branch it keeps with why: unmerged work, an open pull request, protected (Ruling, Krish, 2026-11-15). The script is `.github/scripts/branch_sweep.py`, copied unchanged from ai-harness, which holds the canonical copy. (2026-11-15)
 - NOW.md and RESUME.md describe main as it stands at `719bb3e`: three weekly check-ins (2026-10-26, 2026-11-02, 2026-11-09), each 0 folders gone without Krish's OK; two dev sprawl reports; the W3.3 chat backstop; the CI checks. No code changed. (2026-11-14)
 - closeout notes now fold into NOW.md by themselves: a fold job in .github/workflows/ci.yml runs ai-harness's closeout hook on each push to main (and by hand), where before nothing here read now-notes/ and four notes waited on main. (2026-11-14)
 - the weekly check-in treats a waiting folder inside a growth engine's declared Drive folder as known without asking (D-036), reading each engine's map live; three of the 96 waiting folders qualify today. Krish's press on a folder question in Control Center now writes his answer into answers.json (control-center #891), and the steward's first daily read wrote a baseline of 2,314 folders by key. (2026-11-14)
@@ -61,6 +62,6 @@ Lifecycle: live. The status is in `README.md`; the commands to run and the live 
 
 ## What is next and what is waiting on Krish
 
-- Next (2026-11-14): the Monday 2026-11-16 check-in. `makeyourmindup\00_Brand-Assets` (binned 2026-11-11 at Krish's request) has no consent row in `policy/folder-preferences.json`, so that run counts it unless a row with his words is recorded first.
+- Next (2026-11-15): the Monday 2026-11-16 check-in. `makeyourmindup\00_Brand-Assets` (binned 2026-11-11 at Krish's request) has no consent row in `policy/folder-preferences.json`, so that run counts it unless a row with his words is recorded first.
 - Known for that run: `H:\My Drive\Ventures\Active Ventures\makeyourmindup\00_Brand-Assets` is in the record as `known` and went to the Drive bin on 2026-11-11 at Krish's request (growth-makeyourmindup `docs/BRAND-KIT.md`). `policy/folder-preferences.json` holds no consent row for it, so the check-in will count it as removed without his OK unless a row with his words is recorded first.
-- North Star check (2026-11-14): holds.
+- North Star check (2026-11-15): holds.
