@@ -1,7 +1,7 @@
 ---
 repo: krishanraja/filearchives
 product: filearchives
-as_of: 2026-11-15
+as_of: 2026-11-16
 head: 719bb3e
 lifecycle: live
 production_url: none
@@ -22,12 +22,13 @@ The engine that keeps Krish's documents in one verified library without losing a
 
 Krish himself.
 
-## Where it is right now (as of 2026-11-15)
+## Where it is right now (as of 2026-11-16)
 
 <!-- north-star-state {"week_of":"2026-11-09","week_target":0,"current":0,"current_as_of":"2026-11-09","current_source":"docs/folder-checkin/LOG.jsonl","urgency":1,"urgency_reason":"at 100% of this week's target"} --> **North Star number: U1, on pace.** Folders moved or removed without Krish's OK, per week: 0, against 0 this week, on the way to 0 by 26 October 2026. Steady, and one proposal a week that would raise the ceiling.
 
 Lifecycle: live. The status is in `README.md`; the commands to run and the live folder rules are in `RESUME.md`.
 
+- the weekly check-in asks only what it cannot work out and never the same thing twice (D-037, learning 39). A moved folder keeps its record at its new place, found by Drive id or by its name and the folders inside it; a new folder inside one of his is worked out from its name and place and stays guarded; only a new folder at the top of a drive gets one question, with a guess; everything that moved or went is one "did you OK these?", where an AI session he asked counts as him. Replayed on his real record: the 2026-11-09 week drops from 22 questions to 1, and the next Monday asks none. Proof: tests/test_checkin_asks_less.ps1, in CI. The number is unchanged. (2026-11-16)
 - the branch sweep takes an approved list (branch@sha) on a hand run and deletes each named branch only at that exact commit, skipping and logging anything else; the weekly run is unchanged. Copied from ai-harness's canonical script and workflow. (2026-11-15)
 - A weekly branch sweep (`.github/workflows/branch-sweep.yml`, Sunday 03:17 UTC, and by hand) deletes every remote branch whose work is already on main and lists each branch it keeps with why: unmerged work, an open pull request, protected (Ruling, Krish, 2026-11-15). The script is `.github/scripts/branch_sweep.py`, copied unchanged from ai-harness, which holds the canonical copy. (2026-11-15)
 - NOW.md and RESUME.md describe main as it stands at `719bb3e`: three weekly check-ins (2026-10-26, 2026-11-02, 2026-11-09), each 0 folders gone without Krish's OK; two dev sprawl reports; the W3.3 chat backstop; the CI checks. No code changed. (2026-11-14)
@@ -63,6 +64,6 @@ Lifecycle: live. The status is in `README.md`; the commands to run and the live 
 
 ## What is next and what is waiting on Krish
 
-- Next (2026-11-15): run the sweep by hand with dry_run false and this repository's approved list, and read its log.
+- Next (2026-11-16): after the Monday 2026-11-23 check-in on his PC, read its `popups` in docs/folder-checkin/LOG.jsonl; it should be 0, with the 96 waiting folders worked out.
 - Known for that run: `H:\My Drive\Ventures\Active Ventures\makeyourmindup\00_Brand-Assets` is in the record as `known` and went to the Drive bin on 2026-11-11 at Krish's request (growth-makeyourmindup `docs/BRAND-KIT.md`). `policy/folder-preferences.json` holds no consent row for it, so the check-in will count it as removed without his OK unless a row with his words is recorded first.
-- North Star check (2026-11-15): holds.
+- North Star check (2026-11-16): recalibration proposed. The number holds at 0; "It asks what goes in a new folder" now works as "it works out what goes in a new folder and asks only when it cannot", and the wording is his to change.
