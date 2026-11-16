@@ -22,6 +22,7 @@ cd C:\Users\krish\dev\krishanraja\filearchives
 .\tests\test_path_regex_quarantine.ps1
 .\tests\test_new_folder_survives.ps1
 .\tests\test_checkin_true_losses.ps1
+.\tests\test_checkin_asks_less.ps1
 .\tests\test_dev_sprawl.ps1
 .\tests\test_streaming_folder_copy.ps1
 .\tests\test_windows_profile_coverage.ps1
@@ -49,11 +50,18 @@ without asking first. D-030 and learning 36 hold the detail.
   removal inside a watched root without his per-folder consent row, and
   refuses to empty a folder that is waiting on him.
 - The weekly check-in (Monday 09:00, scheduled task
-  `filearchives-weekly-folder-checkin`, or `CHECK-MY-NEW-FOLDERS.cmd`) asks two
-  questions per new folder, counts recorded folders gone without his OK (the
-  North Star number), and writes `docs/folder-checkin/LATEST.md` and
-  `LOG.jsonl`. It never moves anything. It counts only true losses: a consent
-  row for a folder covers the recorded folders beneath it; a folder whose Drive
+  `filearchives-weekly-folder-checkin`, or `CHECK-MY-NEW-FOLDERS.cmd`) counts
+  recorded folders gone without his OK (the North Star number), and writes
+  `docs/folder-checkin/LATEST.md` and `LOG.jsonl`. It never moves anything. It
+  asks only what it cannot work out, never the same thing twice (D-037; Ruling,
+  Krish, 2026-11-16): a moved folder keeps its record at its new place, found by
+  Drive id or by its name and the folders inside it; a new folder inside one of
+  his is worked out from its name and place and listed, not asked about (it
+  stays guarded as waiting on him); only a new folder at the top of a drive gets
+  one question, with a guess; and everything that moved or went is one "did you
+  OK these?", where an AI session he asked counts as him. `LOG.jsonl` records
+  the pop-ups each run (`popups`). Proof: `tests/test_checkin_asks_less.ps1`.
+  It counts only true losses: a consent row for a folder covers the recorded folders beneath it; a folder whose Drive
   id (from content-engine's `%LOCALAPPDATA%\makeyourmindup\drive-paths.json`)
   sits at a new path is recorded as moved, with where it went, and still counts
   until he answers; a folder that comes back is recorded as restored; a run
@@ -68,8 +76,10 @@ without asking first. D-030 and learning 36 hold the detail.
   G holds `App Issues`, `Family`, `Immigration`, `Legal`, `Music Production`
   and `Tax Return History`; the old `G:\My Drive\Personal` categories no longer
   exist. The record, not the estate policy's category lists, is the authority.
-- Krish can answer in writing in `docs/folder-checkin/answers.json`. A consent
-  to move or remove a folder is a row in `consents` with
+- Krish can answer in writing in `docs/folder-checkin/answers.json`. An AI
+  session that moves or removes a folder on his instruction writes its old path
+  to `removed_by_krish` there in the same change, so he is not asked about it.
+  A consent to move or remove a folder is a row in `consents` with
   `approved_by: "Krish"`, the exact path, the action, the destination for a
   move, and his words; only he gives one.
 

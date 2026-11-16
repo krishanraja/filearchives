@@ -51,6 +51,9 @@ jobs:
       - name: The check-in counts only true losses
         run: pwsh -NoLogo -NoProfile -File tests/test_checkin_true_losses.ps1
 
+      - name: The check-in asks only what it cannot work out, never twice
+        run: pwsh -NoLogo -NoProfile -File tests/test_checkin_asks_less.ps1
+
       - name: Dev sprawl report and consent-row moves
         run: pwsh -NoLogo -NoProfile -File tests/test_dev_sprawl.ps1
 

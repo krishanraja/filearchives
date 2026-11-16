@@ -18,6 +18,8 @@ Ruling (Krish, 2026-10-23): filearchives never moves a folder Krish made without
 
 - Never move, rename, merge or delete a folder inside `H:\My Drive`, `G:\My Drive` or `C:\Users\krish\dev`, by the engine or by hand, without a consent row from Krish for that exact folder in `policy/folder-preferences.json`. Only Krish gives one; record his words with it.
 - A folder the record does not know is new, waiting on Krish. Leave it where it is and let the weekly check-in ask him.
+- When Krish asks you to move, rename or remove a folder in those drives, write its old path to `removed_by_krish` in `docs/folder-checkin/answers.json` in the same change, so the check-in never asks him whether he did it.
+- The check-in asks only what it cannot work out and never the same thing twice (D-037). `tests/test_checkin_asks_less.ps1` must pass before any change to the check-in.
 - `tests/test_new_folder_survives.ps1` must pass before any change to a mover, planner or the consent guard is committed.
 
 ## Where to start

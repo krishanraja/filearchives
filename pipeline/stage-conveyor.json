@@ -296,6 +296,7 @@
     {"id": "learning-35-semantic-git-index-proof", "owner_stage": "duplicate-analysis", "enforced_by": ["tests/test_repository_snapshot.ps1"]},
     {"id": "learning-36-krish-folders-need-his-yes", "owner_stage": "structure", "enforced_by": ["tests/test_new_folder_survives.ps1"]},
     {"id": "learning-37-dev-move-is-a-repository-move", "owner_stage": "structure", "enforced_by": ["tests/test_dev_sprawl.ps1"]},
-    {"id": "learning-38-git-reads-leave-git-alone", "owner_stage": "classification", "enforced_by": ["tests/test_dev_sprawl.ps1"]}
+    {"id": "learning-38-git-reads-leave-git-alone", "owner_stage": "classification", "enforced_by": ["tests/test_dev_sprawl.ps1"]},
+    {"id": "learning-39-ask-only-what-cannot-be-worked-out", "owner_stage": "structure", "enforced_by": ["tests/test_checkin_asks_less.ps1"]}
   ]
 }
