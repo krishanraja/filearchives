@@ -22,6 +22,7 @@ The canonical folder tree, and the proposal that maps files into it.
 - inside a watched root no folder is moved, renamed, merged or removed without Krish's yes for that folder, and nothing inside a folder waiting on him moves
 - Krish's recorded folders outrank the older routing rules: a file in one stays where it is
 - the weekly check-in looks and asks; it never mutates the drive
+- the weekly check-in asks only what it cannot work out and never the same thing twice; working an answer out never lowers the guard
 - a dev consolidation moves nothing without -Execute and a consent row for that exact folder and destination, and snapshots every dirty repository before the first move
 
 ## Code
@@ -46,7 +47,7 @@ The canonical folder tree, and the proposal that maps files into it.
 | `stages/07_structure/new_sensitive_name_quarantine_manifest.ps1` | freeze same-volume metadata-only moves for direct or recursive credential-like files without opening or hashing their content; recursive mode preserves source-relative provenance |
 | `stages/07_structure/new_temporary_family_consolidation_manifest.ps1` | keep the newest conservatively name-normalized temporary plan/instruction family member in archive and quarantine older members while excluding evergreen knowledge |
 | `stages/07_structure/record_folder_preferences.ps1` | record the folder tree as it stands as Krish's preference, folder names only, keeping his answers and the record of any unmounted drive |
-| `stages/07_structure/weekly_folder_checkin.ps1` | find folders made since the record, ask Krish the two questions, count recorded folders gone without his OK, check answered folders against what he said goes in them, and keep the North Star value in NOW.md honest |
+| `stages/07_structure/weekly_folder_checkin.ps1` | find folders made since the record, link a moved folder to its new place, work out what a new folder inside one of his is from its name and place, ask Krish only about a new folder at the top of a drive and once about what moved or went, count recorded folders gone without his OK, check answered folders against what he said goes in them, and keep the North Star value in NOW.md honest |
 | `chains/install_folder_checkin.ps1` | the one button behind RECORD-MY-FOLDERS.cmd: pause other filearchives jobs, record, schedule the weekly check-in, save to GitHub, all after one on-screen yes |
 | `chains/chain_weekly_folder_checkin.ps1` | what the weekly scheduled task and CHECK-MY-NEW-FOLDERS.cmd run: pull, check in with pop-ups, refresh the dev sprawl report and its move requests, save only on Krish's yes |
 | `chains/chain_dev_consolidation.ps1` | turn the dev sprawl report into one consent row per proposed move; with -Execute, snapshot every dirty repository, then move only the folders Krish said yes to through the guarded folder-move pair, proving preserved paths arrive byte for byte |
@@ -61,6 +62,7 @@ The canonical folder tree, and the proposal that maps files into it.
 - `tests/test_path_regex_quarantine.ps1`
 - `tests/test_new_folder_survives.ps1`
 - `tests/test_dev_sprawl.ps1`
+- `tests/test_checkin_asks_less.ps1`
 
 ## Lessons
 | # | what this stage does about it | enforced by |
@@ -77,3 +79,4 @@ The canonical folder tree, and the proposal that maps files into it.
 | 33 | empty-directory execution records locked shells and continues the independently safe remainder | `code:stages/07_structure/invoke_empty_directory_manifest.ps1:remove-failed` |
 | 36 | a folder Krish made is never moved or removed without his yes for that folder; new ones wait on him | `test:tests/test_new_folder_survives.ps1:an unknown new folder survives a run untouched` |
 | 37 | a dev folder move is a repository move: dirty work is snapshotted first, ignored local state arrives byte for byte, a worktree is never moved as a folder | `test:tests/test_dev_sprawl.ps1:Growth's .scratch did not survive the move byte for byte` |
+| 39 | the check-in asks only what it cannot work out, never the same thing twice, and an AI session he asked counts as him | `test:tests/test_checkin_asks_less.ps1:nothing changed and he still got` |

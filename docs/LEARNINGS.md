@@ -319,3 +319,19 @@ when nothing changed (see 35). A report that promises to only look runs every
 Git command with `--no-optional-locks` and never fetches, and its test seals
 every byte under each `.git` before and after.
 
+
+## 39. Ask only what cannot be worked out, and never the same thing twice
+
+Krish, 2026-11-16: the check-in asked about his Immigration folders three weeks
+running. A Claude session had moved them, so with no Drive id each one showed up
+as gone plus new: he was asked whether he had moved them (he had asked Claude
+to), then asked again what `10_passports_and_identity` was, at its new place,
+two pop-ups a folder, ten folders a week. A question is worth his attention only
+when its answer is not already on screen. A folder that moved keeps its record
+at its new place (by Drive id, or by name and the folders inside it, one to one);
+a folder inside a folder he has is worked out from its name and where it sits;
+only a new folder at the top of a drive is asked about, once, with a guess; and
+everything that moved or went is one "did you OK these?", where an AI session he
+asked counts as him. Working an answer out spares him the question and never
+lowers the guard: the folder stays waiting on him for anything that would move a
+file out of it.
