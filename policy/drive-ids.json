@@ -1,7 +1,7 @@
 {
   "schema": "drive-ids/1",
   "about": "The cloud record of the folders under Ventures, by opaque key (never a Drive id or a name: this repository is public). Written by stages/09_mirror/reconcile_drive_tree.ps1 from Control Center's daily read (fleet integration I-25).",
-  "as_of": "2026-11-18T18:01:25.92+00:00",
+  "as_of": "2026-11-19T18:01:35.132+00:00",
   "folders": {
     "000772a5c07f317c9d798597": {
       "parent_key": "385034a7da630e06cbc5dea9",
@@ -595,6 +595,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "05417580a835efceebb91f30": {
+      "parent_key": "3dab5addc9a7f1e86aac3b44",
+      "depth": 4,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "0578ba855a847e176bd1327e": {
@@ -2154,6 +2163,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "149f091bfc3af0995dc20fbb": {
+      "parent_key": "df4d1326cf1782388ec014b5",
+      "depth": 6,
+      "status": "present",
+      "protected": false,
+      "link_shared": false,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
+      "last_change_at": null
+    },
     "14bf8618bae40bcdbce80f7b": {
       "parent_key": "6cd76cb5bb630ee53431b174",
       "depth": 5,
@@ -3003,7 +3021,7 @@
     "1d5449a4fd667142864d8a4c": {
       "parent_key": "7147049659ec16fc6f7ee6a3",
       "depth": 4,
-      "status": "binned",
+      "status": "missing",
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
@@ -3763,6 +3781,15 @@
       "protected": false,
       "link_shared": true,
       "first_seen": "2026-11-17T18:01:33.96+00:00",
+      "last_change_at": null
+    },
+    "24b3371579adbbcc4207686f": {
+      "parent_key": "3dab5addc9a7f1e86aac3b44",
+      "depth": 4,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "24b90ac44eb791e34566537c": {
@@ -5700,6 +5727,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "3aa6e1f3a01d72e750dccdc0": {
+      "parent_key": "4166f66eadc3e2ef8eebef53",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
+      "last_change_at": null
+    },
     "3ad2106f45dc53b2bbb16607": {
       "parent_key": "6f89d9268477665cfd6eaf64",
       "depth": 6,
@@ -6382,6 +6418,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "4166f66eadc3e2ef8eebef53": {
+      "parent_key": "3dab5addc9a7f1e86aac3b44",
+      "depth": 4,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "416b07c454d8a381ccca3d25": {
@@ -12927,6 +12972,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "7c8a338ffdf3c909152bab8f": {
+      "parent_key": "4166f66eadc3e2ef8eebef53",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
+      "last_change_at": null
+    },
     "7c923c55a7e4860041ab1a19": {
       "parent_key": "59531a2190472d1fc91e68e8",
       "depth": 8,
@@ -13312,6 +13366,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "801d389af356c5f9999275ac": {
+      "parent_key": "24b3371579adbbcc4207686f",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "80256c84084e1c8f59970426": {
@@ -13771,6 +13834,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-18T18:01:25.92+00:00",
+      "last_change_at": null
+    },
+    "83f0c01f7a308af45ef13d1b": {
+      "parent_key": "5c1160c8fa1c297029c3620a",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": false,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "83f765946dbf6d77637b60f0": {
@@ -15969,6 +16041,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "9a1231b22c6bc5aab5f9330c": {
+      "parent_key": "f236355799052683d50acd60",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": false,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
+      "last_change_at": null
+    },
     "9a19b1e527b58cb5042d0498": {
       "parent_key": "6bda04f63edc2928f5936082",
       "depth": 6,
@@ -16273,6 +16354,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "9dd32a9e6eca8683d98106f4": {
+      "parent_key": "4166f66eadc3e2ef8eebef53",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "9dd60e2aa120fff66b3551ea": {
@@ -16885,6 +16975,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "a3a8600abffe8bc8b74101df": {
+      "parent_key": "ed5a43919e28134c0fd52177",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "a3ace8b7af9ef36101e9138b": {
@@ -19738,7 +19837,7 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
-      "last_change_at": "2026-11-18T18:01:24.713+00:00"
+      "last_change_at": "2026-11-19T18:01:34.11+00:00"
     },
     "c125c989d074cc2eb02ceccf": {
       "parent_key": "287ec881dd07d11070d5a4cf",
@@ -19900,6 +19999,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "c29dfb6780be379e987ea75e": {
+      "parent_key": "f236355799052683d50acd60",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": false,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "c29dfc9a9f2f9b4804eeca48": {
@@ -20350,6 +20458,15 @@
       "protected": false,
       "link_shared": true,
       "first_seen": "2026-11-16T18:01:21.317+00:00",
+      "last_change_at": null
+    },
+    "c819265e700d82b70dddabb1": {
+      "parent_key": "f236355799052683d50acd60",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": false,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "c81d5533025220ace6ce26b8": {
@@ -22206,6 +22323,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "d95759322b42c193a2601801": {
+      "parent_key": "5c1160c8fa1c297029c3620a",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": false,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
+      "last_change_at": null
+    },
     "d96a1672aeb4c0a554518dc4": {
       "parent_key": "dad76ba32abf9d10902ae9d8",
       "depth": 4,
@@ -22348,7 +22474,7 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
-      "last_change_at": null
+      "last_change_at": "2026-11-19T18:01:34.11+00:00"
     },
     "da47dac8e95fdc8ee387807d": {
       "parent_key": "7b4b25b1bf09f20ff0232b84",
@@ -23365,7 +23491,7 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-17T18:01:33.96+00:00",
-      "last_change_at": null
+      "last_change_at": "2026-11-19T18:01:34.11+00:00"
     },
     "e3faf217ed7935374e00f4f7": {
       "parent_key": "0602dd34a2a872b9fc5631b0",
@@ -23896,7 +24022,7 @@
       "protected": false,
       "link_shared": true,
       "first_seen": "2026-11-18T18:01:25.92+00:00",
-      "last_change_at": null
+      "last_change_at": "2026-11-19T18:01:34.11+00:00"
     },
     "e96f42d2259fb3fda7c9e6c4": {
       "parent_key": "3d9f4a9f66cddd8955d98b0a",
@@ -23932,7 +24058,7 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-17T18:01:33.96+00:00",
-      "last_change_at": null
+      "last_change_at": "2026-11-19T18:01:34.11+00:00"
     },
     "e98fb77b205d2b105b3d23d8": {
       "parent_key": "e360a916a59589c623ccb46f",
@@ -24328,6 +24454,15 @@
       "protected": false,
       "link_shared": true,
       "first_seen": "2026-11-17T18:01:33.96+00:00",
+      "last_change_at": null
+    },
+    "ed5a43919e28134c0fd52177": {
+      "parent_key": "3dab5addc9a7f1e86aac3b44",
+      "depth": 4,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "ed5e01dae04cd459899beb1e": {
@@ -24780,6 +24915,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "f15201cf13844bd3c0ed3682": {
+      "parent_key": "4166f66eadc3e2ef8eebef53",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
+      "last_change_at": null
+    },
     "f180b7f4d8ffda21c1f42f95": {
       "parent_key": "64a91eb2f12f8eed5d939ae0",
       "depth": 6,
@@ -25120,6 +25264,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "f56378902ca21898b940fadd": {
+      "parent_key": "da3ddf11f4516c06ce829a57",
+      "depth": 6,
+      "status": "present",
+      "protected": false,
+      "link_shared": false,
+      "first_seen": "2026-11-19T18:01:35.132+00:00",
       "last_change_at": null
     },
     "f574b0ef192b6ba7da65f7ac": {
