@@ -1,7 +1,7 @@
 {
   "schema": "drive-ids/1",
   "about": "The cloud record of the folders under Ventures, by opaque key (never a Drive id or a name: this repository is public). Written by stages/09_mirror/reconcile_drive_tree.ps1 from Control Center's daily read (fleet integration I-25).",
-  "as_of": "2026-11-19T18:01:35.132+00:00",
+  "as_of": "2026-11-20T18:01:32.599+00:00",
   "folders": {
     "000772a5c07f317c9d798597": {
       "parent_key": "385034a7da630e06cbc5dea9",
@@ -7545,6 +7545,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "4b3200db5872feda7a484741": {
+      "parent_key": "05417580a835efceebb91f30",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-20T18:01:32.599+00:00",
+      "last_change_at": null
+    },
     "4b762d79f32c9daa7573eb1b": {
       "parent_key": "24e5084f0626fb78ef44fad4",
       "depth": 6,
@@ -11809,6 +11818,15 @@
       "protected": false,
       "link_shared": true,
       "first_seen": "2026-11-17T18:01:33.96+00:00",
+      "last_change_at": null
+    },
+    "7342cc54bfde8ed4e85ad434": {
+      "parent_key": "f8cc41f506aa743782ac23d3",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-20T18:01:32.599+00:00",
       "last_change_at": null
     },
     "7345389d4471fa5c750590df": {
@@ -19272,6 +19290,15 @@
       "first_seen": "2026-11-14T18:01:03.759+00:00",
       "last_change_at": null
     },
+    "bb481647bd6d31855680b132": {
+      "parent_key": "05417580a835efceebb91f30",
+      "depth": 5,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-20T18:01:32.599+00:00",
+      "last_change_at": null
+    },
     "bb5d0e92e20b5e90a8491944": {
       "parent_key": "07636ceafb4116284ee0c74b",
       "depth": 8,
@@ -24328,7 +24355,7 @@
       "protected": false,
       "link_shared": true,
       "first_seen": "2026-11-18T18:01:25.92+00:00",
-      "last_change_at": null
+      "last_change_at": "2026-11-20T18:01:30.957+00:00"
     },
     "ec7ddf4127c0358bf60bede8": {
       "parent_key": "5ced5b25437721c378146563",
@@ -25579,6 +25606,15 @@
       "protected": false,
       "link_shared": false,
       "first_seen": "2026-11-14T18:01:03.759+00:00",
+      "last_change_at": null
+    },
+    "f8cc41f506aa743782ac23d3": {
+      "parent_key": "3dab5addc9a7f1e86aac3b44",
+      "depth": 4,
+      "status": "present",
+      "protected": false,
+      "link_shared": true,
+      "first_seen": "2026-11-20T18:01:32.599+00:00",
       "last_change_at": null
     },
     "f8e810b966163d04b3f8419f": {
